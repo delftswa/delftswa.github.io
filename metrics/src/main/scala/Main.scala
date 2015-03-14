@@ -2,11 +2,18 @@
 
 object Main {
   def main(args: Array[String]) {
-    val c: List[(String, String, List[(Char, String)])] = new GitParser().revChanges("/Projects/play-shallow").toList
-    c.map(t => (t._1, t._2, t._3.groupBy(_._1).mapValues(_.size))).filter(_._3.contains('R')).foreach {
-      case (a,b,c) => println(s"${a.take(9)}\t$b\t$c")
-    }
+    val o = new GitParser().revChanges("/Projects/play-shallow")
+    o subscribe { _ match {
+      case (count, commits) => {
+        println(s"Indexing $count commits")
+        commits.subscribe(n => n match {
+          case (a, b, c) => {
+            val summary = c.groupBy(_._1).mapValues(_.size)
+            println(s"${a.take(9)}\t$b\t$summary")
+          }
+        })
+      }
+    }}
 //    println(c.toJson.prettyPrint
-// )
   }
 }
