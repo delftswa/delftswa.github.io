@@ -79,7 +79,7 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
 
   private def clocForObject(sha: SHA, filename: String): Option[CLOC]  = {
     import scala.sys.process._
-    val summary = (Process(Seq("git", "show", sha.hash), root) #| Process(Seq("cloc", "--csv", "--stdin-name", filename, "-"), root)).!!
+    val summary = Process(Seq("git", "show", sha.hash), root) #| Process(Seq("cloc", "--csv", "--stdin-name", filename, "-"), root) !! ProcessLogger(line => ())
     summary.split('\n').drop(5).headOption.flatMap(l => {
       val a = l.split(',')
       Try(Lang.withName(a(1).toLowerCase)).toOption.map(
