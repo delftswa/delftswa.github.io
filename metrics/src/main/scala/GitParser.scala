@@ -31,6 +31,7 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
   }))
 
   val LOCCache = mutable.HashMap.empty[String,immutable.Map[Lang.Value,CLOC]]
+  val moduleCache = mutable.HashMap.empty[SHA,immutable.Map[String,(SHA,Int)]]
 
   // Calculate for each subdirectory (module) in
   // the /framework/src directory the LOC over time.
@@ -53,6 +54,11 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
             val sha = line.substring(12, 12 + 40)
             val module = line.substring(line.indexOf('\t')).trim
             (sha, module) -> LOCCache.getOrElseUpdate(sha, { measureGitTree(SHA(sha), module_root + File.separator + module) })
+          }).doOnEach(t => {
+            // Store for JSON report
+            moduleCache.put(sha, moduleCache.getOrElseUpdate(sha, { immutable.Map.empty }) ++ Map(
+              t._1._2 -> (SHA(t._1._1), t._2.values.map(_.code).sum)
+            ))
           }))
         }
       }
@@ -100,7 +106,8 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
   import spray.json._
   import DefaultJsonProtocol._
   import Lang.LangFormat
- 
+  import SHA.shaFormat
+
   private def loadState(file: String) = {
     if(Source.fromFile(file).nonEmpty){
       val jsValue = SprayJsonParser.parse(Source.fromFile(file).bufferedReader())
@@ -111,7 +118,6 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
 
   private def saveState(file: String) = {
     println(s"Shutdown, writing ${LOCCache.keySet.size}")
-    val locJson = immutable.Map(LOCCache.toSeq : _*).toJson
     val json = immutable.Map(
       "commits" -> commits.zipWithIndex.map(c =>
         c._1._1.hash -> JsObject(
@@ -120,7 +126,13 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
           "x" -> JsNumber(c._2)
         )
       ).toMap.toJson,
-      "loc" -> locJson
+      "modules" -> immutable.Map(moduleCache.toSeq : _*).mapValues(_.mapValues(triple => {
+        JsObject(
+          "object" -> JsString(triple._1.hash),
+          "loc" -> JsNumber(triple._2)
+        )
+      })).map(t => t._1.hash -> t._2).toJson,
+      "loc" -> immutable.Map(LOCCache.toSeq : _*).toJson
     ).toJson
     val writer = new PrintWriter(new File(file))
     new SprayJsonPrinter(writer, 0)(json)
