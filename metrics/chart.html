@@ -10,7 +10,7 @@ Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/r
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin: auto;
         position: relative;
-        width: 960px;
+        width: 1400px;
     }
 
     text {
@@ -32,6 +32,7 @@ Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/r
 
 </style>
 <form>
+    <label id="hoverModule">Focus: &lt;hover&gt;</label>
     <label><input type="radio" name="mode" value="grouped"> Grouped</label>
     <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
 </form>
@@ -50,7 +51,7 @@ Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/r
                 c.x = commits.length - c.x;
             });
 
-            var modules = [];
+            var modules = window.modules = [];
 
             // For each commit, add module stats to layers object
             var layers = {};
@@ -79,11 +80,12 @@ Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/r
             });
 
             // Flatten layer object to array & limit density
-            var limit = 40;
+            var limit = 20;
             window.layers = layers = Object.keys(layers).map(function(m){
+                var lIndex = modules.indexOf(m);
                 // Reduce massive amount, as JS is not capable enough...
                 return layers[m].filter(function(a, i){ return i % limit == 0; }).map(function(o){
-                    return {x: o.x/limit, y: o.y, y0: o.y0};
+                    return {x: o.x/limit, y: o.y, y0: o.y0, layer: lIndex};
                 });
             });
 
@@ -107,8 +109,8 @@ Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/r
 
     function run() {
         var margin = {top: 40, right: 10, bottom: 20, left: 10},
-                width = 960 - margin.left - margin.right,
-                height = 500 - margin.top - margin.bottom;
+                width = 1400 - margin.left - margin.right,
+                height = 800 - margin.top - margin.bottom;
 
         var x = d3.scale.ordinal()
                 .domain(d3.range(m))
@@ -140,6 +142,8 @@ Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/r
                     return color(i%20);
                 });
 
+        var hoverModule = document.getElementById("hoverModule");
+
         var rect = layer.selectAll("rect")
                 .data(function (d) {
                     return d;
@@ -150,7 +154,16 @@ Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/r
                 })
                 .attr("y", 0)
                 .attr("width", x.rangeBand())
-                .attr("height", 0);
+                .attr("height", 0)
+                .on('mouseover', function(d){
+                    hoverModule.textContent = "Focus: "+ modules[d.layer];
+                    layer.transition().style("opacity", function(_d, i){
+                        return i == d.layer ? 1 : 0.6;
+                    });
+                })
+                .on('mouseout', function(){
+                    layer.transition().style("opacity", 1);
+                });
 
         rect.transition()
                 .delay(function (d, i) {
