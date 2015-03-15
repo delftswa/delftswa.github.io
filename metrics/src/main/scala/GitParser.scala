@@ -100,17 +100,30 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
   import spray.json._
   import DefaultJsonProtocol._
   import Lang.LangFormat
+ 
   private def loadState(file: String) = {
-    Some(Source.fromFile(file).mkString).filter(_.nonEmpty).foreach(json => {
-      val map = SprayJsonParser.parse(Source.fromFile(file).bufferedReader()).convertTo[immutable.Map[String, immutable.Map[Lang.Value, CLOC]]]
+    if(Source.fromFile(file).nonEmpty){
+      val jsValue = SprayJsonParser.parse(Source.fromFile(file).bufferedReader())
+      val map = jsValue.asJsObject.fields.getOrElse("loc", jsValue).convertTo[immutable.Map[String, immutable.Map[Lang.Value, CLOC]]]
       LOCCache.++=(map)
-    })
+    }
   }
 
   private def saveState(file: String) = {
     println(s"Shutdown, writing ${LOCCache.keySet.size}")
+    val locJson = immutable.Map(LOCCache.toSeq : _*).toJson
+    val json = immutable.Map(
+      "commits" -> commits.zipWithIndex.map(c =>
+        c._1._1.hash -> JsObject(
+          "sha" -> JsString(c._1._1.hash),
+          "message" -> JsString(c._1._2),
+          "x" -> JsNumber(c._2)
+        )
+      ).toMap.toJson,
+      "loc" -> locJson
+    ).toJson
     val writer = new PrintWriter(new File(file))
-    new SprayJsonPrinter(writer, 0)(immutable.Map(LOCCache.toSeq : _*).toJson)
+    new SprayJsonPrinter(writer, 0)(json)
     writer.close()
   }
 
@@ -120,10 +133,6 @@ class GitParser(gitroot: String, branch: String, saveFile: Option[String]) {
 
 object GitParser {
   def apply(gitroot: String, branch: String = "master", saveFile: Option[String] = None) = new GitParser(gitroot, branch, saveFile)
-}
-
-case class SHA(hash: String) {
-  override def toString = hash
 }
 
 sealed trait Change {}
