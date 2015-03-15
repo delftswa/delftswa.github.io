@@ -1,3 +1,6 @@
+<!--
+Original, unmodified version of Stacked Bar Chart: http://bl.ocks.org/mbostock/raw/3943967/
+-->
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta key="copyright" value="http://bl.ocks.org/mbostock/raw/3943967/">
@@ -39,48 +42,54 @@
         if(this.readyState == 4 && this.status == 200){
             var metrics;
             window.metrics = metrics = JSON.parse(this.responseText);
-            var commits = Object.keys(metrics.commits).map(function(k){
+            var commits = window.commits = Object.keys(metrics.commits).map(function(k){
                 return metrics.commits[k];
             }).sort(function(a,b){ return b.x - a.x });
 
-            var first = true;
-            var good = 0;
+            commits.forEach(function(c){
+                c.x = commits.length - c.x;
+            });
+
+            var modules = [];
+
+            // For each commit, add module stats to layers object
             var layers = {};
             commits.forEach(function(c){
                 var cm = metrics.modules[c.sha];
                 if(!cm){
                     return;
                 }
-                good++;
                 Object.keys(cm).forEach(function(module_name){
-                    layers[module_name] = layers[module_name] || [];
+                    layers[module_name] = layers[module_name] || modules.push(module_name) && [];
                     layers[module_name][c.x] = {
                         x: c.x,
-                        y: cm[module_name].loc
+                        y: Math.sqrt(cm[module_name].loc)
                     };
                 })
             });
 
-            var limit = 50;
-            console.log(Object.keys(layers));
-            // Flatten all modules
+            console.log("These modules:", Object.keys(layers));
+
+            // Fill gaps
+            modules.forEach(function(name, k, all){
+                for(var i = 0; i < commits.length; i++){
+                    layers[name][i] = layers[name][i] || { x: i, y: 0 };
+                    layers[name][i].y0 = k > 0 ? (layers[all[k-1]][i].y0 + layers[all[k-1]][i].y) : 0;
+                }
+            });
+
+            // Flatten layer object to array & limit density
+            var limit = 40;
             window.layers = layers = Object.keys(layers).map(function(m){
                 // Reduce massive amount, as JS is not capable enough...
                 return layers[m].filter(function(a, i){ return i % limit == 0; }).map(function(o){
-                    return {x: o.x/limit, y: o.y};
+                    return {x: o.x/limit, y: o.y, y0: o.y0};
                 });
             });
 
             // Find bounds
             n = layers.length;
             m = layers.reduce(function(p, c){ return Math.max(p, c.length) }, 0);
-            // Fill gaps
-            layers.forEach(function(list, lIndex, all){
-                for(var i = 0; i < m; i++){
-                    list[i] = list[i] || { x: i, y: 0 };
-                    list[i].y0 = lIndex > 0 ? all[lIndex-1][i].y0 + all[lIndex-1][i].y : 0;
-                }
-            });
             yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); }),
             yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); });
             run();
@@ -109,9 +118,7 @@
                 .domain([0, yStackMax])
                 .range([height, 0]);
 
-        var color = d3.scale.linear()
-                .domain([0, n - 1])
-                .range(["#aad", "#556"]);
+        var color = d3.scale.category20b();
 
         var xAxis = d3.svg.axis()
                 .scale(x)
@@ -130,7 +137,7 @@
                 .enter().append("g")
                 .attr("class", "layer")
                 .style("fill", function (d, i) {
-                    return color(i);
+                    return color(i%20);
                 });
 
         var rect = layer.selectAll("rect")
