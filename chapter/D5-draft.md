@@ -19,7 +19,7 @@ Play's development is leaning towards a very strong modular design.
 This improves the maintainability and scalability of the framework. 
 This chapter described the developer view and an **xxx** view. 
 It also explains the software product line and **xxx** perspectives. 
-Finally it provides important metrics that define the assessment of the frameworks Goal and an overview of the future plans of Play!.
+Finally it provides important metrics that define the assessment of the frameworks Goal and an overview of the future plans of Play.
 
 ###Introduction to/Goal of Play Framework
 	- Briefly touch upon what Play is
