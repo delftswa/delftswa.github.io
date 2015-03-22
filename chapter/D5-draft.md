@@ -13,7 +13,13 @@ A plan of < 1 page explaining:
 #Outline of final chapter
 
 ###Abstract
-Play! Framework is a Scala/Java based web application framework that focusses on the development of scalable web applications and thus companies that have large and scalable websites like LinkedIn. Typesafe is the company that maintains the development of Play!. Play's development is leaning towards a very strong module design and phasing out Java. This improves the maintainability and scalability of the framework. This chapter described the developer view and an **xxx** view. It also explains the software product line and **xxx** perspectives. Finally it provides important metrics that define the assessment of the frameworks Goal and an overview of the future plans of Play!.
+Play Framework is a Scala/Java based web application framework that focusses on the development of scalable web applications and thus companies that have large and scalable websites like LinkedIn. 
+Typesafe is the company that maintains the development of Play. 
+Play's development is leaning towards a very strong module design and phasing out Java. 
+This improves the maintainability and scalability of the framework. 
+This chapter described the developer view and an **xxx** view. 
+It also explains the software product line and **xxx** perspectives. 
+Finally it provides important metrics that define the assessment of the frameworks Goal and an overview of the future plans of Play!.
 
 ###Introduction to/Goal of Play Framework
 	- Briefly touch upon what Play is
