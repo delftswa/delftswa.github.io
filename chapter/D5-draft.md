@@ -75,6 +75,11 @@ The ability of Play to support both Java and Scala should form the unique sellin
 #####Users
 The list of well-known users of Play is not very large. The framework could definetly benefit from the exposure that can come when well-known companies embrace a technology.
 As long as there are a handfull of large users, Play could enjoy enough exposure to be able to sustain itself.
+To keep the users with the framework as it develops, it is important for the users to be able to install newer versions of the framework without too much trouble.
+We have noted that Play has extensive documentation on migrating to newer versions in the form of [Migration Guides](https://www.playframework.com/documentation/2.3.x/Migration23).
+This way Play can be more easily upgraded to newer versions.
+We also see that on the [roadmap](https://docs.google.com/document/d/11sVi1-REAIDFVHvwBrfRt1uXkBzROHQYgmcZNGJtDnA/pub) there are measures taken to make sure the upgrade to the next major version (3.0) can occur as smoothly as possible by providing a binary and source compatible in-between version (2.5) that will warn the developers of any deprecated API use.
+Now developers have an additional step in between that their application will still work on, and allows developers to move on to the next version, without completely breaking their apps.
 
 #####Concluding the evolution perspective
 In the landscape of web-application frameworks Play doesn't form a huge mountain, but rather an odd-shaped hill that can prove to be very versatile and unique.
