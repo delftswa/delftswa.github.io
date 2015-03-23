@@ -4,7 +4,7 @@ import json
 
 
 def get_data(name):
-    url = "https://api.stackexchange.com/2.2/questions?pagesize=100&order=desc&sort=activity&tagged=%s&site=stackoverflow" % name
+    url = "https://api.stackexchange.com/2.2/questions?pagesize=100&order=desc&sort=activity&tagged=%s&site=stackoverflow&key=b6gI4yC5CtL7mJMPfK8LOw((" % name
     resp, content = httplib2.Http().request(url)
     print "initial fetch complete"
     json_latest = json.loads(content)
@@ -35,7 +35,7 @@ def get_data(name):
         json.dump(json_res, outfile)
 
 items = [
-    'playframework'
+    'spring-mvc'
 ]
 
 for item in items:
