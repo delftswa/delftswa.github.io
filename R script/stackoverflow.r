@@ -29,7 +29,7 @@ while(document$has_more) {
   i<-i+1
 }
 CairoPNG("frequenogramStackoverflow.png", width = 750, height=500)
-a<-hist(as.POSIXct(spring, origin="1970-01-01"), breaks="months", plot=TRUE, col=rgb(1,0,0,0.5), freq=T, main="Questions on Stackoverflow.com", xlab="date, column per month")
+a<-hist(as.POSIXct(spring, origin="1970-01-01"), breaks="months", plot=TRUE, col=rgb(1,0,0,0.5), freq=T, main="Questions on Stackoverflow.com", xlab="date, column per month", cex.axis=1.5)
 hist(as.POSIXct(res, origin="1970-01-01"), breaks="months", plot=TRUE, col=rgb(0,0,1,0.5), add=T, axes=F, freq=T)
 legend("topleft", legend = c("Spring MVC", "Play Framework"),col=c(rgb(1,0,0,0.5),rgb(0,0,1,0.5)), pch=c(15,15))
 dev.off()
