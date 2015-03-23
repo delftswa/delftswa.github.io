@@ -115,14 +115,15 @@ Its <abbr title="Unique Selling Point">USP</abbr> that it both supports Java and
 but it can also hold the project back too much because effectively it needs to support twice as much.
 
 ###Metrics
-_Research from D4 that has been finished._
+We researched a number of metrics and questions with regard to the Goal that Play is an attractive we developing framework.
+This is done by formulating a number of questions.
+First of all we found that there is job availability, but this is a lot less compared to Spring MVC knowledge. 
+![Work diagram](job.png)
 
-	- Summary of the outcome of D4. This should characterise Play framework
-	- Own experience while investigating in Play?
-	
-###Future plans/work of Play
-	- Maybe this can be our second view that we have to include?
-
+Secondly we found that there is a relative constant activity on [Stackoverflow](http://www.stackoverflow.com).
+We compared the activity for Play to the activity for Spring MVC.
+This is summarised in the following diagram:
+![diagram](frequenogramStackoverflow.png)
 ###Conclusion
 
 
