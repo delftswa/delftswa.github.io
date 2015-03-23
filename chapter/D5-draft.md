@@ -46,7 +46,22 @@ _Research from D2 that has been finished._
 _This includes the Software product line perspective._
 _Another perspective still has to be researched and written._
 
-	- Here we should have another perspective
+####'Evolution perspective on the Context view'
+In D1 we've talked about the context view.
+In this view we took a very neutral perspective, describing the context of Play in a diagram, and explaining the different enitities (people, organisations, competitors etc.).
+In this new perspective, that we have dubbed the 'evolution perspective', we will make an attempt to describe the same entities as before, but in the light of the evolution of Play: Where will it go?
+
+#####Typesafe
+
+#####External organisations
+
+#####Tools
+
+#####Competition
+
+#####Users
+
+#####Concluding the evolution perspective
 
 ###Metrics
 _Research from D4 that has been finished._
