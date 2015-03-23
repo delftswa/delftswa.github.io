@@ -23,7 +23,7 @@ def get_data(name):
 
         print "quota_remaining: " + str(json_latest["quota_remaining"])
         json_latest_c = json_latest.copy()
-        json_res['items'].append(json_latest_c['items'])
+        json_res['items'].extend(json_latest_c['items'])
         i += 1
 
     print "done fetching %d pages" % i
@@ -35,7 +35,8 @@ def get_data(name):
         json.dump(json_res, outfile)
 
 items = [
-    'spring-mvc'
+    'spring-mvc',
+    'playframework'
 ]
 
 for item in items:
