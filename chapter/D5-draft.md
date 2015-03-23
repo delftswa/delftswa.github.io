@@ -78,7 +78,7 @@ As long as there are a handfull of large users, Play could enjoy enough exposure
 
 #####Concluding the evolution perspective
 In the landscape of web-application frameworks Play doesn't form a huge mountain, but rather an odd-shaped hill that can prove to be very versatile and unique.
-Its <a title="Unique Selling Point">USP</a> that it both supports Java and Scala can be a big win, 
+Its <abbr title="Unique Selling Point">USP</abbr> that it both supports Java and Scala can be a big win, 
 but it can also hold the project back too much because effectively it needs to support twice as much.
 
 ###Metrics
