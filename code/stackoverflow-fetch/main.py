@@ -10,11 +10,17 @@ def get_data(name):
     json_latest = json.loads(content)
     json_res = json_latest.copy()
     i = 2
-    while json_latest["has_more"]:
+    while json_latest.get("has_more", None):
         new_url = url + "&page=" + str(i)
         print "fetching next page: " + str(i)
         resp, content = httplib2.Http().request(new_url)
         json_latest = json.loads(content)
+        try:
+            remaining = json_latest["quota_remaining"]
+        except KeyError as e:
+            "quota is no more"
+            break
+
         print "quota_remaining: " + str(json_latest["quota_remaining"])
         json_res = json_latest.copy()
         json_res.update(json_latest)
@@ -29,12 +35,8 @@ def get_data(name):
         json.dump(json_res, outfile)
 
 items = [
-    'playframework-2.0',
-    'playframework-2.1',
-    'playframework-2.2',
-    'playframework-2.3',
-    'playframework-json',
-    'playframework-1.x']
+    'spring',
+    'spring-mvc']
 
 for item in items:
     print "----------start fetchting %s----------" % item
