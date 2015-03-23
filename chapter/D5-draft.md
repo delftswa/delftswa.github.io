@@ -68,7 +68,7 @@ This is visible from the fact that they are trying to push Akka as their HTTP ba
 This allows Play to be less dependant of other systems.
 
 #####Competition
-We've talked about competitors alot in D4 (adoption). For an open-source platform such as Play it always is important to attract enough users and developers to keep the framework alive and advancing.
+We've talked about a number of competitors in D4 (adoption). For an open-source platform such as Play it always is important to attract enough users and developers to keep the framework alive and advancing.
 Supporting a modern language (Scala) and a modern design philosophy (Reactive) Play offers what one should expect from a web-framework. But the competition is fierce and Scala is not a very widely adopted language.
 The ability of Play to support both Java and Scala should form the unique selling point that keeps this framework ahead of the competition.
 
