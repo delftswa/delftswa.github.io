@@ -33,7 +33,7 @@ The most important stakeholder is Typesafe Inc. Typesafe Inc. is the creator of 
 
 Typesafe is the one and only stakeholder that can be identified with multiple roles of stakeholder classes. It is a *Communicator*, a *Maintainer*, an *Assessor*, as Typesafe ensures that each pull request of Play is conform legal [regulation](http://www.typesafe.com/contribute/cla).
 
-Other important stakeholders are for brevity listed in the table below. For a broader overview, please read [D1](./).
+Other important stakeholders are listed in the table below for brevity. For a broader overview, please read [D1](./).
 
 | Type | Entities |
 |---|---|
