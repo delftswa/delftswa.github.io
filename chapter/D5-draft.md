@@ -13,7 +13,7 @@ A plan of < 1 page explaining:
 #Outline of final chapter
 
 ###Abstract
-Play Framework is a Scala/Java based web application framework that focusses on the development of scalable web applications and thus companies that have large and scalable websites like LinkedIn. 
+Play Framework is a Scala/Java based web application framework that focuses on the development of scalable web applications and thus companies that have large and scalable websites like LinkedIn. 
 Typesafe is the company that maintains the development of Play. 
 Play's development is leaning towards a very strong modular design. 
 This improves the maintainability and scalability of the framework. 
@@ -76,7 +76,7 @@ _Another perspective still has to be researched and written._
 
 ####Evolution perspective on the Context view
 In D1 we've talked about the context view.
-In this view we took a very neutral perspective, describing the context of Play in a diagram, and explaining the different enitities (people, organisations, competitors etc.).
+In this view we took a very neutral perspective, describing the context of Play in a diagram, and explaining the different entities (people, organisations, competitors etc.).
 In this new perspective, that we have dubbed the 'evolution perspective', we will make an attempt to describe the same entities as before, but in the light of the evolution of Play: Where will it go?
 
 #####Typesafe
@@ -101,8 +101,8 @@ Supporting a modern language (Scala) and a modern design philosophy (Reactive) P
 The ability of Play to support both Java and Scala should form the unique selling point that keeps this framework ahead of the competition.
 
 #####Users
-The list of well-known users of Play is not very large. The framework could definetly benefit from the exposure that can come when well-known companies embrace a technology.
-As long as there are a handfull of large users, Play could enjoy enough exposure to be able to sustain itself.
+The list of well-known users of Play is not very large. The framework could definitely benefit from the exposure that can come when well-known companies embrace a technology.
+As long as there are a handful of large users, Play could enjoy enough exposure to be able to sustain itself.
 To keep the users with the framework as it develops, it is important for the users to be able to install newer versions of the framework without too much trouble.
 We have noted that Play has extensive documentation on migrating to newer versions in the form of [Migration Guides](https://www.playframework.com/documentation/2.3.x/Migration23).
 This way Play can be more easily upgraded to newer versions.
