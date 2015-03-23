@@ -77,8 +77,9 @@ The list of well-known users of Play is not very large. The framework could defi
 As long as there are a handfull of large users, Play could enjoy enough exposure to be able to sustain itself.
 
 #####Concluding the evolution perspective
-In the landscape of web-application frameworks Play doesn't form a huge mountain, but rather an odd-schaped hill that can prove to be very versatile and unique.
-It's main USP that it both supports Java and Scala can be a big win, but it can also hold the project back too much because effectively it needs to support twice as much.
+In the landscape of web-application frameworks Play doesn't form a huge mountain, but rather an odd-shaped hill that can prove to be very versatile and unique.
+Its <a title="Unique Selling Point">USP</a> that it both supports Java and Scala can be a big win, 
+but it can also hold the project back too much because effectively it needs to support twice as much.
 
 ###Metrics
 _Research from D4 that has been finished._
