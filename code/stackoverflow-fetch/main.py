@@ -22,8 +22,8 @@ def get_data(name):
             break
 
         print "quota_remaining: " + str(json_latest["quota_remaining"])
-        json_res = json_latest.copy()
-        json_res.update(json_latest)
+        json_latest_c = json_latest.copy()
+        json_res.update(json_latest_c)
         i += 1
 
     print "done fetching %d pages" % i
@@ -35,8 +35,12 @@ def get_data(name):
         json.dump(json_res, outfile)
 
 items = [
-    'spring',
-    'spring-mvc']
+    'playframework-2.0',
+    'playframework-2.1',
+    'playframework-2.2',
+    'playframework-2.3',
+    'playframework-json',
+    'playframework-1.x']
 
 for item in items:
     print "----------start fetchting %s----------" % item
