@@ -23,24 +23,20 @@ def get_data(name):
 
         print "quota_remaining: " + str(json_latest["quota_remaining"])
         json_latest_c = json_latest.copy()
-        json_res.update(json_latest_c)
+        json_res['items'].append(json_latest_c['items'])
         i += 1
 
     print "done fetching %d pages" % i
 
-    print json_res
+    # print json_res
 
     filename = 'data_%s.json' % name
     with open(filename, 'w') as outfile:
         json.dump(json_res, outfile)
 
 items = [
-    'playframework-2.0',
-    'playframework-2.1',
-    'playframework-2.2',
-    'playframework-2.3',
-    'playframework-json',
-    'playframework-1.x']
+    'playframework'
+]
 
 for item in items:
     print "----------start fetchting %s----------" % item
