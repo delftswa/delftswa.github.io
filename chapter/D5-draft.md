@@ -22,18 +22,26 @@ It also explains the software product line and **xxx** perspectives.
 Finally it provides important metrics that define the assessment of the frameworks Goal and an overview of the future plans of Play.
 
 ###Introduction to/Goal of Play Framework
-	- Briefly touch upon what Play is
-	- Briefly explain how it distinguishes itself from other web dev frameworks (Goals)
-	- Ideology of Play/developers? What are key competitive features? Why should Play be chosen instead of other web dev frameworks?
-	
-The Play Framework is a framework for developing web applications in Java and Scala.
-The framework provides tools for developers to easily develop scalable, modern, and fast web applications.
-Web development frameworks come a dime a dozen.
-On the other hand, only a few frameworks boast the ability to implement in Scala and Java, develop with a strong compiler, and with good support from a company.
+The [Play Framework](https://playframework.com/) is a Web Application Framework for both Java and Scala.
+Play provides you the tools to quickly and easily develop scalable, modern, and fast web applications.
+Web Application frameworks come a 
+[dime](https://github.com/showcases/web-application-frameworks) 
+[a](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks) 
+[dozen](http://www.bestwebframeworks.com/).
+On the other hand, only a few frameworks for type safe languages like Java and Scala exist.
+Play allows you to implement in either or both Scala and Java, 
+utilise the power of a strong compiler, 
+with good support from a company and a large community.
 
-In our opinion, and from our experience, Play should be chosen in a number of cases.
-First of all, if your development team has experience with one of the programming languages.
-Furthermore, Play provides a great deal of checking at runtime. 
+In our opinion, and from our experience, Play should be your number one choice in a number of cases. 
+First of all, if your development team is used to Java or Scala, you can step right in. 
+Play offers your team the confidence that type safe languages bring.
+It allows large teams to work together creating large, multi-modular apps, 
+while ensuring compatibility of concurrent changes through type checking.
+If your team wants to learn Scala, Play is the way to go: since it supports Java too, you can easily convert later on, and begin your Scala journey with small steps.
+When handling large amounts of streaming data Play has [got you covered](https://www.playframework.com/documentation/latest/Iteratees). When serving a Real-Time app (for example a chat app) Play [integrates](https://www.playframework.com/documentation/latest/ScalaAkka) nicely with Akka's Actor system.
+
+In the following chapter we will give some background to Play, it's architecture, how it evolved over time and how you can contribute to Play yourself.
 
 ###Stakeholders
 _Research from D1 that has been finished._
