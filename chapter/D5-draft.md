@@ -1,4 +1,4 @@
-<!---
+<!--
 The outline should consist of:
 
 A 100 word abstract summarizing your chapter. ~Done
@@ -8,7 +8,7 @@ A plan of < 1 page explaining:
 - which research on your chapter still needs to be done (maybe a pull request / contribution, an additional view/perspective, an interview) ~ Partly Done.
 - a status per section in your table of contents indicating what still needs to be written / how far you are.
 - A first version of your chapter reflecting the current status.
---->
+-->
 
 #Outline of final chapter
 
@@ -26,6 +26,15 @@ Finally it provides important metrics that define the assessment of the framewor
 	- Briefly explain how it distinguishes itself from other web dev frameworks (Goals)
 	- Ideology of Play/developers? What are key competitive features? Why should Play be chosen instead of other web dev frameworks?
 	
+The Play Framework is a framework for developing web applications in Java and Scala.
+The framework provides tools for developers to easily develop scalable, modern, and fast web applications.
+Web development frameworks come a dime a dozen.
+On the other hand, only a few frameworks boast the ability to implement in Scala and Java, develop with a strong compiler, and with good support from a company.
+
+In our opinion, and from our experience, Play should be chosen in a number of cases.
+First of all, if your development team has experience with one of the programming languages.
+Furthermore, Play provides a great deal of checking at runtime. 
+
 ###Stakeholders
 _Research from D1 that has been finished._
 
