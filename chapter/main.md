@@ -152,7 +152,7 @@ but compared to Scalatra, it is scoring good in its niche.
 While many developers would only use Play for developing their own applications, there is also a possibility to contribute to Play.
 The source code of the Play Framework is managed in the [GitHub](https://github.com/playframework/playframework) ecosystem. 
 In this git project, [general rules](https://www.playframework.com/documentation/2.3.x/Guidelines) have to be observed, for instance one cannot commit directly to the 'master' branch.
-Developers are discouraged to use particular code constructs, such as: Locks, casting or modifying the global state.
+Developers are discouraged to use particular code constructs, such as: locks, casting or modifying the global state.
 The [guidelines](https://github.com/playframework/playframework/blob/master/documentation/manual/hacking/Guidelines.md) specify where your code needs to go and what package name it should bear.
 All contributed code needs to be correctly formatted using [Scalariform](https://github.com/mdr/scalariform).
 By doing this the code style remains uniform throughout the project.
