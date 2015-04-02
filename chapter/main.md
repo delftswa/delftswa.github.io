@@ -161,7 +161,7 @@ By doing this the code style remains uniform throughout the project.
 The general workflow of committing code is as follows:
 
 0.  Make sure you have signed the [Typesafe CLA](www.typesafe.com/contribute/cla), if not, sign it online.
-1.  An issue should be made on Github, explaining what you want to fix or implement, this helps to tell others in the project what you are working on.
+1.  An issue should be made on GitHub, explaining what you want to fix or implement, this helps to tell others in the project what you are working on.
 2.  You write code locally, while observing the [standardisation guidelines](https://www.playframework.com/documentation/2.3.x/Guidelines#Pull-Request-Requirements). You commit to a local branch with a meaningful name.
 3.  As a general rule, every piece of code that is added must be accompanied by test code.
 Almost every PR we analysed (that provides contributions to major parts of Play) and that is merged, contained test code.
@@ -177,9 +177,9 @@ For most people contributing to Play, the contributions should come from a fork 
 Play utilises a [continuous integration](https://playframework2.ci.cloudbees.com/) service called [Jenkins](http://jenkins-ci.org/) hosted by [CloudBees](https://www.cloudbees.com/).
 This service is configured to automatically build certain branches (such as 'master' or '2.3.x').
 Also all pull requests will be automatically build, or can be rebuild by using a certain keyword in a github pull request comment ([`@play-pull-request-validator try again`](https://github.com/playframework/playframework/pull/4007#issuecomment-76663971)).
-After the build all unit and integration tests are run and the result is reflected on Github, marking the pull request as ready to merge, or indicates whether the build or tests are failing.
+After the build all unit and integration tests are run and the result is reflected on GitHub, marking the pull request as ready to merge, or indicates whether the build or tests are failing.
 
-![Jenkins integrates with Github](images/jenkins.png)
+![Jenkins integrates with GitHub](images/jenkins.png)
 
 <!-- How the binaries are released for testing and use. -->
 ### Releases
@@ -485,7 +485,7 @@ For accessing Play itself, Typesafe provides a Maven2-style [repository](https:/
 
 Play is a framework to be used to build software, therefore the continuous integration part of the software itself is relatively small.
 The only part of Play that is continuously integrated is the documentation on [www.playframework.com](http://www.playframework.com), which is updated [every ten minutes](https://www.playframework.com/documentation/2.3.x/Translations#Deploying-documentation-to-playframework.com ), with the latest changes 
-[from Github](https://github.com/playframework/playframework/tree/master/documentation).
+[from GitHub](https://github.com/playframework/playframework/tree/master/documentation).
 
 ### Risks
 A risk for evolution of Play could be that any of its dependencies stops to be developed.
