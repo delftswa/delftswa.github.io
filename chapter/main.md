@@ -485,7 +485,7 @@ The software configuration is managed with sbt, which uses Ivy or Maven style so
 For accessing Play itself, Typesafe provides a Maven2-style [repository](https://repo.typesafe.com/typesafe/releases/).
 
 Play is a framework to be used to build software, therefore the continuous integration part of the software itself is relatively small.
-The only part of Play that is continuously integrated is the documentation on [www.playframework.com](http://www.playframework.com), which is updated [every ten minutes](https://www.playframework.com/documentation/2.3.x/Translations#Deploying-documentation-to-playframework.com ), with the latest changes 
+The only part of Play that Typesafe deploys is its documentation on [www.playframework.com](http://www.playframework.com), which is continuously integrated and updated [every ten minutes](https://www.playframework.com/documentation/2.3.x/Translations#Deploying-documentation-to-playframework.com ), with the latest changes 
 [from GitHub](https://github.com/playframework/playframework/tree/master/documentation).
 
 ### Risks
