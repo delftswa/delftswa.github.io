@@ -69,7 +69,7 @@ Play offers these things as well.
 The features of Play are divided over several modules.
 All HTTP features are located in the play-server and Netty modules for example.
 View templating is brought out of the project, in the form of [Twirl](https://github.com/playframework/twirl).
-Some features are not modularised live in the play-core module.
+Some features are not modularised and live in the play-core module.
 These include routing, MVC logic, form validation, localisation, and several utilities.
 
 ![](images/module-diagram/modules-main.png)
@@ -110,10 +110,10 @@ The main trend is adding modules instead of extending existing modules, and some
 Altogether the developers have done a great job keeping modules small and focussed.
 
 ### Who's helping?
-As any developer will know, the best tool for learning is looking up your questions on [StackOverflow](http://www.stackoverflow.com).
-For well adopted frameworks, StackOverflow provides answers for almost all questions raised by programmers.
+As any developer will know, the best tool for learning is looking up your questions on [Stack Overflow](http://www.stackoverflow.com).
+For well adopted frameworks, Stack Overflow provides answers for almost all questions raised by programmers.
 
-We found that there is a relative constant activity on StackOverflow regarding the Play Framework.
+We found that there is a relative constant activity on Stack Overflow regarding the Play Framework.
 We compared the activity for Play to the activity for Spring MVC. 
 Spring MVC is a Java web application framework on top of [Spring](http://nl.wikipedia.org/wiki/Spring_Framework), which exists since 2002.
 Spring is a huge ecosystem, already at major version 4, so it is interesting to compare it to the much newer Play Framework.
