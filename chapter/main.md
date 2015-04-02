@@ -184,9 +184,9 @@ After the build all unit and integration tests are run and the result is reflect
 <!-- How the binaries are released for testing and use. -->
 ### Releases
 To obtain the Play framework binaries, you can use the  [Typesafe Activator](https://typesafe.com/community/core-tools/activator-and-sbt).
-From the [website](https://playframework.com/download) the latest version of the  Activator can be downloaded, but it is also available via [brew install typesafe-activator](http://brew.sh/).
+From the [website](https://playframework.com/download) the latest version of Activator can be downloaded, but it is also available via [brew install typesafe-activator](http://brew.sh/).
 Activator helps to build and configure play projects.
-For novice users Activator provides a nice web interface by running `activator ui`, some bare Scala and Java application templates and example projects are available from there.
+For novice users Activator provides a nice web interface by running `activator ui`. Some bare templates and example projects are available from there, for both Scala and Java.
 Activator will download Play and other dependencies for a developer using [sbt](http://www.scala-sbt.org/), using Maven or Ivy repositories.
 It is possible to use other [releases](https://playframework.com/download#older-versions) or  [snapshots](https://www.playframework.com/documentation/2.3.x/BuildingFromSource#Use-in-projects) by adjusting the sbt dependency, from a [Maven/Ivy repository](https://www.playframework.com/documentation/2.3.x/Repositories).
 
