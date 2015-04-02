@@ -220,16 +220,16 @@ The most important stakeholder is [Typesafe Inc](http://typesafe.com/).
 Typesafe is the creator of the Play Framework. 
 Apart from the Play Framework, it [leads development](http://typesafe.com/products/typesafe-reactive-platform) of open source projects like Scala, Akka and sbt.
 
-Typesafe is a stakeholder that can be identified with multiple roles: it is a *Communicator*, a *Maintainer*, and as an *Assessor*, as Typesafe ensures that each pull request of Play is conform legal [regulation](http://www.typesafe.com/contribute/cla).
+Typesafe is a stakeholder that can be identified with multiple roles: it is a **_Communicator_**, a **_Maintainer_**, and as an **_Assessor_**, as Typesafe ensures that each pull request of Play is conform legal [regulation](http://www.typesafe.com/contribute/cla).
 
 Other stakeholders can be identified. Together with their roles they are listed in the table below. For a detailed overview, we refer to [the Stakeholder Analysis](D1.md#stakeholders).
 
 | Type | Entities |
 |---|---|
-| Developers | Construct and deploy the system. Most active developers are employees of Typesafe. <br>[@jroper](https://github.com/jroper), [@guillaumebort](https://github.com/guillaumebort), [@pk11](https://github.com/pk11), [@richdougherty](https://github.com/richdougherty) |
-| Users | Users of the Play Framework are the type of stakeholder that make use of the system. These are companies that use Play to build their (often client-facing) web services: <br> [LinkedIn](https://www.linkedin.com), [Coursera](https://www.coursera.org), [Klout](https://klout.com/home), [The Guardian](http://www.theguardian.com/uk), [BBC](http://www.bbc.com), many others |
-| Supporters | Cloud Platforms as a service (PaaS) that support the Play Framework for their users: <br> [Amazon Web Services (AWS)](http://aws.amazon.com/opsworks/), [Jelastic](http://jelastic.com), [Heroku](https://www.heroku.com), [Google App Engine (GAE)](https://cloud.google.com/appengine/docs) |
-| Funders | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
+| **Developers** | Construct and deploy the system. Most active developers are employees of Typesafe. <br>[@jroper](https://github.com/jroper), [@guillaumebort](https://github.com/guillaumebort), [@pk11](https://github.com/pk11), [@richdougherty](https://github.com/richdougherty) |
+| **Users** | Users of the Play Framework are the type of stakeholder that make use of the system. These are companies that use Play to build their (often client-facing) web services: <br> [LinkedIn](https://www.linkedin.com), [Coursera](https://www.coursera.org), [Klout](https://klout.com/home), [The Guardian](http://www.theguardian.com/uk), [BBC](http://www.bbc.com), many others |
+| **Supporters** | Cloud Platforms as a service (PaaS) that support the Play Framework for their users: <br> [Amazon Web Services (AWS)](http://aws.amazon.com/opsworks/), [Jelastic](http://jelastic.com), [Heroku](https://www.heroku.com), [Google App Engine (GAE)](https://cloud.google.com/appengine/docs) |
+| **Funders** | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
 
 The figure below shows an overview of the stakeholders discussed in the table above, and also shows the relation of Typesafe's other projects with respect to Play. 
 <a alt="Stakeholder Diagram" href="images/stakeholder_diagram.png"><img src="images/stakeholder_diagram.png" height="450"></a>
