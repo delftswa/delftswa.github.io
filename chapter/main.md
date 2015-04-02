@@ -472,12 +472,11 @@ If later another video-stabilisation phase has to be inserted, this can easily b
 Next to variability for internal components are extension points for external functionality.
 Allowing for plugins to hook into your system prevents the need to add functionality that is not needed for all users,
 keeping the code base small, easing evolution. 
-External developers can create extensions or thin wrappers to other libraries so that the main developers can focus on the core functionality.
+With Play external developers [can create extensions](https://playframework.com/documentation/2.3.x/Modules) or thin wrappers to other libraries so that the main developers can focus on the core functionality.
 
 ### Reliable Change
-To support reliable change, good tools need to be in place. 
-[[Rozanski et al](http://www.viewpoints-and-perspectives.info/home/perspectives/evolution/)]
-For instance, tools for automated builds and testing, software configuration management and continuous integration.
+To support reliable change, good tools need to be in place.
+For instance, tools for automated builds and testing, software configuration management and continuous integration [[Rozanski et al](http://www.viewpoints-and-perspectives.info/home/perspectives/evolution/)].
 In section [How to contribute](#how-to-contribute), 
 we described the tools used for automated build and automated testing from a developer viewpoint.
 
