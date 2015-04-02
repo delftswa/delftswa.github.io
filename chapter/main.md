@@ -449,7 +449,8 @@ configuration parameters can be separated as well.
 
 Breaking up complex processes into smaller steps helps to comprehend 
 the functionality and improves evolvability if those steps make good sense.
-For users of the framework, Play's Iteratees library is a very good tool. 
+Even for users of the framework, Play's Iteratees library is a very good tool.
+It allows to create pipelines of data, to which adding another stage is trivial.
 
 _Remember the following?_
 
