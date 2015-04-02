@@ -1,4 +1,4 @@
-![play_full_color](https://cloud.githubusercontent.com/assets/791189/6451460/d9aa4876-c12e-11e4-94ef-9bca402e1dcb.png)
+![play_full_color](images/play.png)
 # Play Framework
 
 ###Abstract
