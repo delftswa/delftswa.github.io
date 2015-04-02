@@ -41,8 +41,8 @@ Web application frameworks come a
 [a](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks) 
 [dozen](http://www.bestwebframeworks.com/).
 On the other hand, only a few frameworks for [type safe](https://en.wikipedia.org/wiki/Type_safety) languages like Java and Scala exist.
-Play allows you to implement in a mix of Scala and Java, 
-utilising the power of a powerful compiler with good support from a company and a large community.
+Play allows you to implement your application in Scala or Java, or both if you prefer.
+You can utilise the power of a powerful compiler with good support from a company and a large community.
 
 From our experiences we found that Play should be your number one choice in a number of cases. 
 First of all, you can step right in if your development team is used to Java or Scala.
