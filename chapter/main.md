@@ -20,8 +20,8 @@ Finally an overview of Play's past and future is provided from which can be conc
 		- [Workflow](#workflow)
 		- [Who is merging?](#who-is-merging)
 	- [Who is playing?](#who-is-playing)
-		- [Context View](#context-view)
 		- [Stakeholders](#stakeholders)
+		- [Context View](#context-view)
 	- [Future[Play]](#futureplay)
 		- [Reactive](#reactive)		
 		- [Evolution Perspective](#evolution-perspective)
@@ -212,8 +212,8 @@ This allows for a smoother transition to new API's.
 
 When you choose which framework you use, you commit yourself to this framework. 
 It is essential to know the background of the framework to make a good choice.
-Having a context is essential to be able to do a good comparison.
 Knowing which stakeholders are involved is important as it shows if other parties have confidence in the platform and if people are involved in the project.
+Having a context is essential to be able to do a good comparison among competitors.
 
 ### Stakeholders
 The most important stakeholder is Typesafe Inc. Typesafe Inc. is the creator of the Play Framework. 
