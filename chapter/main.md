@@ -34,7 +34,7 @@ Or your team asked if they please could use Scala, or Play?
 This chapter explains what the Play Framework is,
 what it is made of, how you can use it, how you can contribute to it, and who else is involved.
 
-[Play Framework](https://playframework.com/) is a Web application framework for both Java and Scala.
+[Play Framework](https://playframework.com/) is a web application framework for both Java and Scala.
 Play provides you the tools to quickly and easily develop scalable, modern and fast web applications.
 Web application frameworks come a 
 [dime](https://github.com/showcases/web-application-frameworks) 
@@ -115,7 +115,7 @@ For well adopted frameworks, StackOverflow provides answers for almost all quest
 
 We found that there is a relative constant activity on StackOverflow regarding the Play Framework.
 We compared the activity for Play to the activity for Spring MVC. 
-Spring MVC is a Java Web Application Framework on top of [Spring](http://nl.wikipedia.org/wiki/Spring_Framework), which exists since 2002.
+Spring MVC is a Java web application framework on top of [Spring](http://nl.wikipedia.org/wiki/Spring_Framework), which exists since 2002.
 Spring is a huge ecosystem, already at major version 4, so it is interesting to compare it to the much newer Play Framework.
 
 The comparison is shown in the diagram below. 
@@ -396,7 +396,7 @@ To [quote](https://groups.google.com/d/msg/play-framework/AcZs8GXNWUc/PdWeScGaw-
 
 > We are building a framework for the future, not for the past. The
 > choices we make today are important; if we want to have the best Web
-> framework in 2 years, ready for real-time Web applications, supporting
+> framework in 2 years, ready for real-time web applications, supporting
 > many JVM languages, able to scale to ten of thousands of concurrent
 > users, we have to start now.
 > 
