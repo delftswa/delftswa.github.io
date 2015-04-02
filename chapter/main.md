@@ -195,7 +195,7 @@ It is possible to use other [releases](https://playframework.com/download#older-
 
 ### Who is merging?
 The merges of pull requests are handled by, what we define as, integrators.
-The main integrator is [James Roper](https://github.com/jroper), and besides James also [Rich Dougherty](https://github.com/richdougherty) and [Peter Vlughter](https://github.com/pvlugter) acted in the role of integrator.
+The main integrator is [James Roper](https://github.com/jroper), and besides James also [Rich Dougherty](https://github.com/richdougherty) and [Peter Vlughter](https://github.com/pvlugter) act in the role of integrator.
 Of the [10 pull requests](https://github.com/delftswa2014/team-playframework/issues/8) we studied extensively, James merged 7 of the 8 pull requests that were merged.
 
 We have been able to identify several concerns that the integrators looked into. 
