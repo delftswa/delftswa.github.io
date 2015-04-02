@@ -242,7 +242,7 @@ Stakeholders in the top right are the most important stakeholders of the system.
 
 ### Context View
 The context that Play resides in is mainly dependent on the projects that are developed and maintained by Typesafe itself (sbt, Akka). 
-Other dependencies include more general ones like testing frameworks [JUnit](http://junit.org/ and [Specs2](https://etorreborre.github.io/specs2/). 
+Other dependencies include more general ones like testing frameworks [JUnit](http://junit.org/) and [Specs2](https://etorreborre.github.io/specs2/).
 
 Communication about the framework is done using two external organisations, [Google Groups](https://groups.google.com/forum/#!forum/play-framework) mailing list forum and [GitHub](https://github.com/playframework/playframework).
 The latter mainly serves for development, however, issues and bugs are also reported here.
