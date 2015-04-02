@@ -489,7 +489,7 @@ The only part of Play that Typesafe deploys is its documentation on [www.playfra
 [from GitHub](https://github.com/playframework/playframework/tree/master/documentation).
 
 ### Risks
-A risk for evolution of Play could be that any of its dependencies stops to be developed.
+A risk for the evolution of Play could be that any of its dependencies stops to be developed.
 Luckily Play depends on only a few major libraries like Apache Commons 
 and libraries developed at Typesafe, like Akka, sbt and (largely) the Scala language.
 Because Play offers thin wrappers around some of the Apache Commons, Akka and sbt features, 
@@ -522,6 +522,7 @@ Part of this evolution is to transform to a more modular design, reduce the modu
 Play is an underdog in terms of job perspectives, compared to its competitors.
 Nevertheless, there is still significant demand for Play (Scala) developers. 
 The future of Play is a move towards even more "Reactiveness", consisting of reducing blocking I/O operations, and becoming entirely stateless. 
+Play might be in a niche now, but as the web becomes more reactive and real-time, the market grows.
 Besides that, extensibility is key. 
 Allowing variability, upgradability, and maintaining backwards compatibility is crucial for Play to provide users with the latest technologies and maintain its arguably small but sophisticated and exiting user base.
 
