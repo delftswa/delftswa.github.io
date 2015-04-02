@@ -364,7 +364,7 @@ To increase Elasticity and ease Replication, Play aims to be stateless.
 The language Scala itself already aims for as little mutable state as possible, 
 decreasing the amount of issues due to locking and synchronisation.
 Play itself adds to this that HTTP Session data is not stored in server side state,
-but is stored in the cookie, at the client side.
+but is stored in the Cookie, at the client side.
 Authenticity is ensured by signing the Cookie with
 a secret key only available to the server. 
 This allows all of the load balanced instances to access the same Session data, 
