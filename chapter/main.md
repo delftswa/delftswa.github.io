@@ -199,11 +199,11 @@ The main integrator is [James Roper](https://github.com/jroper), and besides Jam
 Of the [10 pull requests](https://github.com/delftswa2014/team-playframework/issues/8) we studied extensively, James merged 7 of the 8 pull requests that were merged.
 
 We have been able to identify several concerns that the integrators looked into. 
-First of all, the integrators focussed on improving the system, while keeping external interfaces [the same if possible](https://github.com/playframework/playframework/pull/3888#issuecomment-72795185). 
+First of all, the integrators focussed on improving the system, while keeping external interfaces [the same, if possible](https://github.com/playframework/playframework/pull/3888#issuecomment-72795185). 
 Secondly, the integrators looked to see if the contributor also added the corresponding documentation, when the code impacts external behaviour. 
 When breaking changes would be merged, the integrators tried to formulate reasons why to introduce the change. 
 Reasons that were considered satisfactory include constraining Play to the specifications of [HTTP](https://github.com/playframework/playframework/pull/3939) or [JSON](https://github.com/playframework/playframework/pull/3888) for example.
-When introducing these changes, the integrators seem to want to have at least [one transitional release](https://docs.google.com/a/typesafe.com/document/d/11sVi1-REAIDFVHvwBrfRt1uXkBzROHQYgmcZNGJtDnA/pub), in which old and new API's co-exist, with the original version of the API being deprecated. 
+When introducing breaking changes, the integrators seem to want to have at least [one transitional release](https://docs.google.com/a/typesafe.com/document/d/11sVi1-REAIDFVHvwBrfRt1uXkBzROHQYgmcZNGJtDnA/pub), in which old and new API's co-exist, with the original version of the API being deprecated. 
 This allows for a smoother transition to new API's.
 
 
