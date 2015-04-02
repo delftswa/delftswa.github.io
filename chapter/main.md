@@ -2,7 +2,7 @@
 # Play Framework
 
 ###Abstract
-This chapter describes and explains various views and perspectives of the Play framework that together aim at providing a broad architectural overview of the system and its context. 
+This chapter describes and explains various views and perspectives of the Play Framework that together aim at providing a broad architectural overview of the system and its context. 
 The stakeholder and context view show that there are a number of very prominent stakeholders involved in the project and that the framework itself does not have many dependencies. 
 Play is in a transition to a more modular design that improves scalability and speed, while trying to maintain backwards compatibility. 
 In the concurrency view it is explained that Play aims at evolving to a reactive and entirely stateless web applications framework and this is partly achieved by moving the execution of HTTP requests to an event driven system. 
@@ -34,17 +34,17 @@ Or your team asked if they please could use Scala, or Play?
 This chapter explains what the Play Framework is,
 what it is made of, how you can use it, how you can contribute to it, and who else is involved.
 
-[Play Framework](https://playframework.com/) is a Web Application Framework for both Java and Scala.
+[Play Framework](https://playframework.com/) is a Web application framework for both Java and Scala.
 Play provides you the tools to quickly and easily develop scalable, modern and fast web applications.
-Web Application frameworks come a 
+Web application frameworks come a 
 [dime](https://github.com/showcases/web-application-frameworks) 
 [a](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks) 
 [dozen](http://www.bestwebframeworks.com/).
 On the other hand, only a few frameworks for [type safe](https://en.wikipedia.org/wiki/Type_safety) languages like Java and Scala exist.
-Play allows you to implement in either or both Scala and Java, 
+Play allows you to implement in a mix of Scala and Java, 
 utilising the power of a powerful compiler with good support from a company and a large community.
 
-From our experiences we find that Play should be your number one choice in a number of cases. 
+From our experiences we found that Play should be your number one choice in a number of cases. 
 First of all, you can step right in if your development team is used to Java or Scala.
 Play offers your team the confidence that type safe languages bring.
 It allows large teams to work together creating large, multi-modular applications, 
@@ -62,7 +62,7 @@ But besides how to use Play, what features does it offer?
 And how are these features realised?
 
 ### Features
-Web Application Frameworks generally provide a HTTP server, request parsing utilities, a way to deliver responses, caches, database access layers, templating libraries, and 
+Web application frameworks generally provide a HTTP server, request parsing utilities, a way to deliver responses, caches, database access layers, templating libraries, and 
 localisation.
 Play offers these things as well.
 
@@ -520,8 +520,8 @@ Play is a framework that is constantly evolving to ensure that their users can i
 Part of this evolution is to transform to a more modular design, reduce the module size, ensure scalability, reduce resource usage, and increase (compilation) speed. 
 Play is an underdog in terms of job perspectives, compared to its competitors.
 Nevertheless, there is still significant demand for Play (Scala) developers. 
-The further of Play is a move towards even more "Reactiveness", consisting of reducing blocking I/O operations and becoming entirely stateless. 
+The future of Play is a move towards even more "Reactiveness", consisting of reducing blocking I/O operations, and becoming entirely stateless. 
 Besides that, extensibility is key. 
-Allowing variability, upgradability and maintaining backwards compatibility is crucial for Play to provide users with the latest technologies and maintain its arguably small but sophisticated and exiting user base.
+Allowing variability, upgradability, and maintaining backwards compatibility is crucial for Play to provide users with the latest technologies and maintain its arguably small but sophisticated and exiting user base.
 
 [Herman, Michiel, Ruben, and Vincent](https://github.com/delftswa2014/team-playframework/blob/master/team.md)
