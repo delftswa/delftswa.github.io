@@ -5,7 +5,7 @@
 This chapter describes and explains various views and perspectives of the Play Framework that together aim at providing a broad architectural overview of the system and its context. 
 The stakeholder and context view show that there are a number of very prominent stakeholders involved in the project and that the framework itself does not have many dependencies. 
 Play is in a transition to a more modular design that improves scalability and speed, while trying to maintain backwards compatibility. 
-In the concurrency view it is explained that Play aims at evolving to a reactive and entirely stateless web applications framework and this is partly achieved by moving the execution of HTTP requests to an event driven system. 
+In a view on reactivity and concurrency it is explained that Play aims at evolving to a reactive and entirely stateless web applications framework and this is partly achieved by moving the execution of HTTP requests to an event driven system. 
 Finally an overview of Play's past and future is provided from which can be concluded that these transitions are in line with proposed development roadmaps.
 
 **Table of Contents**
