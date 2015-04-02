@@ -2,10 +2,10 @@
 # Play Framework
 
 ###Abstract
-This chapter describes and explains various views and perspectives of the Play framework that together aim at providing a broad architectural overview of the system and its context. 
+This chapter describes and explains various views and perspectives of the Play Framework that together aim at providing a broad architectural overview of the system and its context. 
 The stakeholder and context view show that there are a number of very prominent stakeholders involved in the project and that the framework itself does not have many dependencies. 
 Play is in a transition to a more modular design that improves scalability and speed, while trying to maintain backwards compatibility. 
-In the concurrency view it is explained that Play aims at evolving to a reactive and entirely stateless web applications framework and this is partly achieved by moving the execution of HTTP requests to an event driven system. 
+In a view on reactivity and concurrency it is explained that Play aims at evolving to a reactive and entirely stateless web applications framework and this is partly achieved by moving the execution of HTTP requests to an event driven system. 
 Finally an overview of Play's past and future is provided from which can be concluded that these transitions are in line with proposed development roadmaps.
 
 **Table of Contents**
@@ -14,15 +14,15 @@ Finally an overview of Play's past and future is provided from which can be conc
 	- [What is Play?](#what-is-play)
 	- [How to Play?](#how-to-play)
 		- [Features](#features)
-		- [Who is helping?](#whos-helping)
-		- [What is next for me?](#whats-next-for-me)
+		- [Who is helping?](#who-is-helping)
+		- [What is next for me?](#what-is-next-for-me)
 	- [How to contribute?](#how-to-contribute)
 		- [Workflow](#workflow)
-		- [Who's merging?](#whos-merging)
-	- [Who is playing?](#whos-playing)
-		- [Context View](#context-view)
+		- [Who is merging?](#who-is-merging)
+	- [Who is playing?](#who-is-playing)
 		- [Stakeholders](#stakeholders)
-	- [Future[Play]](#future-play)
+		- [Context View](#context-view)
+	- [Future[Play]](#futureplay)
 		- [Reactive](#reactive)		
 		- [Evolution Perspective](#evolution-perspective)
 	- [Conclusion](#conclusion)
@@ -34,17 +34,17 @@ Or your team asked if they please could use Scala, or Play?
 This chapter explains what the Play Framework is,
 what it is made of, how you can use it, how you can contribute to it, and who else is involved.
 
-[Play Framework](https://playframework.com/) is a Web Application Framework for both Java and Scala.
+[Play Framework](https://playframework.com/) is a web application framework for both Java and Scala.
 Play provides you the tools to quickly and easily develop scalable, modern and fast web applications.
-Web Application frameworks come a 
+Web application frameworks come a 
 [dime](https://github.com/showcases/web-application-frameworks) 
 [a](http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks) 
 [dozen](http://www.bestwebframeworks.com/).
 On the other hand, only a few frameworks for [type safe](https://en.wikipedia.org/wiki/Type_safety) languages like Java and Scala exist.
-Play allows you to implement in either or both Scala and Java, 
-utilising the power of a powerful compiler with good support from a company and a large community.
+Play allows you to implement your application in Scala or Java, or both if you prefer.
+You can utilise the power of a powerful compiler with good support from a company and a large community.
 
-From our experiences we find that Play should be your number one choice in a number of cases. 
+From our experiences we found that Play should be your number one choice in a number of cases. 
 First of all, you can step right in if your development team is used to Java or Scala.
 Play offers your team the confidence that type safe languages bring.
 It allows large teams to work together creating large, multi-modular applications, 
@@ -62,14 +62,14 @@ But besides how to use Play, what features does it offer?
 And how are these features realised?
 
 ### Features
-Web Application Frameworks generally provide a HTTP server, request parsing utilities, a way to deliver responses, caches, database access layers, templating libraries, and 
+Web application frameworks generally provide a HTTP server, request parsing utilities, a way to deliver responses, caches, database access layers, templating libraries, and 
 localisation.
 Play offers these things as well.
 
 The features of Play are divided over several modules.
 All HTTP features are located in the play-server and Netty modules for example.
 View templating is brought out of the project, in the form of [Twirl](https://github.com/playframework/twirl).
-Some features are not modularised live in the play-core module.
+Some features are not modularised and live in the play-core module.
 These include routing, MVC logic, form validation, localisation, and several utilities.
 
 ![](images/module-diagram/modules-main.png)
@@ -110,12 +110,12 @@ The main trend is adding modules instead of extending existing modules, and some
 Altogether the developers have done a great job keeping modules small and focussed.
 
 ### Who's helping?
-As any developer will know, the best tool for learning is looking up your questions on [StackOverflow](http://www.stackoverflow.com).
-For well adopted frameworks, StackOverflow provides answers for almost all questions raised by programmers.
+As any developer will know, the best tool for learning is looking up your questions on [Stack Overflow](http://www.stackoverflow.com).
+For well adopted frameworks, Stack Overflow provides answers for almost all questions raised by programmers.
 
-We found that there is a relative constant activity on StackOverflow regarding the Play Framework.
+We found that there is a relative constant activity on Stack Overflow regarding the Play Framework.
 We compared the activity for Play to the activity for Spring MVC. 
-Spring MVC is a Java Web Application Framework on top of [Spring](http://nl.wikipedia.org/wiki/Spring_Framework), which exists since 2002.
+Spring MVC is a Java web application framework on top of [Spring](http://nl.wikipedia.org/wiki/Spring_Framework), which exists since 2002.
 Spring is a huge ecosystem, already at major version 4, so it is interesting to compare it to the much newer Play Framework.
 
 The comparison is shown in the diagram below. 
@@ -152,7 +152,7 @@ but compared to Scalatra, it is scoring good in its niche.
 While many developers would only use Play for developing their own applications, there is also a possibility to contribute to Play.
 The source code of the Play Framework is managed in the [GitHub](https://github.com/playframework/playframework) ecosystem. 
 In this git project, [general rules](https://www.playframework.com/documentation/2.3.x/Guidelines) have to be observed, for instance one cannot commit directly to the 'master' branch.
-Developers are discouraged to use particular code constructs, such as: Locks, casting or modifying the global state.
+Developers are discouraged to use particular code constructs, such as: locks, casting or modifying the global state.
 The [guidelines](https://github.com/playframework/playframework/blob/master/documentation/manual/hacking/Guidelines.md) specify where your code needs to go and what package name it should bear.
 All contributed code needs to be correctly formatted using [Scalariform](https://github.com/mdr/scalariform).
 By doing this the code style remains uniform throughout the project.
@@ -161,7 +161,7 @@ By doing this the code style remains uniform throughout the project.
 The general workflow of committing code is as follows:
 
 0.  Make sure you have signed the [Typesafe CLA](www.typesafe.com/contribute/cla), if not, sign it online.
-1.  An issue should be made on Github, explaining what you want to fix or implement, this helps to tell others in the project what you are working on.
+1.  An issue should be made on GitHub, explaining what you want to fix or implement, this helps to tell others in the project what you are working on.
 2.  You write code locally, while observing the [standardisation guidelines](https://www.playframework.com/documentation/2.3.x/Guidelines#Pull-Request-Requirements). You commit to a local branch with a meaningful name.
 3.  As a general rule, every piece of code that is added must be accompanied by test code.
 Almost every PR we analysed (that provides contributions to major parts of Play) and that is merged, contained test code.
@@ -177,16 +177,16 @@ For most people contributing to Play, the contributions should come from a fork 
 Play utilises a [continuous integration](https://playframework2.ci.cloudbees.com/) service called [Jenkins](http://jenkins-ci.org/) hosted by [CloudBees](https://www.cloudbees.com/).
 This service is configured to automatically build certain branches (such as 'master' or '2.3.x').
 Also all pull requests will be automatically build, or can be rebuild by using a certain keyword in a github pull request comment ([`@play-pull-request-validator try again`](https://github.com/playframework/playframework/pull/4007#issuecomment-76663971)).
-After the build all unit and integration tests are run and the result is reflected on Github, marking the pull request as ready to merge, or indicates whether the build or tests are failing.
+After the build all unit and integration tests are run and the result is reflected on GitHub, marking the pull request as ready to merge, or indicates whether the build or tests are failing.
 
-![Jenkins integrates with Github](images/jenkins.png)
+![Jenkins integrates with GitHub](images/jenkins.png)
 
 <!-- How the binaries are released for testing and use. -->
 ### Releases
 To obtain the Play framework binaries, you can use the  [Typesafe Activator](https://typesafe.com/community/core-tools/activator-and-sbt).
-From the [website](https://playframework.com/download) the latest version of the  Activator can be downloaded, but it is also available via [brew install typesafe-activator](http://brew.sh/).
+From the [website](https://playframework.com/download) the latest version of Activator can be downloaded, but it is also available via [brew install typesafe-activator](http://brew.sh/).
 Activator helps to build and configure play projects.
-For novice users Activator provides a nice web interface by running `activator ui`, some bare Scala and Java application templates and example projects are available from there.
+For novice users Activator provides a nice web interface by running `activator ui`. Some bare templates and example projects are available from there, for both Scala and Java.
 Activator will download Play and other dependencies for a developer using [sbt](http://www.scala-sbt.org/), using Maven or Ivy repositories.
 It is possible to use other [releases](https://playframework.com/download#older-versions) or  [snapshots](https://www.playframework.com/documentation/2.3.x/BuildingFromSource#Use-in-projects) by adjusting the sbt dependency, from a [Maven/Ivy repository](https://www.playframework.com/documentation/2.3.x/Repositories).
 
@@ -194,16 +194,16 @@ It is possible to use other [releases](https://playframework.com/download#older-
 
 
 ### Who is merging?
-The merges of Pull Requests are handled by, what we define as, integrators.
-The main integrator is [James Roper](https://github.com/jroper), and besides James also [Rich Dougherty](https://github.com/richdougherty) and [Peter Vlughter](https://github.com/pvlugter) acted in the role of integrator.
+The merges of pull requests are handled by, what we define as, integrators.
+The main integrator is [James Roper](https://github.com/jroper), and besides James also [Rich Dougherty](https://github.com/richdougherty) and [Peter Vlughter](https://github.com/pvlugter) act in the role of integrator.
 Of the [10 pull requests](https://github.com/delftswa2014/team-playframework/issues/8) we studied extensively, James merged 7 of the 8 pull requests that were merged.
 
 We have been able to identify several concerns that the integrators looked into. 
-First of all, the integrators focussed on improving the system, while keeping external interfaces [the same if possible](https://github.com/playframework/playframework/pull/3888#issuecomment-72795185). 
+First of all, the integrators focussed on improving the system, while keeping external interfaces [the same, if possible](https://github.com/playframework/playframework/pull/3888#issuecomment-72795185). 
 Secondly, the integrators looked to see if the contributor also added the corresponding documentation, when the code impacts external behaviour. 
 When breaking changes would be merged, the integrators tried to formulate reasons why to introduce the change. 
 Reasons that were considered satisfactory include constraining Play to the specifications of [HTTP](https://github.com/playframework/playframework/pull/3939) or [JSON](https://github.com/playframework/playframework/pull/3888) for example.
-When introducing these changes, the integrators seem to want to have at least [one transitional release](https://docs.google.com/a/typesafe.com/document/d/11sVi1-REAIDFVHvwBrfRt1uXkBzROHQYgmcZNGJtDnA/pub), in which old and new API's co-exist, with the original version of the API being deprecated. 
+When introducing breaking changes, the integrators seem to want to have at least [one transitional release](https://docs.google.com/a/typesafe.com/document/d/11sVi1-REAIDFVHvwBrfRt1uXkBzROHQYgmcZNGJtDnA/pub), in which old and new API's co-exist, with the original version of the API being deprecated. 
 This allows for a smoother transition to new API's.
 
 
@@ -212,23 +212,24 @@ This allows for a smoother transition to new API's.
 
 When you choose which framework you use, you commit yourself to this framework. 
 It is essential to know the background of the framework to make a good choice.
-Having a context is essential to be able to do a good comparison.
 Knowing which stakeholders are involved is important as it shows if other parties have confidence in the platform and if people are involved in the project.
+Having a context is essential to be able to do a good comparison among competitors.
 
 ### Stakeholders
-The most important stakeholder is Typesafe Inc. Typesafe Inc. is the creator of the Play Framework. 
+The most important stakeholder is [Typesafe Inc](http://typesafe.com/). 
+Typesafe is the creator of the Play Framework. 
 Apart from the Play Framework, it [leads development](http://typesafe.com/products/typesafe-reactive-platform) of open source projects like Scala, Akka and sbt.
 
-Typesafe is a stakeholder that can be identified with multiple roles: it is a *Communicator*, a *Maintainer*, and as an *Assessor*, as Typesafe ensures that each pull request of Play is conform legal [regulation](http://www.typesafe.com/contribute/cla).
+Typesafe is a stakeholder that can be identified with multiple roles: it is a **_Communicator_**, a **_Maintainer_**, and as an **_Assessor_**, as Typesafe ensures that each pull request of Play is conform legal [regulation](http://www.typesafe.com/contribute/cla).
 
 Other stakeholders can be identified. Together with their roles they are listed in the table below. For a detailed overview, we refer to [the Stakeholder Analysis](D1.md#stakeholders).
 
 | Type | Entities |
 |---|---|
-| Developers | Construct and deploy the system. Most active developers are employees of Typesafe. <br>[@jroper](https://github.com/jroper), [@guillaumebort](https://github.com/guillaumebort), [@pk11](https://github.com/pk11), [@richdougherty](https://github.com/richdougherty) |
-| Users | Users of the Play Framework are the type of stakeholder that make use of the system. These are companies that use Play to build their (often client-facing) web services: <br> [LinkedIn](https://www.linkedin.com), [Coursera](https://www.coursera.org), [Klout](https://klout.com/home), [The Guardian](http://www.theguardian.com/uk), [BBC](http://www.bbc.com), many others |
-| Supporters | Cloud Platforms as a service (PaaS) that support the Play Framework for their users: <br> [Amazon Web Services (AWS)](http://aws.amazon.com/opsworks/), [Jelastic](http://jelastic.com), [Heroku](https://www.heroku.com), [Google App Engine (GAE)](https://cloud.google.com/appengine/docs) |
-| Funders | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
+| **Developers** | Construct and deploy the system. Most active developers are employees of Typesafe. <br>[@jroper](https://github.com/jroper), [@guillaumebort](https://github.com/guillaumebort), [@pk11](https://github.com/pk11), [@richdougherty](https://github.com/richdougherty) |
+| **Users** | Users of the Play Framework are the type of stakeholder that make use of the system. These are companies that use Play to build their (often client-facing) web services: <br> [LinkedIn](https://www.linkedin.com), [Coursera](https://www.coursera.org), [Klout](https://klout.com/home), [The Guardian](http://www.theguardian.com/uk), [BBC](http://www.bbc.com), many others |
+| **Supporters** | Cloud Platforms as a service (PaaS) that support the Play Framework for their users: <br> [Amazon Web Services (AWS)](http://aws.amazon.com/opsworks/), [Jelastic](http://jelastic.com), [Heroku](https://www.heroku.com), [Google App Engine (GAE)](https://cloud.google.com/appengine/docs) |
+| **Funders** | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
 
 The figure below shows an overview of the stakeholders discussed in the table above, and also shows the relation of Typesafe's other projects with respect to Play. 
 <a alt="Stakeholder Diagram" href="images/stakeholder_diagram.png"><img src="images/stakeholder_diagram.png" height="450"></a>
@@ -241,7 +242,7 @@ Stakeholders in the top right are the most important stakeholders of the system.
 
 ### Context View
 The context that Play resides in is mainly dependent on the projects that are developed and maintained by Typesafe itself (sbt, Akka). 
-Other dependencies include more general ones like testing frameworks [JUnit](http://junit.org/ and [Specs2](https://etorreborre.github.io/specs2/). 
+Other dependencies include more general ones like testing frameworks [JUnit](http://junit.org/) and [Specs2](https://etorreborre.github.io/specs2/).
 
 Communication about the framework is done using two external organisations, [Google Groups](https://groups.google.com/forum/#!forum/play-framework) mailing list forum and [GitHub](https://github.com/playframework/playframework).
 The latter mainly serves for development, however, issues and bugs are also reported here.
@@ -363,7 +364,7 @@ To increase Elasticity and ease Replication, Play aims to be stateless.
 The language Scala itself already aims for as little mutable state as possible, 
 decreasing the amount of issues due to locking and synchronisation.
 Play itself adds to this that HTTP Session data is not stored in server side state,
-but is stored in the cookie, at the client side.
+but is stored in the Cookie, at the client side.
 Authenticity is ensured by signing the Cookie with
 a secret key only available to the server. 
 This allows all of the load balanced instances to access the same Session data, 
@@ -396,7 +397,7 @@ To [quote](https://groups.google.com/d/msg/play-framework/AcZs8GXNWUc/PdWeScGaw-
 
 > We are building a framework for the future, not for the past. The
 > choices we make today are important; if we want to have the best Web
-> framework in 2 years, ready for real-time Web applications, supporting
+> framework in 2 years, ready for real-time web applications, supporting
 > many JVM languages, able to scale to ten of thousands of concurrent
 > users, we have to start now.
 > 
@@ -448,7 +449,8 @@ configuration parameters can be separated as well.
 
 Breaking up complex processes into smaller steps helps to comprehend 
 the functionality and improves evolvability if those steps make good sense.
-For users of the framework, Play's Iteratees library is a very good tool. 
+Even for users of the framework, Play's Iteratees library is a very good tool.
+It allows to create pipelines of data, to which adding another stage is trivial.
 
 _Remember the following?_
 
@@ -464,18 +466,17 @@ possibly with different roles.
 Imagine for example an video service, which could first upload and store a video,
 then transcode the file on a heavy rendering machine and finally notify all connected clients of the new video.
 This kind of communication could be handled by Akka. 
-If later another stabilisation phase has to be inserted, this can easily be done even more easily.
+If later another video-stabilisation phase has to be inserted, this can easily be done even more easily.
 
 ### Extensibility
 Next to variability for internal components are extension points for external functionality.
 Allowing for plugins to hook into your system prevents the need to add functionality that is not needed for all users,
 keeping the code base small, easing evolution. 
-External developers can create extensions or thin wrappers to other libraries so that the main developers can focus on the core functionality.
+With Play external developers [can create extensions](https://playframework.com/documentation/2.3.x/Modules) or thin wrappers to other libraries so that the main developers can focus on the core functionality.
 
 ### Reliable Change
-To support reliable change, good tools need to be in place. 
-[[Rozanski et al](http://www.viewpoints-and-perspectives.info/home/perspectives/evolution/)]
-For instance, tools for automated builds and testing, software configuration management and continuous integration.
+To support reliable change, good tools need to be in place.
+For instance, tools for automated builds and testing, software configuration management and continuous integration [[Rozanski et al](http://www.viewpoints-and-perspectives.info/home/perspectives/evolution/)].
 In section [How to contribute](#how-to-contribute), 
 we described the tools used for automated build and automated testing from a developer viewpoint.
 
@@ -484,11 +485,11 @@ The software configuration is managed with sbt, which uses Ivy or Maven style so
 For accessing Play itself, Typesafe provides a Maven2-style [repository](https://repo.typesafe.com/typesafe/releases/).
 
 Play is a framework to be used to build software, therefore the continuous integration part of the software itself is relatively small.
-The only part of Play that is continuously integrated is the documentation on [www.playframework.com](http://www.playframework.com), which is updated [every ten minutes](https://www.playframework.com/documentation/2.3.x/Translations#Deploying-documentation-to-playframework.com ), with the latest changes 
-[from Github](https://github.com/playframework/playframework/tree/master/documentation).
+The only part of Play that Typesafe deploys is its documentation on [www.playframework.com](http://www.playframework.com), which is continuously integrated and updated [every ten minutes](https://www.playframework.com/documentation/2.3.x/Translations#Deploying-documentation-to-playframework.com ), with the latest changes 
+[from GitHub](https://github.com/playframework/playframework/tree/master/documentation).
 
 ### Risks
-A risk for evolution of Play could be that any of its dependencies stops to be developed.
+A risk for the evolution of Play could be that any of its dependencies stops to be developed.
 Luckily Play depends on only a few major libraries like Apache Commons 
 and libraries developed at Typesafe, like Akka, sbt and (largely) the Scala language.
 Because Play offers thin wrappers around some of the Apache Commons, Akka and sbt features, 
@@ -520,8 +521,9 @@ Play is a framework that is constantly evolving to ensure that their users can i
 Part of this evolution is to transform to a more modular design, reduce the module size, ensure scalability, reduce resource usage, and increase (compilation) speed. 
 Play is an underdog in terms of job perspectives, compared to its competitors.
 Nevertheless, there is still significant demand for Play (Scala) developers. 
-The further of Play is a move towards even more "Reactiveness", consisting of reducing blocking I/O operations and becoming entirely stateless. 
+The future of Play is a move towards even more "Reactiveness", consisting of reducing blocking I/O operations, and becoming entirely stateless. 
+Play might be in a niche now, but as the web becomes more reactive and real-time, the market grows.
 Besides that, extensibility is key. 
-Allowing variability, upgradability and maintaining backwards compatibility is crucial for Play to provide users with the latest technologies and maintain its arguably small but sophisticated and exiting user base.
+Allowing variability, upgradability, and maintaining backwards compatibility is crucial for Play to provide users with the latest technologies and maintain its arguably small but sophisticated and exiting user base.
 
 [Herman, Michiel, Ruben, and Vincent](https://github.com/delftswa2014/team-playframework/blob/master/team.md)
