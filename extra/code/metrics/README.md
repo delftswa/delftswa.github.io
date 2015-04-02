@@ -10,7 +10,7 @@ http-server # run inside the [metrics] folder
 Now surf to [http://localhost:8080/chart.html](http://localhost:8080/chart.html) to view the graph.
 
 You should see something like this:
-![Module metrics](https://cloud.githubusercontent.com/assets/791189/6657079/6ef44d4e-cb40-11e4-840c-7a76cd495619.png)
+![Module metrics](../../../chapter/images/modules-over-time.png)
 
 # How to run these metrics
 

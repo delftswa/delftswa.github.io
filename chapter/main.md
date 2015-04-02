@@ -1,4 +1,4 @@
-![play_full_color](https://cloud.githubusercontent.com/assets/791189/6451460/d9aa4876-c12e-11e4-94ef-9bca402e1dcb.png)
+![play_full_color](images/play.png)
 # Play Framework
 
 ###Abstract
@@ -72,10 +72,10 @@ View templating is brought out of the project, in the form of [Twirl](https://gi
 Some features are not modularised live in the play-core module.
 These include routing, MVC logic, form validation, localisation, and several utilities.
 
-![](module-diagram/modules-main.png)
+![](images/module-diagram/modules-main.png)
 
 The diagram above shows most of the modules and their dependencies. 
-The test modules and Java-specific modules are excluded to provide a clearer view, but can be found in the [full diagram](module-diagram/modules-full.png). 
+The test modules and Java-specific modules are excluded to provide a clearer view, but can be found in the [full diagram](images/module-diagram/modules-full.png). 
 Much of the functionality is contained in the main Play module, central in the diagram. 
 This main module depends only on these high level modules, required for basic operation:
 
@@ -102,7 +102,7 @@ The developers of Play focussed a lot on modularising Play in the past and conti
 To visualise this, the following [interactive graph](http://delftswa2014.github.io/team-playframework/modules.html) shows the size in LOC of each module as a different slice of the total code base. 
 The overlaying text is dynamic and shows the commits in the currently hovered over changes.
 
-[![Modules over time](modules-over-time.png)](http://delftswa2014.github.io/team-playframework/modules.html)
+[![Modules over time](images/modules-over-time.png)](http://delftswa2014.github.io/team-playframework/modules.html)
 
 First of all we can see that lots of modules were added over time. 
 Also existing modules disappeared, as was the case with Twirl and [Anorm](https://www.playframework.com/documentation/2.1.0/ScalaAnorm). 
@@ -123,7 +123,7 @@ The fact that Play has less questions could mean that Play is easier to use than
 Both seem reasonable: Play is very well documented, and Spring MVC is widely adopted due to Spring, convincing people to use that whole platform.
 Compared to their estimated sizes (see [jobs](#what-s-next-for-me) below) however, Play has relatively many questions.
 
-![diagram](frequenogramStackoverflow.png)
+![diagram](images/frequenogramStackoverflow.png)
 
 Getting exact usage numbers is hard however, as Play does not advertise itself in response headers.
 This causes sites like [BuiltWith.com](http://trends.builtwith.com/framework/Play-Framework) not to measure its world wide usage correctly. 
@@ -138,7 +138,7 @@ Our metric here, the amount of job openings, relates to the question of how adop
 The more jobs we found, the more adopted Play is.
 We looked at the amount of jobs on [Indeed](http://indeed.com), for which each of the frameworks is listed.
 
-![Job openings](job.png)
+![Job openings](images/job.png)
 
 From this we can see that there exist frameworks that are far more adopted by employers, concluded from the amount of job openings.
 We think that this is due to the fact that traditionally PHP and JavaScript are the most common web languages,
@@ -179,7 +179,7 @@ This service is configured to automatically build certain branches (such as 'mas
 Also all pull requests will be automatically build, or can be rebuild by using a certain keyword in a github pull request comment ([`@play-pull-request-validator try again`](https://github.com/playframework/playframework/pull/4007#issuecomment-76663971)).
 After the build all unit and integration tests are run and the result is reflected on Github, marking the pull request as ready to merge, or indicates whether the build or tests are failing.
 
-![Jenkins integrates with Github](jenkins.png)
+![Jenkins integrates with Github](images/jenkins.png)
 
 <!-- How the binaries are released for testing and use. -->
 ### Releases
@@ -231,13 +231,13 @@ Other stakeholders can be identified. Together with their roles they are listed 
 | Funders | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
 
 The figure below shows an overview of the stakeholders discussed in the table above, and also shows the relation of Typesafe's other projects with respect to Play. 
-<a alt="Stakeholder Diagram" href="https://cloud.githubusercontent.com/assets/791189/6330391/19e5d764-bb78-11e4-92f2-2a527f6a229c.png"><img src="https://cloud.githubusercontent.com/assets/791189/6330391/19e5d764-bb78-11e4-92f2-2a527f6a229c.png" height="450"></a>
+<a alt="Stakeholder Diagram" href="images/stakeholder_diagram.png"><img src="images/stakeholder_diagram.png" height="450"></a>
 
 
 In the diagram below, the stakeholders' power with respect to their interest are shown in a [Power/Interest Grid](http://www.mindtools.com/pages/article/newPPM_07.htm). 
 Stakeholders in the top right are the most important stakeholders of the system.
 
-![Power/Interest Grid](https://cloud.githubusercontent.com/assets/791189/6330393/1ce56cea-bb78-11e4-863f-e839c2763f02.png)
+![Power/Interest Grid](images/interest-power.png)
 
 ### Context View
 The context that Play resides in is mainly dependent on the projects that are developed and maintained by Typesafe itself (sbt, Akka). 
@@ -256,7 +256,7 @@ There exist a number of web frameworks which can be considered as competitors. T
  * [Lift](http://liftweb.net/) (Scala)
 
 The diagram below explains context and the dependencies and relations between the discussed components. 
-![Context View](context-view.png)
+![Context View](images/context-view.png)
 
 ## Future[Play]
 The Future[A] looks bright, is a bad inside joke.
@@ -290,7 +290,7 @@ Thist allows the main HTTP *execution context* to handle new requests, even when
 The image below [by Julien Richard-Foy](https://www.packtpub.com/books/content/handling-long-running-requests-play) (major contributor of Play) illustrates this: 
 the execution of code is interleaved, while the threaded model would block the entire thread.
 
-![Threaded vs evented execution models](reactive/execution-models.png)
+![Threaded vs evented execution models](images/reactive/execution-models.png)
 
 Until this point, this section could have been about NodeJS or any other modern platform as well.
 While basic I/O requires only some minor usage of Scala's Futures (or Promises) which can be then handed off to asynchronous actions, 
@@ -321,7 +321,7 @@ Julien Richard-Foy visualised this in the image below.
 The two white horizontal boxes represent the execution contexts with both two threads.
 Using execution contexts, related work can be grouped, keeping the default context fast and responsive while still waiting for legacy blocking operations on other threads, in a transparent way.
 
-![Execution Contexts](reactive/2400OS_05_08.png)
+![Execution Contexts](images/reactive/2400OS_05_08.png)
 
 However, in general, blocking operations should be prevented. 
 It is better to divide the work into small tasks that can be executed individually.
