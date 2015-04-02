@@ -466,7 +466,7 @@ possibly with different roles.
 Imagine for example an video service, which could first upload and store a video,
 then transcode the file on a heavy rendering machine and finally notify all connected clients of the new video.
 This kind of communication could be handled by Akka. 
-If later another stabilisation phase has to be inserted, this can easily be done even more easily.
+If later another video-stabilisation phase has to be inserted, this can easily be done even more easily.
 
 ### Extensibility
 Next to variability for internal components are extension points for external functionality.
