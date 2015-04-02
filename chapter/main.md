@@ -216,7 +216,8 @@ Knowing which stakeholders are involved is important as it shows if other partie
 Having a context is essential to be able to do a good comparison among competitors.
 
 ### Stakeholders
-The most important stakeholder is Typesafe Inc. Typesafe Inc. is the creator of the Play Framework. 
+The most important stakeholder is [Typesafe Inc](http://typesafe.com/). 
+Typesafe is the creator of the Play Framework. 
 Apart from the Play Framework, it [leads development](http://typesafe.com/products/typesafe-reactive-platform) of open source projects like Scala, Akka and sbt.
 
 Typesafe is a stakeholder that can be identified with multiple roles: it is a *Communicator*, a *Maintainer*, and as an *Assessor*, as Typesafe ensures that each pull request of Play is conform legal [regulation](http://www.typesafe.com/contribute/cla).
