@@ -1,10 +1,23 @@
+var fs = require("fs");
 var data = require('./metricscache.json');
+var merges = fs.readFileSync("merges.csv", {encoding: "utf8"}).split("\n");
 
 var commits = [];
-for(var sha in data.commits){
-	//if(data.commits[sha].x < 10)
-		commits[data.commits[sha].x] = data.commits[sha];
-}
+merges.forEach(function(row){
+	var p = row.split(" ",2);
+	var message = row.substr(52);
+	commits.push({
+		sha: p[0],
+		date: new Date(p[1]*1000),
+		unix: p[1],
+		message: message
+	})
+});
+
+// for(var sha in data.commits){
+// 	//if(data.commits[sha].x < 10)
+// 		commits[data.commits[sha].x] = data.commits[sha];
+// }
 
 var modules = {};
 for(var x in commits){
