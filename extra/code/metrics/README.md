@@ -26,3 +26,9 @@ If you place
 [this json file](https://github.com/delftswa2014/team-playframework/releases/download/metric-modules-output/metricscache.bare-git.json) 
 in the same directory as where you run the sbt command you will utilize that as a cache, 
 which speeds things up tremendously.
+
+# Fetching merge commits only
+
+````bash
+git log --merges --format="%H %ct %s" > merges.csv
+````
