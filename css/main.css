@@ -70,5 +70,5 @@ table td, table th {
   width: 69%;
   position: relative;
   float: right;
-//  min-height: 3000px;
+  min-height: 1000px;
 }
