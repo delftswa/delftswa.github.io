@@ -1,14 +1,23 @@
+---
+layout: default
+title: Example chapter
+chapter: true
+---
+
 # Place your chapter here
 
 ## How it works
 
 Generally you can simply copy your content from your team repository.
-If you want to use the `git filter` as proposed by @hermanbanken, please see that issue
+If you want to use the `git filter` as proposed by @hermanbanken, please see [that issue](https://github.com/delftswa2014/course-info-2015/issues/124)
+
 
 __Some remarks__:
 
 - Only refer to images in your images subfolder, not your repo (that one is not public)
 - Relative links
+- Name your file `index.md`
+- Don't forget the Jekyll headings just as in this file!
 
 ## Submitting
 
@@ -31,4 +40,10 @@ The site is now available on http://localhost:4000
 ## Questions?
 
 Just raise an issue and tag me!
+
+## Got it
+
+Cool!
+
+![high five](images/got-it.gif)
 
