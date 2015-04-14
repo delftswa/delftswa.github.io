@@ -1,0 +1,8 @@
+pygments: true
+relative_permalinks: false
+
+timezone: UTC
+exclude: ['provision.sh','Vagrantfile','README.md']
+
+# Server settings
+host: 0.0.0.0

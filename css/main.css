@@ -1,0 +1,74 @@
+body, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+table {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+table td, table th {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  min-width: 1080px;
+  max-width: 1280px;
+  position: relative;
+  display: inline-block;
+}
+
+.sidebar {
+  width: 30%;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+  background-color: #0072ba;
+  padding-top: 56px
+}
+
+.sidebar h3 {
+  color: white !important;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 18px;
+}
+
+.sidebar a {
+  color: #9ccdec;
+  text-decoration: none;
+}
+
+.sidebar .cover {
+  color: white;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar .cover img {
+  border-radius: 140px;
+  -webkit-border-radius: 140px;
+  -moz-border-radius: 140px;
+  border: 15px solid #0064aa;
+  margin: -15px;
+}
+
+.sidebar .cover ol {
+  list-style-type: decimal-leading-zero;
+  margin: 0px;
+  padding: 0px 32px;
+}
+
+.content {
+  width: 69%;
+  position: relative;
+  float: right;
+  min-height: 3000px;
+}
