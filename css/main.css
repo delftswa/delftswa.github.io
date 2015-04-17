@@ -14,6 +14,11 @@ table td, table th {
   border-right: 1px solid #ccc;
 }
 
+img {
+  max-width: 100%; 
+  /* Github's markdown renderer has this too, this will probably help a lot of people */
+}
+
 .container {
   min-height: 100%;
   width: 100%;
