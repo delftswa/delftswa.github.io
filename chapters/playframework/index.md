@@ -6,6 +6,7 @@ chapter: true
 ---
 
 ![play_full_color](images/play.png)
+
 # Play Framework
 
 ###Abstract
@@ -188,7 +189,6 @@ After the build all unit and integration tests are run and the result is reflect
 
 ![Jenkins integrates with GitHub](images/jenkins.png)
 
-<!-- How the binaries are released for testing and use. -->
 ### Releases
 To obtain the Play framework binaries, you can use the  [Typesafe Activator](https://typesafe.com/community/core-tools/activator-and-sbt).
 From the [website](https://playframework.com/download) the latest version of Activator can be downloaded, but it is also available via [brew install typesafe-activator](http://brew.sh/).
@@ -239,8 +239,8 @@ Other stakeholders can be identified. Together with their roles they are listed 
 | **Funders** | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
 
 The figure below shows an overview of the stakeholders discussed in the table above, and also shows the relation of Typesafe's other projects with respect to Play. 
-<a alt="Stakeholder Diagram" href="images/stakeholder_diagram.png"><img src="images/stakeholder_diagram.png" height="450"></a>
 
+<a alt="Stakeholder Diagram" href="images/stakeholder_diagram.png"><img src="images/stakeholder_diagram.png" height="450"></a>
 
 In the diagram below, the stakeholders' power with respect to their interest are shown in a [Power/Interest Grid](http://www.mindtools.com/pages/article/newPPM_07.htm). 
 Stakeholders in the top right are the most important stakeholders of the system.
@@ -308,22 +308,29 @@ For example, when we defer a heavy computation, we need to put it into a differe
 or we would still run out of threads on the default execution context. We can do so using very little code in Play:
 
 In `application.conf`:
-```
+
+{% highlight text %}
+
 my-context {
   fork-join-executor {
     parallelism-factor = 20.0
     parallelism-max = 200
   }
 }
-```
+
+{% endhighlight %}
+
 In `MyController.scala`:
-```scala
+
+{% highlight scala %}
+
 implicit val myExecutionContext = Akka.system.dispatchers.lookup("my-context")
 def index = Action.async {
   val futureInt = scala.concurrent.Future { intensiveComputation() }
   futureInt.map(i => Ok("Got result: " + i))
 }
-```
+
+{% endhighlight %}
 
 Julien Richard-Foy visualised this in the image below. 
 The two white horizontal boxes represent the execution contexts with both two threads.
@@ -345,7 +352,7 @@ The library itself consists of three types, the Enumerator, producing data,
 the Enumeratee which transforms, maps or interleaves data,
 and the Iteratee which consumes data, producing a final result:
 
-`Enumerator (produce data) → Enumeratee (map data) → Iteratee (consume data)`
+````Enumerator (produce data) → Enumeratee (map data) → Iteratee (consume data)````
 
 Each step of an Iteratee can represent a single chunk of computation, for example with the size of a network packet.
 Using Iteratees, many different data pipelines can be made.
