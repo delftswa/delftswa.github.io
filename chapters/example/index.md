@@ -1,5 +1,6 @@
 ---
 layout: default
+project: a
 title: Example chapter
 chapter: true
 ---
