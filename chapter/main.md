@@ -355,7 +355,7 @@ It can also be used to process live data streams like the Twitter Firehose,
 like how [Klout](http://engineering.klout.com/2013/01/iteratees-in-big-data-at-klout/) is using Play for it Big Data on Social Network data. 
 These streams can be long running, but the tasks themselves are small, this is ideal for an evented execution model.
 
-Using this pattern Play can also handle thousands of concurrent long-running requests. This is for example shown in this small [chatting application](https://github.com/matthiasn/sse-chat/issues/10#issuecomment-42857305).
+Using this pattern Play can also handle thousands of concurrent long-running requests. This is for example shown in this small [chatting application](https://github.com/matthiasn/sse-chat/issues/10#issuecomment-42857305) of Matthias Nehlsen (@matthiasn).
 Having a single server handling these amounts of requests is certainly not trivial using a solely thread-based model.
 
 ![Chat application](https://raw.githubusercontent.com/matthiasn/sse-chat/master/tutorial/sse-chat2.png)
