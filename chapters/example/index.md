@@ -19,6 +19,7 @@ __Some remarks__:
 - Relative links
 - Name your file `index.md`
 - Don't forget the Jekyll headings just as in this file!
+- Run the `test_links.rb` script in the repo root like `ruby test_links.rb <YOURPROJECTNAME>` and check if all links are ok
 
 ## Submitting
 
@@ -28,7 +29,7 @@ It's simple really!
 1. You can place your content as described here
 1. Commit, push, and submit a pull request
 1. I (@rogierslag) will check it and merge
-1. Within some minutes your new site should be available on delftswa2014.github.io
+1. Within some minutes your new site should be available on delftswa.github.io
 
 You can use vagrant to start a virtual machine with the site generator.
 
