@@ -1,3 +1,10 @@
+---
+layout: default
+project: playframework
+title: Play Framework
+chapter: true
+---
+
 ![play_full_color](images/play.png)
 # Play Framework
 
