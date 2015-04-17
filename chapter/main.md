@@ -106,10 +106,10 @@ Unused modules can be disabled, lowering resource usage.
 Furthermore Scala [compilation speeds are improved](https://www.playframework.com/documentation/latest/CompilationSpeed) when creating smaller modules, for several reasons, including the parallelisation and limiting the amount of compilation steps.
 
 The developers of Play focussed a lot on modularising Play in the past and continue to do so today. 
-To visualise this, the following [interactive graph](http://delftswa2014.github.io/team-playframework/modules.html) shows the size in LOC of each module as a different slice of the total code base. 
+To visualise this, the following [interactive graph](http://hermanbanken.github.io/play-metrics/modules.html) shows the size in LOC of each module as a different slice of the total code base. 
 The overlaying text is dynamic and shows the commits in the currently hovered over changes.
 
-[![Modules over time](images/modules-over-time.png)](http://delftswa2014.github.io/team-playframework/modules.html)
+[![Modules over time](images/modules-over-time.png)](http://hermanbanken.github.io/play-metrics/modules.html)
 
 First of all we can see that lots of modules were added over time. 
 Also existing modules disappeared, as was the case with Twirl and [Anorm](https://www.playframework.com/documentation/2.1.0/ScalaAnorm). 
@@ -203,7 +203,7 @@ It is possible to use other [releases](https://playframework.com/download#older-
 ### Who is merging?
 The merges of pull requests are handled by, what we define as, integrators.
 The main integrator is [James Roper](https://github.com/jroper), and besides James also [Rich Dougherty](https://github.com/richdougherty) and [Peter Vlughter](https://github.com/pvlugter) act in the role of integrator.
-Of the [10 pull requests](https://github.com/delftswa2014/team-playframework/issues/8) we studied extensively, James merged 7 of the 8 pull requests that were merged.
+Of the 10 pull requests we studied extensively, James merged 7 of the 8 pull requests that were merged.
 
 We have been able to identify several concerns that the integrators looked into. 
 First of all, the integrators focussed on improving the system, while keeping external interfaces [the same, if possible](https://github.com/playframework/playframework/pull/3888#issuecomment-72795185). 
@@ -533,4 +533,7 @@ Play might be in a niche now, but as the web becomes more reactive and real-time
 Besides that, extensibility is key. 
 Allowing variability, upgradability, and maintaining backwards compatibility is crucial for Play to provide users with the latest technologies and maintain its arguably small but sophisticated and exiting user base.
 
-[Herman, Michiel, Ruben, and Vincent](https://github.com/delftswa2014/team-playframework/blob/master/team.md)
+[Herman](https://github.com/hermanbanken), 
+[Michiel](https://github.com/michielha), 
+[Ruben](https://github.com/rubenverboon), and 
+[Vincent](https://github.com/vivami)
