@@ -1,11 +1,14 @@
 ---
 layout: default
 project: a
-title: Example chapter
+title: Example chapter, title for front page
 chapter: true
 ---
 
-# Place your chapter here
+# Place your chapter here _with appealing title_
+
+**Author1, Author2, Author3, Author4**<br/>
+*Delft University of Technology*
 
 ## How it works
 
@@ -48,4 +51,3 @@ Just raise an issue and tag me!
 Cool!
 
 ![high five](images/got-it.gif)
-
