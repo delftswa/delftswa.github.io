@@ -4,7 +4,11 @@ project: angulardart
 title: AngularDart
 chapter: true
 ---
-# Abstract
+# AngularDart: A Client-Side Web Framework for Dart
+**Stephan Kool, Kors van Loon, Jeroen Vos and Jochem de Goede**<br/>
+*Delft University of Technology*
+
+## Abstract
 
 In this chapter, a client-side web framework called AngularDart is studied, which is a Dart version of its JavaScript counterpart: AngularJs. 
 AngularJs came from the need of developers to have easy data binding between forms and JavaScript and grew out to a big framework for developing client-side web applications. 
@@ -15,9 +19,9 @@ We discovered that for an open source project contributions are tremendously imp
 
 ![AngularDart](images/angulardart_logo.png "AngularDart")
 
-# Introduction
+## Introduction
 
-## From the Humble Beginnings of AngularJs
+### From the Humble Beginnings of AngularJs
 
 The story of Angular starts with the need for improved client-side scripting and quick prototyping. Two developers of the company Brat Tech LLC company started to work on a framework Angular. The framework had few followers and it was decided to release the framework as open source and abandon the idea. Later, Google picked up the initiative and turned it into the open-source AngularJS we know today. How Google is involved will be described in the stakeholder section. 
 Amongst Angular's unique and innovative features are two-way data binding, dependency injection, easy-to-test code and extending the HTML mark-up with directives. AngularJs is a JavaScript client-side web framework that allows for expansion of HTML coding in applications. The data binding and dependency injection reduces the coding effort and the decoupling of the DOM convention reduces the testing effort. 
@@ -29,9 +33,7 @@ Since the aging of the programming language JavaScript, AngularJs was still not 
 AngularDart combines the client-side framework Angular with the programming language Dart. It provides the benefits of the more structured Dart over JavaScript, while still having the flexibility and power of Angular.
 
 
-By [Stephan Kool](https://github.com/sfkool), [Kors van Loon](https://github.com/korsvanloon), [Jeroen Vos](https://github.com/Jeroenvos) and [Jochem de Goede](https://github.com/Donenzone). 
-
-## What it is all about - A Quick Example
+### What it is all about - A Quick Example
 
 HTML:
 <pre>
@@ -114,13 +116,13 @@ main() {
 
 In the next section the Angular framework is described: Its stakeholders are analyzed, as well as the project's organization. Then, the implementation and its functions are assessed, after which the evolution is described and the metrics for evaluation are introduced. Lastly, the contributions made are discussed.
 
-# AngularDart in detail
+## AngularDart in detail
 The need for AngularDart has been established in the previous segment. In the next section a description of relevant stakeholders, an overview of the functional aspects of AngularDart and an overview of the modularity of the system is given.
 
-## Who are Involved? - Stakeholders
+### Who are Involved? - Stakeholders
 The stakeholders of AngularDart are divided according Woods and Rozanski (2011). The three main types of stakeholders for Angular are the acquirers, developers and users, which are described in this section. 
 
-### Google
+#### Google
 Google is both the acquirer of AngularDart and delivers its main developers. 
 Google is heavily investing in Dart and wanted to have the AngularJs team build a Dart version that seamlessly integrates with Dart. 
 Seven of the top ten contributers to the GitHub repository of AngularDart were identifiable as Google employees.  
@@ -130,7 +132,7 @@ Furthermore, the major contributors outside this core team are leading members o
 
 The development team of AngularDart densely communicates and cooperates with the team of AngularJs and therefore partly consists of the same members. Furthermore, the major contributors outside this core team are leading members of the Dart team.
 
-### The Community
+#### The Community
 The last significant group of stakeholders are the users of AngularDart which make up the community and use this  framework for developing client-side applications. This group can contribute to the project by means of three crucial elements: adoption, feedback and module development.
 
 For AngularDart, the users has to adopt to the Dart environment. The Dart environment (language and tools) has huge productivity benefits, but does right now not seamlessly works with Javascript libraries, which could be a hurdle towards adoption. This however, is being addressed and major improvements will come with the soon-to-come 2.0 version of Dart.
@@ -142,11 +144,11 @@ The community mostly contributes to the project, not by improving the AngularDar
 The community modules are often proven solutions for real use cases, and therefore are an important factor of the overall value and success of Angular.
 
 
-## How Angular is organized - A Modular View
+### How Angular is organized - A Modular View
 
 Now that we looked into the people involved in Angular, its architecture is explored by looking at the different internal modules and their interdependencies. Angular is composed of different components and modules, which are explained in this section.
 
-### Module Structures
+#### Module Structures
 Modules are functional, largely independent, units in the project that contain multiple files of source code. It is an 'encapsulation' of a specific aspect of the project. The two main advantages of the modular programming method are (1) simplification of code through limitation of dependencies between modules and (2) easier organisation of distributed programming because teams (or individuals) can specialize on single modules instead of having to know all the source code [Sun Microsystems, 2007](https://netbeans.org/project_downloads/usersguide/rcp-book-ch2.pdf). 
 
 Although the AngularDart repository could be considered to be relatively small, it also benefits from modules to structure the source code. The code section below illustrates a folder structure in the AngularDart project. It depicts the /lib folder, which actually contains 15 folders and 10 files. 
@@ -184,11 +186,11 @@ The Core module is, as the name would suggest, an essential module which provide
   
 Other modules that that provide functionalities and are fully dependent on other modules are represented by the small and red nodes in the graph. The Animate module is an example of this. It is dependent on the core, the DI, the Core DOM and the logging module and it provides the functionality of animations in AngularDart.
 
-## The implementation - A Functional View
+### The implementation - A Functional View
 
 The functional view of the system describes the runtime functional elements and the responsibilities, interfaces and interactions. In this view first the functions of the system are defined before describing the responsibilities, interfaces and interactions.
 
-### Functional capabilities
+#### Functional capabilities
 The functional capabilities define what AngularDart does. AngularDart is a port of AngularJs to the Dart programming language, so its main goal is to provide all the features that AngularJs offers. 
 We derived the following functions in AngularDart:
 
@@ -234,7 +236,7 @@ class UsersRepository {
 </code></pre>
 
 
-### Interfaces
+#### Interfaces
 The Dart programming language does not contain the keyword `interface ` [[3](http://news.dartlang.org/2012/06/proposal-to-eliminate-interface.html)]. 
 This was already removed from the framework in 2012. 
 Instead, all classes in Dart have implicit interfaces. The motivation for this choice was that interfaces can be mapped to abstract classes. 
@@ -247,10 +249,10 @@ Some examples are:
 * HttpBackend: this is the HTTP back-end which is used by the HTTP service. This is an implicit interface, as two other classes implement the HttpBackend.
 * RouteProvider: classes that implement this interface can provide routes for the Web app for use with single-page applications.
 
-### Connectors
+#### Connectors
 Connectors are the pieces of code of the architecture that link the elements, or modules, together. From what was observed, connectors are not used in AngularDart. Instead, the Core and Core DOM modules are the center of the framework and all other modules expand on this.
 
-### External entities
+#### External entities
 AngularDart has "other systems, software programs, hardware devices or other entities with which the system interacts" (Rozanski and Woods, p. 272), or external entities. These can be extracted from the Context view image below.
 
 ![Context view with logos](images/Context_view_with_logos.png "Context view with logos")
@@ -260,15 +262,16 @@ AngularDart has "other systems, software programs, hardware devices or other ent
 * Dart2Js compiler: AngularDart has to be used compiled as JavaScript, so this compiling also plays a role as an external entity.
 * Browsers: AngularDart has to work flawlessly in all major and popular browsers, for it to be considered a serious web framework.
 
-# Beyond AngularDart - Evolution perspective
+## Beyond AngularDart - Evolution perspective
 The framework Angular is currently at the verge of a major change. Version 2 is under active development which will bring major changes to the platform. These changes are so major, that backwards compatibility with 1.x versions will initially be non-existent. However, once version 2 is deemed stable enough by Google, the development team will start working on a migration path from AngularDart and AngularJs 1.x to version 2. In the next section some of the dimensions of change in the overall Angular framework are discussed.
 
-## Platform evolution
+### Platform evolution
 The major reason for this compatibility break between the two versions is that version 1.x does not fit today's modern Web. A new architecture is required since the Web is quite different than it was five years ago, with a largely changed device landscape and new technologies. The platform as a whole needs some more drastically than evolution: a revolution.
 
 One of these technologies that is on the verge of change is JavaScript, or EcmaScript 5. Soon the EcmaScript 6 specification will be finalized, most likely  in mid 2015. Many Web frameworks will be willing to quickly adopt the new standard. Users, on the other hand will likely adopt the framework after major browsers support the new version of EcmaScript. Angular 2.0 will offer support for EcmaScript 6. 
 
 Version 2 will also add support for Web Components, which are a collection of four related W3C specifications:
+
 * Custom Elements: allows the extension of HTML with your own tags
 * HTML imports: allows for packaging of resources, such as CSS, JS and more
 * Template elements
@@ -283,17 +286,17 @@ In the image above you can see the way the Angular 2 is built. Since the develop
 
 This compiler actually adds an extra option to develop Angular apps. Besides EcmaScript 5, EcmaScript 6, TypeScript and Dart, it is also possible to write Angular apps using the Traceur compiler in EcmaScript 6 and having it transpile to any number of the just mentioned languages. 
 
-## Functional evolution
+### Functional evolution
 Angular 2.0 is set to improve performance of the framework drastically. Version 1.x was originally intended as a tool for designers in order to  create HTML forms. Over time, a lot of features for the framework to remain relevant for the Web were added. Performance never was really that important in the old Angular, something that will change in version 2.0. Some of these performance issues arise from the binding and template infrastructure.
 
 Angular 2 will offer improved support for mobile devices and will become easier to use with a more elegant API. When Angular 1 was built five years ago, phones and tablets were not that pervasive as they are now. Features that need to be added are router extensions for mobile, caching pre-compiled views and better touch support. These will be added in Angular 2.0.
 
 Moving to TypeScript will allow for better IDE support, making the lives of Web developers easier. For example, Microsoft will offer Angular support in Visual Studio 2015.
 
-## Growth
+### Growth
 Growth is of course very important to Angular. As the framework increased in popularity in the last five years, it needs to adapt in order to be able to handle larger tasks and websites. This means scalability and high performance are very important. As discussed in the Functional evolution paragraph, Angular 2.0 will focus highly on performance. In the Js and Dart versions, performance was not a requirement because of the initial application of the framework and as a result, AngularJs does not scale very well. However, now that Angular is used in so many Web applications, scalability has to be incorporated in the architecture of the framework, something that the developers will do with version 2.
 
-## Migration path
+### Migration path
 With all these changes for Angular 2.0, current Web app developers that want to use Angular now, are put in a difficult position. Why would someone build a Web application with Angular now, when you'll be guaranteed to be obsolete by the end of the year, probably having to re-do much of your work? The Angular team, unfortunately, does not have a definitive answer right now. 
 
 Some developers are not planning to wait for transition solutions. The blog [paislee.io](http://paislee.io/migrating-to-angularjs-2-0/) offers steps Angular developers can take right now to make the transition later on a less obstacle. The steps proposed in the blog post are the following:
@@ -304,13 +307,13 @@ Some developers are not planning to wait for transition solutions. The blog [pai
 
 As said at the beginning of this perspective, after releasing version 2, the Angular developers will start working on back-porting some of the new features to version 1.x of AngularJs. One of these features will most likely be the router [[5](#5)].
 
-# The Major Challenge: Contributing
+## The Major Challenge: Contributing
 
 Throughout this project it appeared to be quite challenging to contribute to the project.
 There are several reasons why contributing to AngularDart or Angular 2.0 turned out to be harder than expected.
 This section summarizes the hurdles and present a metric system that could help improve the contribution process.
 
-## Initial Complexity
+### Initial Complexity
 
 Google developers are widely known for their excellence and professionalism.
 This can be seen throughout all aspects of Angular. 
@@ -321,7 +324,7 @@ This also means that the tooling environment of which the project is dependent o
 The Dart programming environment seeks to ease this process by providing a very nice set of standard tools that work straight out of the box.
 Unfortunately, AngularDart does not exploit this plug-and-play opportunity, and uses a mixture of Dart tests, JavaScript tests (which need JavaScript tooling dependencies) and shell scripts, all of which have to work before a contribution can pass the continuous integration gate.
 
-### AngularDart and Angular 2.0
+#### AngularDart and Angular 2.0
 
 We, as the 'SWA Angular team', tried to contribute to both AngularDart and Angular 2.0.
 Apart from the hurdles described above, which are applicable for both repositories, there are some specific hurdles for each of them.
@@ -335,7 +338,7 @@ To contribute, you "need" the newest IDE configured for the __development__ vers
 Getting things running for Angular 2.0 is even harder and more time-consuming than for AngularDart, especially when you are not that experienced with Angular 2.0.
 
 
-## Metrics
+### Metrics
 
 This section researches the improvements of certain processes of Angular 2.0 compared to the 1.0 version, both in JavaScript and Dart. Therefore, the upcoming measures should be done in threefold, whenever possible, starting from the beginning of the projects (AngularJs, -Dart, and -2.0) towards the current situation. 
 The level of achievement of the goal can be measured by comparing the deltas of these threefold measurements. 
@@ -350,7 +353,7 @@ M2 = Issues(A2) / Contributors(A2)
 
 Resulting in: `M2 < Mdart < Mjs`
 
-### Goal for Angular
+#### Goal for Angular
 
 | Goal |  |
 |---------|-------|
@@ -359,16 +362,16 @@ Resulting in: `M2 < Mdart < Mjs`
 | Object  | For contributing towards Angular (2.0)  |
 | Viewpoint  | From the perspective of the open source community |
 
-### Questions
+#### Questions
 
-#### Q1: How easy is it to start a local development environment for contributions?
+##### Q1: How easy is it to start a local development environment for contributions?
 
 This question is used to measure the difficulty for a potential contributor to start working. 
 This involves steps like cloning the project, installing dependencies, handling the common difficulties encountered at the beginning and running tests.
 
-##### Metrics
+###### Metrics
 
-###### Number of steps involved to get an example and the tests running and making a contribution
+**Number of steps involved to get an example and the tests running and making a contribution**
 
 * **Entity**:  Source code of AngularDart
 * **Attribute**: Number of steps for setting up development environment
@@ -389,7 +392,7 @@ As of April 2015 for AngularDart, the following steps are logged in order to hav
 
 After those steps, the contributor can make the changes, run the tests and the example and finally file the pull request when the work is considered done.
 
-###### Number of issues raised related to the set up of the project relative to the external contributors
+**Number of issues raised related to the set up of the project relative to the external contributors**
 
 * **Entity**: GitHub issue tracker
 * **Attribute**: Number of issues
@@ -397,7 +400,7 @@ After those steps, the contributor can make the changes, run the tests and the e
 
 As observers, we were unable to execute this metric. The maintainers of the project could execute it by adding a specific label to opened issues for this topic on GitHub.
 
-###### Evaluation of the start up experience from first time contributors
+**Evaluation of the start up experience from first time contributors**
 
 * **Entity**: Start-up experience
 * **Attribute**: Subjective, what contributors think of it
@@ -411,14 +414,14 @@ An evaluation could be created that measures the experience for first-time contr
 * Is the code in the module where you were working understandable?
 * Did you find the bite size bugs to be fixed by the community indeed bite size, or were they too difficult?
 
-#### Q2: How easy is it for the contributor to understand the application architecture?
+##### Q2: How easy is it for the contributor to understand the application architecture?
 
 In order for contributors of the open source community to contribute productively, he or she has to work though the specifics of the code base.
 Measuring the amount of documentation or comments can give an insight, however, a more subjective measurement like a questionnaire might also contribute to this metric.
 
-##### Metrics
+###### Metrics
 
-###### Ratio of lines of code compared to commented lines
+**Ratio of lines of code compared to commented lines**
 
 * **Entity**: Source code of AngularDart
 * **Attribute**: LOC and number of comments
@@ -440,7 +443,7 @@ An application called `cloc` is used to count the number of lines of code and th
 
 ![Ratio Comment/LOC](images/ratio_loc_comments.png "Ratio Comment / LOC")
 
-###### Total volume of documentation (word count)
+**Total volume of documentation (word count)**
 
 * **Entity**: Documentation of AngularDart
 * **Attribute**: Volume
@@ -448,7 +451,7 @@ An application called `cloc` is used to count the number of lines of code and th
 
 From the table above, the total volume for the comments can be found. Unfortunately, this misses the count of GitHub and other documentation, such as documentation available on the AngularDart website.
 
-###### Consistent and descriptive naming
+**Consistent and descriptive naming**
 
 * **Entity**: Source code of AngularDart
 * **Attribute**: Consistency in source code
@@ -460,13 +463,13 @@ This metric is partially subjective, as it requires someone to determine if an e
 Also, it would be possible to measure how descriptive naming is in terms of length of names, where it is important to strike a balance.
 
 
-#### Q3: Is the barrier to contribute visibly being lowered?
+##### Q3: Is the barrier to contribute visibly being lowered?
 
 Finally, general checking metrics are needed to define whether the goal, namely actually and visibly lowering the barrier, is being achieved.
 
-##### Metrics
+###### Metrics
 
-###### Number of contributors
+**Number of contributors**
 
 * **Entity**: GitHub contributors
 * **Attribute**: Number of contributors
@@ -477,7 +480,7 @@ This metric is performed and obtained from GitHub, with the results depicted in 
 
 The number of contributors reached a peak in November 2014, and has steadily declined. This might be just because of start of the AngularJs 2.0, the new framework.
 
-###### Number of pull requests by contributors
+**Number of pull requests by contributors**
 
 * **Entity**: GitHub PRs
 * **Attribute**: Number of pull requests
@@ -488,7 +491,7 @@ For the period of February 22 to March 22 2015, the number of proposed pull requ
 
 Source: [GitHub AngularDart Pulse page](https://github.com/angular/angular.dart/pulse/monthly)
 
-###### Time between an issue being picked up by a contributor and its accepted pull request
+**Time between an issue being picked up by a contributor and its accepted pull request**
 
 * **Entity**: GitHub issue and PR tracker
 * **Attribute**: Time
