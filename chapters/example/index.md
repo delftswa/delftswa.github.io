@@ -1,7 +1,7 @@
 ---
 layout: default
 project: a
-title: Example chapter
+title: Example chapter, title for front page
 chapter: true
 ---
 
