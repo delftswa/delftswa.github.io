@@ -5,7 +5,9 @@ title: Example chapter
 chapter: true
 ---
 
-# Place your chapter here
+# Place your chapter here _with appealing title_
+
+*Author1, Author2, Author3, Author4, Delft University of Technology*
 
 ## How it works
 
@@ -48,4 +50,3 @@ Just raise an issue and tag me!
 Cool!
 
 ![high five](images/got-it.gif)
-
