@@ -9,7 +9,7 @@ chapter: true
 </p>
 
 **Simon Bijl, Tejaswini Dandi, Selman Ercan, Revathi MC**<br/>
-+*Delft University of Technology*
+*Delft University of Technology*
 
 ## Abstract
 
