@@ -1,13 +1,12 @@
-<p align="center">
-  <img  src="images/Diaspora.png"/>
-</p>
-
 ---
 layout: default
 project: diaspora
 title: Diaspora
 chapter: true
 ---
+<p align="center">
+  <img  src="images/Diaspora.png"/>
+</p>
 
 **Simon Bijl, Tejaswini Dandi, Selman Ercan, Revathi MC**<br/>
 +*Delft University of Technology*
