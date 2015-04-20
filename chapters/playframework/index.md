@@ -234,7 +234,7 @@ Apart from the Play Framework, it [leads development](http://typesafe.com/produc
 
 Typesafe is a stakeholder that can be identified with multiple roles: it is a **_Communicator_**, a **_Maintainer_**, and as an **_Assessor_**, as Typesafe ensures that each pull request of Play is conform legal [regulation](http://www.typesafe.com/contribute/cla).
 
-Other stakeholders can be identified. Together with their roles they are listed in the table below. For a detailed overview, we refer to [the Stakeholder Analysis](D1.md#stakeholders).
+Other stakeholders can be identified. Together with their roles they are listed in the table below.
 
 | Type | Entities |
 |---|---|
