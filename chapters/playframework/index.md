@@ -9,6 +9,11 @@ chapter: true
 
 # Play Framework
 
+By: [Herman](https://github.com/hermanbanken), 
+[Michiel](https://github.com/michielha), 
+[Ruben](https://github.com/rubenverboon), and 
+[Vincent](https://github.com/vivami)
+
 ###Abstract
 This chapter describes and explains various views and perspectives of the Play Framework that together aim at providing a broad architectural overview of the system and its context. 
 The stakeholder and context view show that there are a number of very prominent stakeholders involved in the project and that the framework itself does not have many dependencies. 
@@ -123,7 +128,7 @@ For well adopted frameworks, Stack Overflow provides answers for almost all ques
 
 We found that there is a relative constant activity on Stack Overflow regarding the Play Framework.
 We compared the activity for Play to the activity for Spring MVC. 
-Spring MVC is a Java web application framework on top of [Spring](http://nl.wikipedia.org/wiki/Spring_Framework), which exists since 2002.
+Spring MVC is a Java web application framework on top of [Spring](http://en.wikipedia.org/wiki/Spring_Framework), which exists since 2002.
 Spring is a huge ecosystem, already at major version 4, so it is interesting to compare it to the much newer Play Framework.
 
 The comparison is shown in the diagram below. 
@@ -539,8 +544,3 @@ The future of Play is a move towards even more "Reactiveness", consisting of red
 Play might be in a niche now, but as the web becomes more reactive and real-time, the market grows.
 Besides that, extensibility is key. 
 Allowing variability, upgradability, and maintaining backwards compatibility is crucial for Play to provide users with the latest technologies and maintain its arguably small but sophisticated and exiting user base.
-
-[Herman](https://github.com/hermanbanken), 
-[Michiel](https://github.com/michielha), 
-[Ruben](https://github.com/rubenverboon), and 
-[Vincent](https://github.com/vivami)
