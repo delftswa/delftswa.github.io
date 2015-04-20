@@ -84,7 +84,7 @@ devices. As a result, Syncany is designed and developed to be
 platform-independent.
 
 Users may use many different types of remote storage, so Syncany has to
-accomodate for the users' needs by integrating with a large variety of storage
+accommodate for the users' needs by integrating with a large variety of storage
 solutions. To support this, Syncany includes a plugin-based design for the
 communication with the backend storage. The backend storage also imposes
 requirements on the security of Syncany; one of the key assumptions of Syncany
@@ -227,7 +227,7 @@ Taking this responsibility comes in the form of a solid system architecture.
 A good architecture results in a clean codebase organization that is easily
 extended and maintained.
 
-As dictated by the need to accomodate for many different needs of Syncany's
+As dictated by the need to accommodate for many different needs of Syncany's
 users, Syncany is organized in multiple projects. The majority of Syncany's
 implementation is part of the main project
 ([`syncany`](https://github.com/syncany/syncany)). This includes most of the
@@ -275,7 +275,7 @@ The output of this component is passed on to (or its input provided by) the
 *cryptography* component. This component encapsulates the security provided
 by Syncany. As demanded by Syncany's context, the cryptography component uses
 BouncyCastle behind the scenes to perform the encryption and decryption. The
-complexity of the cryptography component is primarily found in determing what to
+complexity of the cryptography component is primarily found in determining what to
 encrypt and how to ensure that not only data but also metadata is hidden.
 
 Interaction with storage (both local and remote) is managed by the *data access*
@@ -313,7 +313,7 @@ but also limits the use of extra capabilities (or consideration for the
 limitations) that a storage platform may have. Overall, between the clearly
 defined communication patterns between components as described earlier, and
 the encapsulation achieved by the plugin system, Syncany's architecture is
-sound and more than capable of accomodating the project's current goals.
+sound and more than capable of accommodating the project's current goals.
 
 ## Syncany is Evolving!
 
