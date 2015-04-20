@@ -122,7 +122,7 @@ Also existing modules disappeared, as was the case with Twirl and [Anorm](https:
 The main trend is adding modules instead of extending existing modules, and sometimes modules are split into smaller sub-modules.
 Altogether the developers have done a great job keeping modules small and focussed.
 
-### Who's helping?
+### Who is helping?
 As any developer will know, the best tool for learning is looking up your questions on [Stack Overflow](http://www.stackoverflow.com).
 For well adopted frameworks, Stack Overflow provides answers for almost all questions raised by programmers.
 
