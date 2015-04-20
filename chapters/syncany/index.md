@@ -7,7 +7,10 @@ chapter: true
 
 # Syncany: The road to beta
 
-**By Jesse Donkervliet, Tim Hegeman, Stefan Hugtenburg, and Niels Spruit**<br/>
+**By [Jesse Donkervliet](https://github.com/jdonkervliet), [Tim
+Hegeman](https://github.com/thegeman), [Stefan
+Hugtenburg](https://github.com/MrHug), and [Niels
+Spruit](https://github.com/nspruit)**<br/>
 *Delft University of Technology*
 
 *After the Snowden revelations in 2013, the call for privacy has gone out more
