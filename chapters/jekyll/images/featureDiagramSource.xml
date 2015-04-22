@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="0" horizontalLayout="true">
+		<struct>
+			<and abstract="true" coordinates="458, 385" mandatory="true" name="Jekyll">
+				<and abstract="true" coordinates="554, 150" mandatory="true" name="Conversion">
+					<alt coordinates="682, 85" mandatory="true" name="Parser">
+						<feature coordinates="841, 27" mandatory="true" name="Kramdown"/>
+						<feature coordinates="841, 56" mandatory="true" name="Maruku"/>
+						<feature coordinates="841, 85" mandatory="true" name="RedCarpet"/>
+						<feature coordinates="841, 114" mandatory="true" name="RDiscount"/>
+						<feature coordinates="841, 143" mandatory="true" name="Plugin parser"/>
+					</alt>
+					<and coordinates="682, 215" mandatory="true" name="Format">
+						<feature coordinates="841, 172" mandatory="true" name="Markdown">
+							<description>
+								
+							</description>
+						</feature>
+						<feature coordinates="841, 201" name="Latex"/>
+						<feature coordinates="841, 230" name="Math symbols"/>
+						<feature coordinates="841, 259" name="Other format"/>
+					</and>
+				</and>
+				<and abstract="true" coordinates="554, 317" name="Commands">
+					<feature coordinates="682, 288" name="Safe">
+						<description>
+							Build site without external plugins
+						</description>
+					</feature>
+					<feature coordinates="682, 317" name="Watch"/>
+					<feature coordinates="682, 346" name="Plugin command"/>
+				</and>
+				<and abstract="true" coordinates="554, 425" name="Rendering">
+					<alt coordinates="682, 389" name="Highlighting">
+						<and coordinates="840, 359" mandatory="true" name="Pyment">
+							<feature coordinates="973, 360" mandatory="true" name="Python "/>
+						</and>
+						<feature coordinates="841, 425" mandatory="true" name="Rouge"/>
+					</alt>
+					<feature coordinates="682, 433" name="Pagination"/>
+					<feature coordinates="682, 462" name="Assets"/>
+				</and>
+				<or abstract="true" coordinates="554, 621" mandatory="true" name="Content">
+					<and coordinates="682, 520" mandatory="true" name="Data files">
+						<feature coordinates="841, 491" name=".yml and .yaml"/>
+						<feature coordinates="841, 520" name=".json"/>
+						<feature coordinates="841, 549" name=".csv"/>
+					</and>
+					<feature coordinates="682, 578" mandatory="true" name="Static file"/>
+					<or abstract="true" coordinates="682, 723" mandatory="true" name="Document">
+						<or abstract="true" coordinates="841, 636" mandatory="true" name="Overview">
+							<feature coordinates="989, 607" mandatory="true" name="Permalinks"/>
+							<feature coordinates="989, 636" mandatory="true" name="Categories"/>
+							<feature coordinates="989, 665" mandatory="true" name="Tags"/>
+						</or>
+						<feature coordinates="841, 694" mandatory="true" name="Page"/>
+						<or abstract="true" coordinates="841, 752" mandatory="true" name="Post type">
+							<feature coordinates="989, 723" mandatory="true" name="Draft"/>
+							<feature coordinates="989, 752" mandatory="true" name="Future"/>
+							<feature coordinates="989, 781" mandatory="true" name="Post"/>
+						</or>
+						<feature coordinates="841, 810" mandatory="true" name="Collections"/>
+					</or>
+				</or>
+			</and>
+		</struct>
+		<constraints>
+			<rule coordinates="607, 864">
+				<imp>
+					<var>Latex</var>
+					<disj>
+						<var>Kramdown</var>
+						<disj>
+							<var>Maruku</var>
+							<var>Plugin parser</var>
+						</disj>
+					</disj>
+				</imp>
+			</rule>
+			<rule coordinates="610, 886">
+				<imp>
+					<var>Math symbols</var>
+					<disj>
+						<var>Kramdown</var>
+						<var>Plugin parser</var>
+					</disj>
+				</imp>
+			</rule>
+			<rule coordinates="657, 908">
+				<imp>
+					<var>Other format</var>
+					<var>Plugin parser</var>
+				</imp>
+			</rule>
+			<rule coordinates="620, 930">
+				<imp>
+					<var>Safe</var>
+					<conj>
+						<not>
+							<var>Other format</var>
+						</not>
+						<not>
+							<var>Plugin parser</var>
+						</not>
+					</conj>
+				</imp>
+			</rule>
+			<rule coordinates="672, 952">
+				<imp>
+					<var>Pagination</var>
+					<not>
+						<var>Permalinks</var>
+					</not>
+				</imp>
+			</rule>
+			<rule coordinates="655, 974">
+				<imp>
+					<var>Overview</var>
+					<disj>
+						<var>Page</var>
+						<var>Post type</var>
+					</disj>
+				</imp>
+			</rule>
+			<rule coordinates="679, 996">
+				<imp>
+					<var>Data files</var>
+					<var>Document</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
