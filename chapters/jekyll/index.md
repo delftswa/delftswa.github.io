@@ -5,6 +5,7 @@ title: Jekyll - A Simple Static Site Generator
 chapter: true
 ---
 
+{: .center}
 ![Jekyll Software Architecture](./images/jekyll-sa-header.png)
 
 **[Joop Aué](https://github.com/JoopAue), [Anton Bouter](https://github.com/abouter), and [Martin Rogalla](https://github.com/MartinRogalla)**<br/>
@@ -89,58 +90,59 @@ For each stakeholder type a short description is given followed by a specificati
  Furthermore they may provide training for staff or the development team.
  Often communicators promote the product by communicating the product's key features and benefits to other stakeholders.
 
- One of the more important communicators of the Jekyll project is [Troy Swanson](https://github.com/troyswanson).
- Troy Swanson organizes the [Town Hall Meetings](http://goo.gl/CFmDH9) of Jekyll in which the core team describes the current state of Jekyll and reason regarding future developments.
+  One of the more important communicators of the Jekyll project is [Troy Swanson](https://github.com/troyswanson).
+  Troy Swanson organizes the [Town Hall Meetings](http://goo.gl/CFmDH9) of Jekyll in which the core team describes the current state of Jekyll and reason regarding future developments.
 
- When focusing on documentation, the task is spread throughout the Jekyll team and its community.
- Whenever new features are added, developers are required to supply tests and documentation of the feature.
+  When focusing on documentation, the task is spread throughout the Jekyll team and its community.
+  Whenever new features are added, developers are required to supply tests and documentation of the feature.
 
 * **Developers**:
  are responsible for the implementation and deployment from the systems' specification.
  That is: design, code, test and accept.
  Their concerns lie with the platform used, programming languages for writing code, tools used, dependencies needed, as well as the maintainability and flexibility of the system.
 
- The most active and notable developers at this moment are: [Parker Moore](https://github.com/parkr), [Alfred Xing](https://github.com/alfredxing), [Matt Rogers](https://github.com/mattr-), [Jordon Bedwell](https://github.com/envygeeks) and [Anatol Broder](https://github.com/penibelst).
- These developers create pull requests with new features or fixes, test their code and review other pull requests.
- It is important to note that these are not the only developers working on the Jekyll project.
- The full list of developers can be found on the [contribution page](https://github.com/jekyll/jekyll/graphs/contributors) of the Jekyll project.
+  The most active and notable developers at this moment are: [Parker Moore](https://github.com/parkr), [Alfred Xing](https://github.com/alfredxing), [Matt Rogers](https://github.com/mattr-), [Jordon Bedwell](https://github.com/envygeeks) and [Anatol Broder](https://github.com/penibelst).
+  These developers create pull requests with new features or fixes, test their code and review other pull requests.
+  It is important to note that these are not the only developers working on the Jekyll project.
+  The full list of developers can be found on the [contribution page](https://github.com/jekyll/jekyll/graphs/contributors) of the Jekyll project.
 
 * **Testers**:
  test the system to ensure that it works exactly the way it was intended to work.
 
- In Jekyll automatic Continuous Integration testing is done by [TravisCI](https://travis-ci.org/jekyll/jekyll/).
- The [Jekyll Contributing page](http://jekyllrb.com/docs/contributing/) states the following: *"If you're creating a small fix or patch to an existing feature, just a simple test will do"*.
- This means that every developer is also immediately involved as a tester.
- There are no additional testers assigned; all of the testing is done automatically by the test suite and indirectly by the community.
+  In Jekyll automatic Continuous Integration testing is done by [TravisCI](https://travis-ci.org/jekyll/jekyll/).
+  [Jekyll Contributing page](http://jekyllrb.com/docs/contributing/) states the following: *"If you're creating a small fix or patch to an existing feature, just a simple test will do"*.
+  This means that every developer is also immediately involved as a tester.
+  There are no additional testers assigned; all of the testing is done automatically by the test suite and indirectly by the community.
 
 * **Users**:
  define the system's functionality and use it once it has been deployed.
 
- There are two types of users for Jekyll:
+  There are two types of users for Jekyll:
 
-  * Users that create content which is to be processed by Jekyll.
-  * Users that use Jekyll to generate static pages.
+    * Users that create content which is to be processed by Jekyll.
+    * Users that use Jekyll to generate static pages.
 
- The content-creators include developers, employees, authors and other people writing articles.
- These people often also use Jekyll as a generator, since they would like to preview their pages.
- However the people who use Jekyll purely as a generator extend this group.
- Think of larger organizations such as [analytics.usa.gov](https://github.com/GSA/analytics.usa.gov), [healthcare.gov](https://developmentseed.org/blog/2013/10/24/its-called-jekyll/) and [GitHub Pages](https://help.github.com/articles/using-jekyll-with-pages/).
+
+  The content-creators include developers, employees, authors and other people writing articles.
+  These people often also use Jekyll as a generator, since they would like to preview their pages.
+  However the people who use Jekyll purely as a generator extend this group.
+  Think of larger organizations such as [analytics.usa.gov](https://github.com/GSA/analytics.usa.gov), [healthcare.gov](https://developmentseed.org/blog/2013/10/24/its-called-jekyll/) and [GitHub Pages](https://help.github.com/articles/using-jekyll-with-pages/).
 
 * **Community**:
   is concerned with its own involvement with the system and exploitation of its features.
  The community is also involved with the creation of new features as often suggestions and recommendations are coming directly from the community.
 
- The community stakeholder in case of Jekyll is a blend of the users and the developers.
- Although this stakeholder is a combination of two earlier defined stakeholders it is comprehensible to discuss the community as a separate stakeholder.
+  The community stakeholder in case of Jekyll is a blend of the users and the developers.
+  Although this stakeholder is a combination of two earlier defined stakeholders it is comprehensible to discuss the community as a separate stakeholder.
 
- The community can influence Jekyll's development by suggesting new features or reporting bugs using the [Jekyll issues](https://github.com/jekyll/jekyll/issues).
- Furthermore, the community can express their opinion by commenting on developments and ideas.
+  The community can influence Jekyll's development by suggesting new features or reporting bugs using the [Jekyll issues](https://github.com/jekyll/jekyll/issues).
+  Furthermore, the community can express their opinion by commenting on developments and ideas.
 
- Jekyll's community is essential to Jekyll's success.
- Due to [Jekyll's help repository](https://github.com/jekyll/jekyll-help), the community is self-supportive as there are people with a lot of knowledge regarding Jekyll who offer their expertise by answering questions asked by the community.
- Additional means of communications in the community are: [IRC](irc:irc.freenode.net/jekyll) and [Stack Overflow](http://stackoverflow.com/questions/tagged/jekyll).
+  Jekyll's community is essential to Jekyll's success.
+  Due to [Jekyll's help repository](https://github.com/jekyll/jekyll-help), the community is self-supportive as there are people with a lot of knowledge regarding Jekyll who offer their expertise by answering questions asked by the community.
+  Additional means of communications in the community are: IRC and [Stack Overflow](http://stackoverflow.com/questions/tagged/jekyll).
 
- The Jekyll community benefits greatly from [GitHub Pages](https://pages.github.com/) as GitHub Pages provides Jekyll [support](https://help.github.com/articles/using-jekyll-with-pages/) as a blog-aware static site generator.
+  The Jekyll community benefits greatly from [GitHub Pages](https://pages.github.com/) as GitHub Pages provides Jekyll [support](https://help.github.com/articles/using-jekyll-with-pages/) as a blog-aware static site generator.
 
 ### Power/Interest Grid
 The stakeholders can be prioritized using the Power/Interest Grid<sup>[[2]](#bibliography)</sup>.
@@ -150,6 +152,7 @@ High interest and low power stakeholders need to be kept up-to-date with develop
 Low interest and low power stakeholders should be monitored and not flooded with excessive communication.
 The Power/Interest Grid for the Jekyll project is displayed in [Figure 1](#figure1).
 
+{: .center}
 | <a name="figure1">![Power/Interest Grid](./images/power-interest-grid.png)</a>|
 |:-------------:|
 |  **Figure 1** - *Power/Interest Grid* |
@@ -170,30 +173,33 @@ The relevant entities are grouped in three relevant categories: [Internal System
 
 #### Internal Systems
 Internal systems that run within the Jekyll organization include:
-* **Jekyll-help**: allows Jekyll users to ask questions and indirectly gives feedback to Jekyll itself.
-* **Jekyll-paginate**: is used to paginate large quantities of content.
-* **Jekyll-coffeescript**: is a [Coffeescript](http://www.coffeescript.org/) converter for Jekyll, which allows users to write Coffeescript.
-* **Jekyll-gist**: allows inclusion of [Gists](https://gist.github.com/) in Jekyll websites.
-* **Jekyll-sass-convert**: allows Jekyll to build [Sass and SCSS](http://sass-lang.com/).
-* **Jekyll-watch**: features automatic rebuilding of a Jekyll site when file changes occur.
+
+ * **Jekyll-help**: allows Jekyll users to ask questions and indirectly gives feedback to Jekyll itself.
+ * **Jekyll-paginate**: is used to paginate large quantities of content.
+ * **Jekyll-coffeescript**: is a [Coffeescript](http://www.coffeescript.org/) converter for Jekyll, which allows users to write Coffeescript.
+ * **Jekyll-gist**: allows inclusion of [Gists](https://gist.github.com/) in Jekyll websites.
+ * **Jekyll-sass-convert**: allows Jekyll to build [Sass and SCSS](http://sass-lang.com/).
+ * **Jekyll-watch**: features automatic rebuilding of a Jekyll site when file changes occur.
 
 #### External Systems
 External systems that run outside of the Jekyll organization include:
-* **Dependencies**: of which the most important dependencies include Ruby, RubyGems, Markup converters, testing frameworks, Rake and syntax highlighters.
-* **Plugins**: provided by Jekyll include Generator, Converter, Filter, Tag, Collection and other plug-ins.
+
+ * **Dependencies**: of which the most important dependencies include Ruby, RubyGems, Markup converters, testing frameworks, Rake and syntax highlighters.
+ * **Plugins**: provided by Jekyll include Generator, Converter, Filter, Tag, Collection and other plug-ins.
  For a list of plugins consult the [plugin page](http://jekyllrb.com/docs/plugins/).
-* **Jekyll Offsprings**: are systems based on Jekyll such as [Octopress](http://octopress.org/), [Hyde](http://hyde.github.io/) and [Jekyll Bootstrap](http://www.jekyllbootstrap.com/).
+ * **Jekyll Offsprings**: are systems based on Jekyll such as [Octopress](http://octopress.org/), [Hyde](http://hyde.github.io/) and [Jekyll Bootstrap](http://www.jekyllbootstrap.com/).
 	These systems provide similar features and target the same audience.
-* **Version Control**: which is facilitated by GitHub.
-* **Continuous Integration**: is handled by [TravisCI](https://travis-ci.org/) and creates a feedback-loop between the developers and the test-suite.
+ * **Version Control**: which is facilitated by GitHub.
+ * **Continuous Integration**: is handled by [TravisCI](https://travis-ci.org/) and creates a feedback-loop between the developers and the test-suite.
 
 #### Classes of People
 There are several classes of people involved with Jekyll of which the relevant ones for the context view are listed below.
-* **Users**: are the people that either use Jekyll indirectly as authors or are generators, which means they use Jekyll to generate static web pages.
+
+ * **Users**: are the people that either use Jekyll indirectly as authors or are generators, which means they use Jekyll to generate static web pages.
     Evidently a user can be both an author and generator.
-* **Developers**: contribute to Jekyll by applying changes and creating pull requests.
+ * **Developers**: contribute to Jekyll by applying changes and creating pull requests.
  The group of developers consists of Jekyll users and the core team that maintains Jekyll.
-* **Community**: is the combination of the users and developers.
+ * **Community**: is the combination of the users and developers.
 Questions are asked and answered by the community.
 Furthermore, ideas for features and the future of Jekyll originate from the community.
 
@@ -201,6 +207,7 @@ Furthermore, ideas for features and the future of Jekyll originate from the comm
 In the context diagram in [Figure 2](#figure2), a clear illustration is given of Jekyll's capabilities and its interaction with external entities.
 It does not go into the system's details in terms of how it should be built, but rather gives an abstract and high level view of the system.
 
+{: .center}
 | <a name="figure2">![Context Diagram](./images/context-diagram.png)</a>|
 |:-------------:|
 |  **Figure 2** - *Context Diagram* |
@@ -225,6 +232,7 @@ The structure consists out of the following five layers ordered by abstractness 
 
 The rough dependencies between the different layers in the figure are denoted by arrows.
 
+{: .center}
 | <a name="figure3">![Structure Model](./images/structure-model.png)</a>|
 |:-------------:|
 |  **Figure 3** - *Structure Model* |
@@ -302,6 +310,7 @@ However, the *lib/jekyll* folder also contains 35 Ruby files in the folder itsel
 This is a very large number of files for a single folder and these should preferably be placed in separate folders to maintain a clear and organized structure.
 One could for example place the files *site.rb*, *post.rb*, *page.rb* and *document.rb* in a new subdirectory *site* to organize the *lib/jekyll* folder.
 
+{: .center}
 | <a name="figure4">![Directory Structure](./images/fileStructure.png)</a>|
 |:-------------:|
 |  **Figure 4** - *Directory Structure* |
@@ -337,6 +346,7 @@ The main feature of Jekyll is static site generation.
 This feature is primarily made possible by the features listed below.
 
 **Content**
+
 * Content can be written in [Markdown](http://daringfireball.net/projects/markdown/) which is converted to HTML by using one of the following converters: [RDiscount](http://dafoster.net/projects/rdiscount/), [Kramdown](http://kramdown.gettalong.org/), [Redcarpet](https://github.com/vmg/redcarpet) or [Maruku](https://github.com/bhollis/maruku).
 These converters have different advantages, e.g. LaTeX or [GitHub Flavoured Markdown](https://help.github.com/articles/github-flavored-markdown/) support.
 * Content can be written in other languages, e.g. [Textile](https://github.com/textile), and can be converted using a custom converter plug-in.
@@ -349,6 +359,7 @@ This folder is not included during build unless specifically configured.
 * To make custom data available to the renderer a user can include [YAML](http://yaml.org/), JSON and CSV files.
 
 **Commands**
+
 * Jekyll will only rebuild that part of the website that is changed when the `--watch` command is supplied.
 This allows for fast generation of the website by only regenerating the parts which are required.
 This creates a fast feedback loop if users want to, for example, adjust their theme and see the changes applied to their site.
@@ -357,12 +368,14 @@ For security reasons, when GitHub Pages is used for building and deploying a Jek
 * To allow users to run their own custom commands Jekyll allows plug-in commands to be used.
 
 **Styling**
+
 * Jekyll allows pages to be styled and to show content.
 This may include pagination of posts with a small excerpt of this post.
 * Jekyll provides highlighting for code snippets by supporting [Pygments](http://pygments.org/) and [Rouge](https://github.com/jneen/rouge) to be chosen.
 * To allow users to use [CoffeeScript](http://coffeescript.org/) and [Sass](http://sass-lang.com/) the so named assets are built into Jekyll.
 
 **Organizing**
+
 * Besides pages and posts users can also write their own custom type of collections, to allow for a more diverse site.
 * Pages that contain an overview of posts can be paginated.
 By doing this a user visiting the blog gets to see a clear view and can browse pages of posts.
@@ -402,6 +415,7 @@ Permalinks should not exists without having a post or a page.
 The second constraint is that data should also have either a page, post or collection, since otherwise the data will never be used.
 Furthermore, formats like _LaTeX_ and _Math symbols_ require specific parsers to be used.
 
+{: .center}
 | <a name="figure5">![Feature Diagram](./images/featureDiagram.png)</a>|
 |:-------------:|
 |  **Figure 5** - *Feature Diagram* |
@@ -451,6 +465,7 @@ By [applying metrics](#metrics) to a Jekyll site the most influential sub proces
 Building a site starts with the `command` class that calls the `site.process` method.
 This method calls the methods displayed in [Figure 6](#figure6) subsequently:
 
+{: .center}
 | <a name="figure6">![Processes](images/processes.png)</a>|
 |:-------------:|
 |  **Figure 6** - *Processes in Jekyll* |
@@ -460,6 +475,7 @@ By running a benchmark on the processes described by the [task structure](#task-
 Analyzing the time spent on these different methods indicates that 97.5% of the build time is caused by the `render` method, as is displayed in [Figure 7](#figure7).
 The measurements have been performed on the [Jekyll site](http://jekyllrb.com/).
 
+{: .center}
 | <a name="figure7">![Diagram processes](./images/measurements/1-site-process.png)</a>|
 |:-------------:|
 |  **Figure 7** - *Time delay caused by the site processes* |
@@ -469,6 +485,7 @@ The renderer uses around 20% of the time to render pages and posts.
 The other 80% is spent on rendering collections.
 Time spent on rendering permalinks is negligible compared to the rendering of pages, posts and collections.
 
+{: .center}
 | <a name="figure8">![Diagram render](./images/measurements/2-render-process.png)</a>|
 |:-------------:|
 |  **Figure 8** - *Time delay caused by render processes* |
@@ -508,14 +525,16 @@ Passing only the relevant attributes into constructors and methods will not only
 Loops in which iterations do not depend on other iterations are perfect candidates for parallelization.
 There are multiple performance influential loops in Jekyll, which can be parallelized.
 For example the rendering of posts and pages:
-```ruby
+
+{% highlight ruby %}
 payload = site_payload
 [posts, pages].flatten.each do |page_or_post|
     if regenerator.regenerate?(page_or_post)
         page_or_post.render(layouts, payload)
     end
 end
-```
+{% endhighlight %}
+
 It is worthwhile to take a look at these types of loops as the performance can be improved drastically by parallelization. 
 
 ## Conclusions and Recommendations
@@ -544,4 +563,4 @@ Have a look at [Jekyll](https://github.com/jekyll/jekyll) and don't be afraid to
 Working with Stakeholders Using Viewpoints and Perspectives. Addison-Wesley
 Professional.
 
-**[2]** Rachel Thompson. Stakeholder Analysis - Winning Support for Your Projects. http://www.mindtools.com/pages/article/newPPM_07.htm
+**[2]** Rachel Thompson. Stakeholder Analysis - Winning Support for Your Projects. [http://www.mindtools.com/pages/article/newPPM_07.htm](http://www.mindtools.com/pages/article/newPPM_07.htm)
