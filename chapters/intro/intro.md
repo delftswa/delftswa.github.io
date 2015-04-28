@@ -21,7 +21,7 @@ At the start of the course, teams of 3-4 students could adopt a project of choic
 
 During a 10 week period, in which the students spent one third of their time on this course, the students engaged with these systems, in order to understand and describe their software architecture.
 
-Inspired by Brown and Wilsons' [Architecture of Open Source Applications][aosa], we decided to organize each description as a chapter, resulting in the present on line book.
+Inspired by Brown and Wilsons' [Architecture of Open Source Applications][aosa], we decided to organize each description as a chapter, resulting in the present online book.
 
 ## Recurring Themes
 
@@ -30,7 +30,7 @@ The chapters share several common themes, which are based on smaller assignments
 [viewpoints]: http://www.viewpoints-and-perspectives.info/home/viewpoints/
 [perspectives]: http://www.viewpoints-and-perspectives.info/home/perspectives/
 
-The first theme is outward looking, focusing on the use of the system. Thus, many of the chapters contain an explicit [stakeholder analysis], as well as a description of the [context] in which the systems operate. These were based on available on line documentation, as well as on an analysis of open and recently closed issues for these systems.
+The first theme is outward looking, focusing on the use of the system. Thus, many of the chapters contain an explicit [stakeholder analysis], as well as a description of the [context] in which the systems operate. These were based on available online documentation, as well as on an analysis of open and recently closed issues for these systems.
 
 [context]: http://www.viewpoints-and-perspectives.info/home/viewpoints/context/
 [stakeholder analysis]: http://www.mindtools.com/pages/article/newPPM_07.htm
