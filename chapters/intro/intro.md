@@ -49,9 +49,9 @@ A fourth theme is [metrics-based evaluation of software architectures][bouwers].
 Last but not least, the chapters are also based on the student's experience in actually contributing to the systems described. As part of the course over 75 pull requests to the projects under study were made, including refactorings
 ([Jekyll 3545](https://github.com/jekyll/jekyll/pull/3545),
   [Docker 11350](https://github.com/docker/docker/pull/11350),
+  [Docker 11323](https://github.com/docker/docker/pull/11323),
   [Syncany 391](https://github.com/syncany/syncany/pull/391)), bug fixes
-([Docker 11018](https://github.com/docker/docker/pull/11018),
-  [Diaspora 5714](https://github.com/diaspora/diaspora/pull/5714),
+([Diaspora 5714](https://github.com/diaspora/diaspora/pull/5714),
  [OpenRA 7486](https://github.com/OpenRA/OpenRA/pull/7486), [OpenRA 7544](https://github.com/OpenRA/OpenRA/pull/7544),
  [Kodi 6570](https://github.com/xbmc/xbmc/pull/6570)), and helpful documentation such as a [Play Framework screen cast](https://www.youtube.com/watch?v=47TqFH8MXhk).
 
