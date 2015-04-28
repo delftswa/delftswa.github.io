@@ -15,7 +15,9 @@ chapter: true
 
 
 
-_Delft Students on Software Architecture_ is a collection of architectural descriptions of open source software systems written by students from Delft University of Technology during a master-level course taking place in the spring of 2015.
+_Delft Students on Software Architecture_ is a collection of architectural descriptions of open source software systems written by students from Delft University of Technology during a [master-level course][in4315] taking place in the spring of 2015.
+
+[in4315]: http://www.studiegids.tudelft.nl/a101_displayCourse.do?course_id=31246
 
 At the start of the course, teams of 3-4 students could adopt a project of choice on GitHub. The projects selected had to be sufficiently complex and actively maintained (one or more pull requests merged per day).
 
