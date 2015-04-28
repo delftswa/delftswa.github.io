@@ -21,7 +21,7 @@ _Delft Students on Software Architecture_ is a collection of architectural descr
 
 At the start of the course, teams of 3-4 students could adopt a project of choice on GitHub. The projects selected had to be sufficiently complex and actively maintained (one or more pull requests merged per day).
 
-During a 10 week period, in which the students spent one third of their time on this course, the students engaged with these systems, in order to understand and describe their software architecture.
+During a 10 week period, the students spent one third of their time on this course,and engaged with these systems in order to understand and describe their software architecture.
 
 Inspired by Brown and Wilsons' [Architecture of Open Source Applications][aosa], we decided to organize each description as a chapter, resulting in the present online book.
 
