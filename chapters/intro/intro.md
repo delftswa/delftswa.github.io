@@ -75,9 +75,9 @@ We value your feedback on any of the material in the book. For your feedback, yo
 
 We would like to thank:
 
-* The additional members of the teaching team: Eric Bouwers, Nicolas Dintzner, Annibale Panichella, and Felienne Hermans;
+* The additional members of the teaching team: Eric Bouwers, Nicolas Dintzner, Annibale Panichella, and Felienne Hermans.
 * Michael de Jong and Alex Nederlof who were instrumental in the earlier editions of this course.
-* All open source developers who helpfully responded to the student's questions and contributions;
+* All open source developers who helpfully responded to the student's questions and contributions.
 
 
 
