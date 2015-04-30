@@ -1,3 +1,10 @@
+---
+layout: default
+project: kodi
+title: Kodi - Appendix
+chapter: false
+---
+
 ## Appendix - ***"Oh, one more thing..!"***
 
 ### Contributions - ***Using our gained knowledge***
