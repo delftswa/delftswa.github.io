@@ -192,9 +192,9 @@ The main features of the system are investigated along with the perspective of t
 The price of reaching a broader audience is that Kodi has to cope with different incompatibilities across the different operating systems and devices. This can be lack of hardware, for example the lack of disc drive for mobile devices, or other factors like the lack of support of a certain library for a specific platform. These variabilities are resolved during **Build Time** or **Run Time**.
 
 ### 6.1. During Build Time
-An example of variabilities during build time, is the use of the video player engine, since during the build time it is determined whether the DirectX11, OpenGL ES, or OpenGL API is used. This directly influence the way Kodi will render its interface. In code fragment 1, it can be seen how the features are configured using a configuration file. There are many different features initialized only during build time and subsequently remain that way. 
+An example of variabilities during build time, is the use of the video player engine, since during the build time it is determined whether the DirectX11, OpenGL ES, or OpenGL API is used. This directly influence the way Kodi will render its interface. In code fragment 1, it can be seen how the features are configured using a configuration file. There are many different features initialised only during build time and subsequently remain that way. 
 
-```` 
+{% highlight text %}
 arm*-*-linux-gnu*|arm*-*-linux-uclibc*)
      ARCH="arm"
      use_arch="arm"
@@ -204,8 +204,9 @@ arm*-*-linux-gnu*|arm*-*-linux-uclibc*)
      use_gl=no			
      use_wayland=no
      USE_STATIC_FFMPEG=1
-     ;;
- ````
+     ;;  
+{% endhighlight %}
+
 *Code fragment 1: Shows what variable features are included/excluded during build time - source [config.in](https://github.com/delftswa2014/xbmc/blob/master/configure.in)*
 
 This code fragment is part of the build time for unix systems, windows is not included because it doesn't (natively) support the build system that Kodi uses. Because of that it now uses a separate way resolve the variabilities for windows. In the future the developers of Kodi want to have one build system CMake for this, but the migration will take more time.
@@ -215,21 +216,23 @@ As long as the audience of the Kodi Media Player is expanding around the world, 
 
 If the user wants to change the language, this can be done in the program itself while running. The menus will then automatically reload so the changes become visible and the menus are displayed in the new language. All languages have been recently moved to the add-ons and the default language is English(GB). This language is located in the add-ons directory of the Kodi:````/addons/resource.language.en_gb/resources/string.po````. This ````.po```` file contains all the strings of the menus and options (see code fragment 2). 
 
-````
+{% highlight text %}
 msgctxt "#118"
 msgid "Rename"
 msgstr "Hernoem"
-````
+{% endhighlight %}
+
 *Code fragment 2: Example of the ````.po```` language string that is obtained in every function - source: [strings.po](https://github.com/xbmc/xbmc/blob/master/addons/resource.language.en_gb/resources/strings.po)* 
 
 The functions within the ````.cpp```` source files call these strings by their ````msgctxt```` number (see code fragment 3). In this way, it is only required to translate the ````.po```` string files when a new language is adopted. Besides that, this emphasises the modular strategy of Kodi; the languages can be changed while running the program.
 
-````
+{% highlight text %}
 if ((CSettings::Get().GetBool("filelists.allowfiledeletion")
 ....
 buttons.Add(CONTEXT_BUTTON_RENAME, 118);
 ....
-````
+{% endhighlight %}
+
 *Code fragment 3: The function relating to the #118 string - [source](https://github.com/xbmc/xbmc/blob/master/xbmc/video/windows/GUIWindowVideoNav.cpp#L965-L972)*
 
 ## 7. Roadmap to Update Isenguard - ***New cool features and fixing bugs***
@@ -255,9 +258,9 @@ Secondly, a user could expect to get an all in one media player with all the gre
 
 #### 7.3. Evolution Tradeoffs
 
-Removing legacy code from the project must be done with high precaution since this code can be deeply integrated into the overall code. Therefore refactoring would be required to untangle it and to make this deletion possible. Different types of legacy code could be categorized into categories, code that is not used anymore, selective code that is only used by some older devices and code that is still used but better alternatives are available in for example the add-on repository. Only code that is not used can be removed without drawbacks. Code that is only used by some legacy devices needs to be examine more closely. An assessment should be made of the specific devices that use the involved part of the code. Then an estimation of the required effort, magnitude of the change divided by de estimated required time needed, should be made. As result of that support of the specified device could be removed by removing the corresponding code.
+Removing legacy code from the project must be done with high precaution since this code can be deeply integrated into the overall code. Therefore refactoring would be required to untangle it and to make this deletion possible. Different types of legacy code could be categorised into categories, code that is not used anymore, selective code that is only used by some older devices and code that is still used but better alternatives are available in for example the add-on repository. Only code that is not used can be removed without drawbacks. Code that is only used by some legacy devices needs to be examine more closely. An assessment should be made of the specific devices that use the involved part of the code. Then an estimation of the required effort, magnitude of the change divided by de estimated required time needed, should be made. As result of that support of the specified device could be removed by removing the corresponding code.
 
-There is a certain trade-off that on keeping support the devices resulting in a broader audience versus the ability to maintain the project code and be able to easily add new features. As stated before, older devices lack the benefit of new hardware support innovations therefore keeping the support results in a more complex [variability model](#6-variability-view---the-effort-to-broaden-audience) that is harder to maintain. The last category a review has to be done of the devices that can upgrade to the new and potentially better alternative. This will mean that Kodi will move forward to a new innovation level, but if only a few users could make the transition, than replacing and removing the code would make no sense. Moving functionality to the add-ons can further minimize the size of the Kodi core. By creating a variability model a map can be made of the parts that depend on each other. This is an important step because moving some features from a higher level in the model to the add-ons could possibly break features that depends on this. 
+There is a certain trade-off that on keeping support the devices resulting in a broader audience versus the ability to maintain the project code and be able to easily add new features. As stated before, older devices lack the benefit of new hardware support innovations therefore keeping the support results in a more complex [variability model](#6-variability-view---the-effort-to-broaden-audience) that is harder to maintain. The last category a review has to be done of the devices that can upgrade to the new and potentially better alternative. This will mean that Kodi will move forward to a new innovation level, but if only a few users could make the transition, than replacing and removing the code would make no sense. Moving functionality to the add-ons can further minimise the size of the Kodi core. By creating a variability model a map can be made of the parts that depend on each other. This is an important step because moving some features from a higher level in the model to the add-ons could possibly break features that depends on this. 
 
 So there is a need to make a tradeoff of having a more stable and better maintainable core versus probably more effort to keep the system stable and maintainable after the users adds a lot of plugins (what is the driven power behind Kodi). Most add-ons are created by third-party developers meaning it becomes harder to cooperate in one place and base new features on top of other features. 
 
@@ -266,11 +269,11 @@ So there is a need to make a tradeoff of having a more stable and better maintai
 
 At the end of the journey through Kodi's different layers we can conclude that Kodi has an interesting architectural design. As been pointed out during the [context view](http://www.viewpoints-and-perspectives.info/home/viewpoints/context/) analyses, the hardware and multiple operating systems support imposes restrictions and limitations on what the developers can do with Kodi. As a result of this they try to keep Kodi as independent as possible to make development easier.
  
-The [development view](http://www.viewpoints-and-perspectives.info/home/viewpoints/development/) describes Kodi's independent 'modular' architecture. This helps to make it easier to add functionality and support the multiple operating systems. To dive deeper in the architecture we looked at the [functional view](http://www.viewpoints-and-perspectives.info/home/viewpoints/functional-viewpoint/) and variability points in Kodi.This shows that there are some core features that are available on all platforms, but also features which aren't available because of for example the lack of needed hardware. This all is configured correctly during build time.
+The [development view](http://www.viewpoints-and-perspectives.info/home/viewpoints/development/) describes Kodi's independent 'modular' architecture. This helps to make it easier to add functionality and support the multiple operating systems. To dive deeper in the architecture we looked at the [functional view](http://www.viewpoints-and-perspectives.info/home/viewpoints/functional-viewpoint/) and variability points in Kodi. This shows that there are some core features that are available on all platforms, but also features which aren't available because of for example the lack of needed hardware. This all is configured correctly during build time.
 The evolution perspective shows how the community decided to improve stability and maintainability, while keeping in mind all the tradeoffs. They made the right decision by following this roadmap, because only this way Kodi will keep evolving and gaining more popularity.
 
 After analysing Kodi from different viewpoints and perspectives it can be clearly seen that the architecture of Kodi has been designed well with the restrictions imposed by the different platforms and with future evolution in mind. By using python for the add-ons new functionality can easily be added while not having to recompile the whole system or having to worry about system specific dependencies.
 
-Another lesson learned from the intensive study on the organisation of Kodi, is that collaborating online on a large software project does work properly in this case. Kodi has numerous enthusiastic contributors and embraces news developers to also help with the building and maintenance process. Github is a perfect place for this online cooperation, that is accessible and communication incentivizing. 
+Another lesson learned from the intensive study on the organisation of Kodi, is that collaborating online on a large software project does work properly in this case. Kodi has numerous enthusiastic contributors and embraces news developers to also help with the building and maintenance process. Github is a perfect place for this online cooperation, that is accessible and communication incentivising. 
 
-Ultimately, the Kodi community also convinced us to be part of their quality enhancement process. To bring over our enthusiasm we have created a guide to start contributing to Kodi (see [Appendix](./appendix.md)).
+Ultimately, the Kodi community also convinced us to be part of their quality enhancement process. To bring over our enthusiasm we have created a guide to start contributing to Kodi (see [Appendix](https://delftswa.github.io/chapters/kodi/appendix.html)).
