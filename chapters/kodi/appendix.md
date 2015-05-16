@@ -25,7 +25,7 @@ We are armed with the different architectural tools, an experience richer. Kodi'
 		  
 
 
-	````
+	{% highlight text %}
 	---In language string:---
 	msgctxt "#118"
 	msgid "Rename"
@@ -35,7 +35,8 @@ We are armed with the different architectural tools, an experience richer. Kodi'
 	....
 	buttons.Add(CONTEXT_BUTTON_RENAME, 118);
 	....
-	````
+	{% endhighlight %}
+	
 	*Code fragment 1: The function relating to the #118 string - [source](https://github.com/xbmc/xbmc/blob/master/xbmc/video/windows/GUIWindowVideoNav.cpp#L965-L972)*
 
 10. By searching in your code editor to this string number, there are less results shown. This clarifies your scope more precisely.
@@ -45,10 +46,12 @@ We are armed with the different architectural tools, an experience richer. Kodi'
 14. Add an explanation to your solution and argument your choices. 
 15. Wait for the reaction of at least 2 of the main integrators (for example [*mkortstiege*](https://github.com/mkortstiege) or [*MartijnKaijser*](https://github.com/MartijnKaijser)). 
 16. When they call the keyword "*Jenkins build this please*", their build bot named Jenkins is checking if the code runs with your patch (see Figure 8)
-   <p align="center">
-      <img src="images/jenkins.png" width=700px>
-      <p align="center"><i>Figure 8: Jenkins the build bot</i></p>
-   </p>
+
+	<p align="center">
+		<img src="images/jenkins.png" width=700px>
+		<p align="center"><i>Figure 8: Jenkins the build bot</i></p>
+	</p>
+   
 17. When you receive a message that your Pull Request is accepted; congratulations.  
 18. Good luck with contributing!
 
