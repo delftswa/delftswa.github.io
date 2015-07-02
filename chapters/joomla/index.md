@@ -1,6 +1,6 @@
 ---
 layout: default
-project: a
+project: joomla
 title: Joomla
 chapter: true
 ---
@@ -14,24 +14,24 @@ chapter: true
 </p>
 
 
-##Abstract
+## Abstract
 _Joomla is an open-source Content Management System designed to assist users in building websites and online applications. Joomla is built using several levels of extensions that exist upon its framework. Through the combination of these extensions, content is generated and displayed to the user as a complete website.  Although Joomla is community-driven, many more stakeholders entailed due to the many millions of websites and developers supported. Through an analogy, comparing the architecture of Joomla to that of a large city, this chapter attempts to convey the details of the Joomla framework to the reader._
 
-##Table of Contents
+## Table of Contents
 
 
-- [All Together, as a whole](#intro)
-- [The City of Joomla](#city)
-	- [Architecture of Joomla](#arch)
-	- [Population](#pop)
+- [All Together, as a whole](#all-together-as-a-whole)
+- [The City of Joomla](#the-city-of-joomla)
+	- [Architecture of Joomla](#architecture-of-joomla)
+	- [Population](#population)
 		- [Immigrants](#immigrants)
-	- [City Maintenance](#main) 
-	- [Import and Export](#impexp) 
-	- [Storage and Traffic](#traffic) 
-- [Utopia or Dystopia?](#utop)
+	- [City Maintenance](#city-maintenance) 
+	- [Import and Export](#import-and-export) 
+	- [Storage and Traffic](#storage-and-traffic) 
+- [Utopia or Dystopia?](#utopia-or-dystopia)
 
 
-##<a name="intro"></a>All together, as a whole
+## All together, as a whole
 
 As a reader, by now you will have noticed the combined effort presented in the form of this book. A single person with a single article could have been interesting, but rather the combined effort of the students has created a book as interesting and complete as this. In exactly the same manner, Joomla approaches web design. 
 
@@ -45,7 +45,7 @@ The positive userbase of Joomla also stems from the fact that Joomla splits its 
 
 As shown above, Joomla's core build contains a vast amount of features. As such, grasping its architecture may be overwhelming for a beginning software architecture or an otherwise intelligent reader. To ease the learning curve throughout this document, we build upon the analogy of comparing Joomla to a large city. This works suprisingly well.
 
-##<a name="city"></a>The City of Joomla
+## The City of Joomla
 It is a bright and sunny day as you get off the open-source train at the station of Joomla. You look around but see nothing familiar and have no idea exactly where you are. The city of Joomla is much bigger than you imagined. You want to get the full experience of what the city has to offer. As such, you step into the tourist information office hosted by ___team-Joomla___. Here you look among the many similar documents and get yourself a map of the city in English. As you open the folder, the first thing you notice is a little piece of history.
 
 > Over a decade ago in the year 2002, an open source CMS was created by the non-profit Miro corporation under the name of Mambo. Over the years, Mambo grows out to be a very successful and widely used platform for basic and more advanced web-designers. As is known to be a given in the world of business, money rules all and money makes corrupt. Whether that was true in the Miro corporation remains uncertain. The allegations, however, were enough for the core development team to abandon ship and fork to a "rebranding of Mambo" under the, now widely known, name of Joomla. Based on a very solid foundation with quite a decent community size, Joomla soon increased its population to over 500,000 members and 20,000 developers
@@ -66,7 +66,7 @@ On the map you see that Joomla is divided in four main districts. As in any city
 
  The city is huge, with so much to see! To start, you get a ticket to head to the center of the city taking the tourist bus. 
  
-###<a name="arch"></a>Architecture of Joomla
+### Architecture of Joomla
 
 On your way there, you drive past the industrial area. But it is unlike what you have seen before. Instead of services such as a power plant or waterworks, you see plugin companies. Right at that moment the tour guide starts speaking. (You hadn't even noticed there was one)
 
@@ -96,7 +96,7 @@ And it continues for a while. Noticing your confused gaze, the receptionist kind
 _**Figure:** Example of a Joomla Page_
 
 
-###<a name="pop"></a>Population
+### Population
 Slowly you begin to unravel more and more of the mysteries that the city of Joomla holds. For now though, there is something on your bucketlist; namely to meet a distant friend of yours, [infograf768](https://github.com/infograf768). Although you haven't met much in real life, you've often talked in the past on improvements to open source software. He works on and off in the town hall as well as in some industrial companies, really working on the basics of the city. So you hop into a cab and head to his place, back through the many areas as more and more residential houses appear spread through the city. On your way there, you drive past a big and majestic building and wonder what it is. You ask the taxi driver whether he knows, to which he replies "But of course! Everybody knows! It's the town hall!"
 
 > Although Joomla is open-source community driven software, for smooth proceedings, marketing, budget allocation a strong leading team should exist for managing all other people involved (stakeholders).  Within Joomla, the leadership team is divided into three main teams:
@@ -169,7 +169,7 @@ With a slightly dim face he continues, "Joomla is not the only city delivering p
 _**Figure:** A typical path to decide between the main competitors in the world of CMS_
 
 
-####<a name="immigrants"></a>Immigrants
+#### Immigrants
 Some more time passes and you accidentally blurt out: "There are many different nationalities of people here. Is immigration a problem?". He continues, "No we very much support immigration! We have done so right from the start. "One of the powers of Joomla is it's welcoming of different nationalities and we try to cater them as much as possible. As you may have noticed when visiting the city, we try to present all services in all languages, even those from outside of Joomla."
 
 
@@ -191,7 +191,7 @@ _**Figure:** A location based dissection of the different user groups_
 _**Figure:** Implementation of translations using language packs_
 
 
-###<a name="main"></a>City Maintenance
+### City Maintenance
 After engaging in many hours more of interesting conversation you decide to call it a night. The next morning [infograf768](https://github.com/infograf768) takes you around to see some more of the city and the town hall, where he works. However, before you are even able to get out of the residential area, you have to stop because you see a large cloud moving towards you. "Is it a sandstorm?", you ask. "No", your friend replies, "Sadly, with every new company or industry coming into the city, more pollution is brought in which attracts many bugs. It is the biggest problem the city faces." You sit silently for a while as the swarm of bugs passes by. "I'm part of the city maintenance, however, and I lead many of the bug catchers. I'll show you as we reach the town hall!" Skipping ahead about an hour and the explanation starts.
 
 >Joomla provides developers with an action plan in case of an issue. Issues assigned with a priority and a status (e.g pending, open and confirmed). Consequently, all necessary information can be found in the [Joomla Issue Tracker](http://issues.joomla.org/) which works using GitHub. 
@@ -201,7 +201,7 @@ _**Figure:** Bug Tracker decision tree_
 
 >All changes is the Joomla code is done through GitHub. Joomla on Github uses a staging branch. The reason of using such a branch is mainly for developers to have a steady ground for contributing to the source code of Joomla. Opening Pull Requests (PRs) allows solving already identified issues and step-by-step integration by Joomla's integrator.
 
-"Such as yourself?", you wonder. "Yes," he says, "for example, I have accepted and integrated several fixes through PR's as submitted by [team-Joomla](https://github.com/delftswa2014/team-joomla-cms). You know, the guys that also run the tourist information center?"
+"Such as yourself?", you wonder. "Yes," he says, "for example, I have accepted and integrated several fixes through PR's as submitted by team-Joomla. You know, the guys that also run the tourist information center?"
 
 >Of course, every newly submitted code in Github will be tested to avoid making Joomla vulnerable to attacks. When there is a proposal for a pull request on Github two things will happen:
 
@@ -212,7 +212,7 @@ _**Figure:** Bug Tracker decision tree_
 >In addition the Joomla team provides a [checklist](https://docs.joomla.org/Testing_Checklists) for the developers.
 
 
-###<a name="impexp"></a>Import and Export
+### Import and Export
 As his shift ends, you head back to the train station and drive past the docks. You notice many trucks going in and coming out. It seems like the city of Joomla has a very bustling trade market. Once again you see the names you've seen before on the signpost, such as Peugeot, but now on a truck going toward the docks. However, the outgoing trucks you do not recognize. Apache, for example. Your gaze is not left unnoticed. "The latest versions of the finalized products as designd in the office buildings you were at earlier are now shipped to their respective cities and villages. New versions are often shipped daily at even the slightest change." "But what about the other trucks?", you ask. "Ah, that...", he declares, "No city can only produce goods, we need something to build with as well"
 
 >As we can see from the figure corresponding to the context view of Joomla there is a wide range of factors that influence its structure. For example, adaptability to different environments that vary from  mobile apps to any possible browser. Also, the ability to facilitate functionality for different web servers, programming languages and databases. For instance, Joomla needs to integrate functionality for the web servers(e.g NGiNX, APACHE) that is going to hosted in and also handle the supported  variety of databases (e.g MySQL, Microsoft SQL server).
@@ -223,7 +223,7 @@ As his shift ends, you head back to the train station and drive past the docks. 
 _**Figure:** Joomla Context view_
 
 
-###<a name="traffic"></a>Storage and Traffic
+### Storage and Traffic
 Upon arrival back at the station, you notice that there hasn't been a lot of traffic, but still everything was running smoothly. "Are there ever any traffic jams?" you ask. "Sure, every so often there is a bottleneck, an infinite loop or a new unknown dead-end road, but generally all traffic runs smoothly due to the good infrastructure"
 
 >Text is stored as records in a mySQL database. Therefore, not all content is necessarily shown on the designed website, although all textual content is stored. the Joomla database. On the other hand, content which is considerable larger (e.g. images, video, audio, etc) is not part of the above-mentioned database. These files are stored on the file system that is accessible by Joomla. <br> <br>
@@ -238,7 +238,7 @@ Upon arrival back at the station, you notice that there hasn't been a lot of tra
 > Information flow is mainly handled through the database. Clear paths are made between the several sources of information. This allows for fast handling of data. A clear [visualisation](http://www.torkiljohnsen.com/wp-content/uploads/2010/07/joomla_1.6_database_schema.png) of this can be made by investigating the inter-table calls.
 
 
-##<a name="utop"></a>Utopia or Dystopia
+## Utopia or Dystopia
 As you buy your ticket and board the train, you wonder what will happen to the city of Joomla. Now such an organized and bustling city full of activity, but with many a flaw. Sure it has its fantastic characteristics and highlights, but will that be enough to keep the inhabitants happy?
 
 >One of the key features of Joomla is that it is offering more than 64 languages. The result of that is that creates a lot of issues to the Joomla development team. Many people are working on the multilingual issues (for example in [#6051](https://github.com/joomla/joomla-cms/pull/6051)). All these could be eliminated if only one language was offered resources are focused in other things. <br><br>
