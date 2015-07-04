@@ -1,7 +1,7 @@
 ---
 layout: default
 project: jekyll
-title: Jekyll - A Simple Static Site Generator
+title: Jekyll
 chapter: true
 ---
 

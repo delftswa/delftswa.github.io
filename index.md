@@ -1,14 +1,16 @@
 ---
 layout: default
-project: 000
-title: Introduction
-chapter: true
+title: Delft Students on Software Architecture -- DESOSA 2015
+overview: true
 ---
 
-# Introduction
+# Delft Students on Software Architecture
+
+## DESOSA 2015
+
 
 **[Arie van Deursen] and [Rogier Slag].**<br/>
-*Delft University of Technology, The Netherlands*
+*Delft University of Technology, The Netherlands, July 2, 2015
 
 [arie van deursen]: http://avandeursen.com
 [rogier slag]: https://github.com/rogierslag
