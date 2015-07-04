@@ -2,7 +2,7 @@ highlighter: pygments
 relative_permalinks: false
 
 timezone: UTC
-exclude: ['provision.sh','Vagrantfile','README.md']
+exclude: ['provision.sh','Vagrantfile','README.md','test_links.rb']
 
 # Server settings
 host: 0.0.0.0
