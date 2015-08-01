@@ -2,6 +2,10 @@
 layout: default
 title: Delft Students on Software Architecture -- DESOSA 2015
 overview: true
+creator: 
+- role: Editor
+- text: Arie van Deursen and Rogier Slag
+date: 2015-07
 ---
 
 # Delft Students on Software Architecture
@@ -10,7 +14,7 @@ overview: true
 
 
 **[Arie van Deursen] and [Rogier Slag].**<br/>
-*Delft University of Technology, The Netherlands, July 2, 2015
+*Delft University of Technology, The Netherlands, July 2, 2015*
 
 [arie van deursen]: http://avandeursen.com
 [rogier slag]: https://github.com/rogierslag
@@ -68,7 +72,7 @@ We value your feedback on any of the material in the book. For your feedback, yo
 
 * Open an issue on our [GitHub repository for this book][dswa.io].
 * Offer an improvement to a chapter by posting a pull request on our [GitHub repository][dswa.io].
-* Contact [@delftswa][dswa.tw] on Twitter.
+* Contact @[delftswa][dswa.tw] on Twitter.
 * Send an email to Arie.vanDeursen at tudelft.nl.
 
 [dswa.io]: https://github.com/delftswa/delftswa.github.io
