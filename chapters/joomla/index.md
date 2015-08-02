@@ -5,19 +5,19 @@ title: Joomla
 chapter: true
 ---
 
-<p align="center">
-  <img  src="http://woensdag.nl/wp-content/uploads/Joomla-website.png" width="70%"/>
-</br></br>
+# Joomla
 
-<b>Remy Kabel, Panagiotis Mitsis, Michail Papadimitriou, Nikolaos Stekas</b><br/>
-<i>Delft University of Technology</i>
-</p>
+<img  src="images/Joomla-website.png" width="70%"/>
 
+**Remy Kabel, Panagiotis Mitsis, Michail Papadimitriou, Nikolaos Stekas**
 
-## Abstract
+_Delft University of Technology_
+
+**Abstract**
+
 _Joomla is an open-source Content Management System designed to assist users in building websites and online applications. Joomla is built using several levels of extensions that exist upon its framework. Through the combination of these extensions, content is generated and displayed to the user as a complete website.  Although Joomla is community-driven, many more stakeholders entailed due to the many millions of websites and developers supported. Through an analogy, comparing the architecture of Joomla to that of a large city, this chapter attempts to convey the details of the Joomla framework to the reader._
 
-## Table of Contents
+**Table of Contents**
 
 
 - [All Together, as a whole](#all-together-as-a-whole)
@@ -109,7 +109,7 @@ Slowly you begin to unravel more and more of the mysteries that the city of Joom
 
 The moment he finishes his last sentence you notice the care has come to a halt. You grab your bag and reach for your wallet but even before you can open it, the driver says, "Are you mad, it's all free here!". So you thank him kindly, exit the vehicle and walk to the house where you are warmly greeted. You are immediatly taken inside, get a drink and make small talk for hours on end. Amongst others as to how he moved into the city of Joomla. "Ah!", he says, "Anyone who uses, or contributes to the products Joomla creates need to work in the center. As such Joomla provides housing. As such there are many different people here. All linked to Joomla"
 
-#####Partners
+#### Partners
 
 * Rochen LTD
 	* Hosting the official website
@@ -119,7 +119,7 @@ The moment he finishes his last sentence you notice the care has come to a halt.
 * Software Freedom Law Center
 	* Legal guidance and representation 
 
-#####Users
+#### Users
 Other cities and villages
 
 * Individual web site developers
@@ -127,7 +127,7 @@ Other cities and villages
 * Government's web site developers
 
 
-#####Popular Users
+#### Popular Users
 
 * Harvard University 
 * UK Ministry of Defense
@@ -142,7 +142,7 @@ Other cities and villages
 * The Fashion Spot
 * El VIlliareal CF
 
-##### Developers
+#### Developers
  * Joomla! Production Working Groups
  * Third Party Developers
  * Designers
@@ -150,22 +150,21 @@ Other cities and villages
 ![Stakeholders Graph](images/SHpic.png)
 _**Figure:** Graph showing all related stakeholders of Joomla_
 
-##### Competitors
+#### Competitors
 With a slightly dim face he continues, "Joomla is not the only city delivering product like these though. Two other cities directly compete which does no good to our inhabitants."
 
 > There are two main competitors in the current world of CMS based website building. These are WordPress and Drupal. The reasons for one over the other can be easily seen in the first image below. Although there are other competitors, these do not even come close to the main three in terms of users.
 
->###### Biggest Competitors
+>##### Biggest Competitors
 * Wordpress - GPL
 * Drupal - Open-Source
 
->###### Other Competitors
+>##### Other Competitors
 * Moodle - Open-Source, mainly used to create a private website for dynamic online courses.
 * Contao - Free Content CMS, specializes in back-office and front-office accessibility.
 * Modx - Open-Source CMS, awarded Packt Publishing's Most Promising Open Source Content Management System in 2007.
 
 ![The Path to CMS](http://michaellobry.com/wordpress/wp-content/uploads/2012/07/Flow-chart-Wordpress-vs-Joomla-vs-Drupal-Matrix-compare.png)
-
 _**Figure:** A typical path to decide between the main competitors in the world of CMS_
 
 
@@ -181,13 +180,11 @@ Some more time passes and you accidentally blurt out: "There are many different 
 >Joomla users though have created local communities in order to be able to interact with each other. Through these communities we can approximately calculate the percentages of different nationalities of Joomla users. Below we present a graph which categorizes different nationalities according to the continent of their origin.
 
 ![Joomla user groups](images/m12.png)
-
 _**Figure:** A location based dissection of the different user groups_
 
 >In many cases Joomla has to provide output or feedback to the user (administrator or visitor of a site). In order to be able to provide feedback in the correct language the site administrator decides the default language in use. Whenever a message has to been created Joomla use a symbolic variable to represent the message. That variable will get its value from the system depending on the administrator's configuration.
 
 ![Joomla user groups](images/figure1.PNG)
-
 _**Figure:** Implementation of translations using language packs_
 
 
@@ -226,7 +223,7 @@ _**Figure:** Joomla Context view_
 ### Storage and Traffic
 Upon arrival back at the station, you notice that there hasn't been a lot of traffic, but still everything was running smoothly. "Are there ever any traffic jams?" you ask. "Sure, every so often there is a bottleneck, an infinite loop or a new unknown dead-end road, but generally all traffic runs smoothly due to the good infrastructure"
 
->Text is stored as records in a mySQL database. Therefore, not all content is necessarily shown on the designed website, although all textual content is stored. the Joomla database. On the other hand, content which is considerable larger (e.g. images, video, audio, etc) is not part of the above-mentioned database. These files are stored on the file system that is accessible by Joomla. <br> <br>
+>Text is stored as records in a mySQL database. Therefore, not all content is necessarily shown on the designed website, although all textual content is stored. the Joomla database. On the other hand, content which is considerable larger (e.g. images, video, audio, etc) is not part of the above-mentioned database. These files are stored on the file system that is accessible by Joomla. <br/> <br/>
 
 >In general information can be stored in many different places and may be called for by the extensions. Not every option is good practice, however.
 
@@ -241,13 +238,12 @@ Upon arrival back at the station, you notice that there hasn't been a lot of tra
 ## Utopia or Dystopia
 As you buy your ticket and board the train, you wonder what will happen to the city of Joomla. Now such an organized and bustling city full of activity, but with many a flaw. Sure it has its fantastic characteristics and highlights, but will that be enough to keep the inhabitants happy?
 
->One of the key features of Joomla is that it is offering more than 64 languages. The result of that is that creates a lot of issues to the Joomla development team. Many people are working on the multilingual issues (for example in [#6051](https://github.com/joomla/joomla-cms/pull/6051)). All these could be eliminated if only one language was offered resources are focused in other things. <br><br>
+>One of the key features of Joomla is that it is offering more than 64 languages. The result of that is that creates a lot of issues to the Joomla development team. Many people are working on the multilingual issues (for example in [#6051](https://github.com/joomla/joomla-cms/pull/6051)). All these could be eliminated if only one language was offered resources are focused in other things. <br/><br/>
 
 >On the other hand there are a lot of volunteers contributing to the project and the [Joomla Bug Squad](https://docs.joomla.org/Portal:Bug_Squad) who are helping to make a very stable CMS. This huge amount of volunteers make it evolve but not very quickly due to the large number of bugs and that it doesn't follow a strict roadmap. So what team-Joomla believes is that Joomla can extend a lot its features but first it should fix all the bugs that it faces. Also, they should have feasible and realistic views about their future. Below you can see the roadmap that Joomla wanted to follow but currently we are at March 2015 and they are still in version **3.4** and the suggested improvements are acceptable but new features remain abstract. In their [current roadmap](http://developer.joomla.org/cms/roadmap.html) they have adapted this. However, adapting a roadmap with every delay is not a solution.
 
 With that thought, the train stutters once and steadily increases its speed. You wave goodbye to your friend and decide to continue the journey on the open-source train.
 
 ![Roadmap](images/roadmap.png)
-
 _**Figure:** Joomla 2014-2015 roadmap_
 
