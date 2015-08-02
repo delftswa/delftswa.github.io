@@ -219,7 +219,7 @@ visualizes the core functionality of Syncany in a single image.
 It shows the repositories, remote file synchronization, repository sharing and
 storing secure content on unsecured remote locations.
 
-![Syncany core functionality summarized](images/functionality.png)
+![](images/functionality.png)
 
 __Figure 2__: Syncany core functionality summarized.
 
@@ -369,7 +369,7 @@ storage. The latter action prevents any inconsistencies that may have arisen bet
 clients after a cleanup operation. Figure 4 below summarizes the evolution that this
 feature has undergone.
 
-![image](images/cleanup.png)
+![](images/cleanup.png)
 
 __Figure 4__: Feature evolution for the Cleanup feature.
 
@@ -405,7 +405,7 @@ has been reached. The uploading of these transactions is then pipelined with the
 further indexing of changes. Figure 5 below shows the evolution of the
 transactions feature.
 
-![image](images/transactions.png)
+![](images/transactions.png)
 
 __Figure 5__: Feature evolution for the Transactions feature.
 
@@ -452,7 +452,7 @@ changed and tested and this measure raises no real concern for too complex
 methods or classes. Figure 6 shows an overview of the complexity of the methods
 for the three main Syncany projects.
 
-![image](images/barplotMethods.png)
+![](images/barplotMethods.png)
 
 __Figure 6__: Method complexities for Syncany's main projects.
 
@@ -480,7 +480,7 @@ types of tests classes in the three main projects have, it becomes apparent that
 Syncany does not yet have both tests for a majority of its classes, as shown in
 Figure 7.
 
-![image](images/coverage.png)
+![](images/coverage.png)
 
 __Figure 7__: Coverage data on a class level for the three main Syncany projects.
 
@@ -492,7 +492,7 @@ show the coverage on a method level, in which we plot the percentage of lines
 covered by some test in a method. "Barely covered" represents 1-49% coverage,
 "Covered" represents 50-79% and "Covered well" represents 80+%.
 
-![image](images/coverageClasses.png)
+![](images/coverageClasses.png)
 
 __Figure 8__: Coverage data on a method level for the three main Syncany projects.
 
