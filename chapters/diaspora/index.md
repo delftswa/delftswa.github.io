@@ -4,18 +4,22 @@ project: diaspora
 title: Diaspora
 chapter: true
 ---
-<p align="center">
+
+# Diaspora
+
+<p class="center">
   <img  src="images/Diaspora.png"/>
 </p>
 
 **Simon Bijl, Tejaswini Dandi, Selman Ercan, Revathi MC**<br/>
 *Delft University of Technology*
 
-## Abstract
+**Abstract**
 
 *The past few years have brought a cascade of news of how our social networks are being monitored ranging from Wikileaks to Facebook's privacy issues. With the dawn of centralised social networks, comes the dusk of privacy. The centralised model is less trusted to keep any of the information private, or restricted to being viewed only by a small group of people. Diaspora presents a novel approach by providing users a decentralised social network, where users can register to one of the servers of the distributed network without any data centralisation. This chapter provides a map of the architecture of and the functionality provided by Diaspora and describes its path towards an online social world where users are in control of their data.*
 
-###**Table of Contents**
+**Table of Contents**
+
 - [Diaspora](#diaspora)
     - [Inception and development](#inception-and-development)
 - [Organisation](#organisation)
@@ -46,10 +50,10 @@ In this chapter, we discuss the context, architecture and development of the Dia
 
 In 2010 the project was funded as a Kickstarter project, collecting over $200,000. Since 2012 the project is fully based on volunteer work. The image below gives a rough timeline of the project.
 
-<p align="center">
+<p class="center">
   <img  src="images/History.PNG"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 1: Project History of Diaspora
 </p>
 
@@ -61,26 +65,26 @@ In this section, the organisation and analysis of major stakeholders involved in
 
 Some of the stakeholder categories identified in Rozanski and Woods are included in this section. As the project currently involves less contributors, few of the stakeholders have multiple roles in the project. 
 
-<p align="center">
+<p class="center">
   <img  src="images/Stakeholder.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 2: Stakeholder Analysis of Diaspora
 </p>
 
 The Diaspora Foundation, which is part of the Free Software Support Network (FSSN), manages the Diaspora software development. Eben Moglen and the Software Freedom Law Center in turn run the FSSN. The FSSN provides resources to Diaspora development and manages Diaspora's branding, trademark, copyrights, finances and legal assets. Administrators who maintain the system once it has been deployed are called *podmins*, and the system administrators. Users of the network of nodes, mainly different individuals and organisations, can host a pod on their own server. 
 
 Figure 2 shows that few of the developers work in multiple roles in the project.
-The most active developer is [Mr. Jonne Haß](https://github.com/jhass) with 1872 commits, who also acts as an active community manager and integrator. Diaspora uses the GitHub issue tracking system and actively tags submitted bugs. On the issue board, especially the users Flaburgan and jhass are active contributors in terms of reactions. They almost always respond to confirmed bugs. Typically, [Flaburgan](https://github.com/Flaburgan) provides a better insight into the bug and jhass is often the one who comes with the bug fixes. Other active users are @goobertron, [@svbergerem](https://github.com/svbergerem). @jhass is the most active developer in pull request discussions; he reviews them thoroughly and has many comments on best practices and code style issues.
+The most active developer is [Mr. Jonne Haß](https://github.com/jhass) with 1872 commits, who also acts as an active community manager and integrator. Diaspora uses the GitHub issue tracking system and actively tags submitted bugs. On the issue board, especially the users Flaburgan and jhass are active contributors in terms of reactions. They almost always respond to confirmed bugs. Typically, [Flaburgan](https://github.com/Flaburgan) provides a better insight into the bug and jhass is often the one who comes with the bug fixes. Other active users are @goobertron, @[svbergerem](https://github.com/svbergerem). @jhass is the most active developer in pull request discussions; he reviews them thoroughly and has many comments on best practices and code style issues.
 
 ### Context view
 
 The process of software architecture involves the concerns of both the internal and the external environment. In addition to the internal stakeholders, it is essential to give a definition of the environment of the system in terms of its relationships and dependencies. This need can be met by creating a context view as part of the architectural description. The figure below gives an overview of Diaspora's interactions with external entities. 
 
-<p align="center">
+<p class="center">
   <img  src="images/Context view.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 3: Context view diagram of Diaspora
 </p>
 
@@ -120,10 +124,10 @@ Mandatory features are present in all products.
 Optional ones may or may not be selected.
 Among alternative features only one can be selected, while in OR-features it is possible to select one or more. Below is the feature model diagram of Diaspora.
 
-<p align="center">
+<p class="center">
   <img  src="images/feature-model.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 4: Diaspora Feature Model
 </p>
 
@@ -133,10 +137,10 @@ Most of the included features are mandatory. The OS support for development is a
 
 In order to represent a complex system in a way that is manageable and comprehensible by a range of business and technical stakeholders, the only successful way is to attack the problem from different directions simultaneously. In this approach, the architecture definition is partitioned into a number of separate but interrelated views and perspectives, each of which describes a separate aspect of the architecture. Collectively these views describe the whole system. 
 
-<p align="center">
+<p class="center">
   <img  src="images/Viewpoint.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 5: Viewpoint Catalog
 </p>
 
@@ -154,19 +158,19 @@ In general, Model (M) is the central component of the MVC Architecture. Models a
 
 The operation of this architecture is illustrated in the following figure.
 
-<p align="center">
+<p class="center">
   <img  src="images/MVC.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 6: MVC Architecture
 </p>
 
 As explained earlier, Diaspora's architecture consists of modules organised as models, controllers and views. The following figure shows which modules belongs to which part of the MVC architecture.
 
-<p align="center">
+<p class="center">
   <img  src="images/Module.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 7: Modular organisation
 </p>
 
@@ -180,10 +184,10 @@ Diaspora uses JSXC in the front end of Diaspora's built-in chat feature. Diaspor
 ##### Source Code Structure
 Diaspora is a Ruby on Rails application and the module organisation conforms to the Ruby on Rails project structure described in [application structure](http://en.wikibooks.org/wiki/Ruby_on_Rails/Getting_Started/Creating_the_application#The_Application_Structure). The project documentation is provided through [wiki](https://wiki.Diasporafoundation.org/Main_Page) where every single feature is precisely explained using workflows. The documentation on recent changes in the system is provided through the `Changelog.md` file. The Diaspora application structure is shown in the figure below. 
 
-<p align="center">
+<p class="center">
   <img  src="images/diaspora-codeline.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 8: The application structure of Diaspora
 </p>
 
@@ -251,10 +255,10 @@ This is an important model for the deployment viewpoint. This model defines:
 
 The Runtime platform Model of Diaspora is shown below:
 
-<p align="center">
+<p class="center">
   <img  src="images/Deployment Diagram.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 9: Runtime platform Model
 </p>
 
@@ -291,20 +295,20 @@ By default rails-i18n loads all locale files, pluralisation and transliteration 
 
 #### Major touch points 
 
-<p align="center">
+<p class="center">
   <img  src="images/Touch points.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 10: Major Touch points of Diaspora around the globe
 </p>
 
 
 This concern focuses on identifying all the major touch points (where a person interacts with the system), its scope of services and information that need to be internationalised in each of these touch points and system's region of concerns. The regions plotted in the diagram show the major touch points of the Diaspora system. The data is retrieved by taking the regions of active pod administrators, regions which have their languages translated at higher rate and regions which has its recent updates on languages. 
 
-<p align="center">
+<p class="center">
   <img  src="images/I18n.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 11: Scope of internationalisation of Diaspora
 </p>
  
@@ -327,10 +331,10 @@ In this section we evaluate the maintainability of the Diaspora project. We defi
 
 The quality profile below is plotted by evaluating the cyclomatic complexity in the Diaspora codebase, through analysing every single line of code by the risk category instead of summation or average median method. Code complexity is analysed using Saikuro, which is a Ruby cyclomatic complexity analyser. When given Ruby source code Saikuro will generate a report listing the cyclomatic complexity of each method found. Some of the Classes/Modules which is under High risk category include `AspectsController`, `ConversationsController`, `PhotosController`, `StatusMessagesController`, `UsersController` and `PeopleController`. Duplication of code attributing to high risk category can be seen in the modules `PeopleController`, `StatusMessagesController`.
 
-<p align="center">
+<p class="center">
   <img  src="images/Complexity.png"/>
 </p>
-<p align="center">
+<p class="center">
   Figure 12: Quality profile of cyclomatic complexity
 </p>
 
@@ -348,10 +352,10 @@ The quality profile below is plotted by evaluating the cyclomatic complexity in 
 
 Below is a diagram generated by the CodeClimate plugin running on the Diaspora codebase. It shows the change in the number of classes per risk category over a period of four months, prior to the last release;`Diaspora 0.4.1.2`on October 30th, 2014.
 
-<p align="center">
+<p class="center">
   <img  src="images/code-climate-trends.png"/>
 </p>
-<p align="center">
+<p class="center">
 Figure 13: CodeClimate Maintainability trends
 </p>
 
