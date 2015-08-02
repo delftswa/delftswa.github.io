@@ -9,17 +9,17 @@ chapter: true
 **[Martijn Dwars](https://github.com/MartijnDwars), [Wiebe van Geest](https://github.com/wrvangeest), [Rik Nijessen](https://github.com/gewoonrik) and [Rick Wieman](https://github.com/RickWieman)**<br/>
 *Delft University of Technology*
 
-[![Docker logo](images/docker_logo.png)](https://www.docker.com/).
+[![Docker logo](images/docker_logo.png)](https://www.docker.com/)
 
-## Abstract
+**Abstract**
 
-[Docker](https://www.docker.com/) is designed to run isolated environments in so called containers, without the overhead of virtual machines.
+*[Docker](https://www.docker.com/) is designed to run isolated environments in so called containers, without the overhead of virtual machines.
 This document gives an overview of the source code of the project. The architecture is analyzed, discussing both stakeholders of the system and the design of the modules within it.
 One of the ways in which this architecture is managed is through the development process.
 The knowledge gained by hands-on experience with this process is used to explain it.
-After this, a current big development within Docker, the porting to Windows, is discussed with regards to challenges and some ways in which the difficulty of the porting can be measured.
+After this, a current big development within Docker, the porting to Windows, is discussed with regards to challenges and some ways in which the difficulty of the porting can be measured.*
 
-## Table of Contents
+**Table of Contents**
 
 1. [Introduction](#introduction)
 1. [What is Docker?](#what-is-docker)
@@ -77,7 +77,7 @@ Internally, Docker uses the same functionality as the commit command to execute 
 To take a closer look at the structure of the Docker project, we first identify the functional elements of Docker.
 The relation between those elements is depicted in Figure 2. Table 1 provides a small description of each element's responsibility.
 
-![Component Diagram](images/component_diagram.png)
+![](images/component_diagram.png "Component Diagram")
 
 *Figure 2: Component diagram of Docker*
 
@@ -98,7 +98,7 @@ It uses namespaces, cgroups, capabilities, and filesystem access controls to iso
 However, by using their own interface they are able to drastically reduce the number of moving parts [[ref]](http://blog.docker.com/2014/03/docker-0-9-introducing-execution-drivers-and-libcontainer/) and no longer depend on userland packages. 
 The libcontainer project attracted a number of companies to support Docker, such as Microsoft, Google, IBM, Red Hat, and Canonical [[ref]](http://www.zdnet.com/article/docker-libcontainer-unifies-linux-container-powers/).
 
-<img alt="Virtualization Abstraction" src="images/docker-linux-interfaces.png" width="300" />
+<img  src="images/docker-linux-interfaces.png" width="300" />
 
 *Figure 3: Virtualization abstraction [[ref]](http://en.wikipedia.org/wiki/Docker_(software)#/media/File:Docker-linux-interfaces.svg)* 
 
@@ -115,7 +115,7 @@ This also allows the use of previously built layers/images.
 For example, when you have only changed the source code of your application, only the layers starting at importing your source code have to be rebuilt, i.e. the dependencies do not need to be built/installed again.
 Intermediate layers are cached by Docker, so only the changed layer and all layers on top of that need to be rebuilt.
 
-<img alt="Layered image" src="https://docs.docker.com/terms/images/docker-filesystems-multilayer.png" width="300" />
+<img  src="https://docs.docker.com/terms/images/docker-filesystems-multilayer.png" width="300" />
 
 *Figure 4: Layered structure of an image [[ref]](https://docs.docker.com/terms/image/)*
 
@@ -156,7 +156,7 @@ Maintainers are the only persons allowed to merge pull requests and can be found
 
 Another big group of stakeholders are the suppliers. Companies offering Docker based services have a big interest in its development. Examples of suppliers are companies that offer Infrastructure as a Service with built-in support for Docker, such as [DigitalOcean](https://www.digitalocean.com/features/one-click-apps/docker/) and [GiantSwarm](https://giantswarm.io), but also [Docker Hub](https://hub.docker.com/), offering tools for building and sharing containers.
 
-<img alt="Power/Interest Curve for Docker" src="images/P_I_curve.png" height="500" />
+<img  src="images/P_I_curve.png" height="500" />
 
 *Figure 5: The Power/Interest curve for Docker*
 
@@ -179,7 +179,7 @@ The Docker project can be divided into four layers: core, utility, security, and
 Figure 6 displays these layers and their modules.
 Most of the modules that had their functionality described in Figure 2 reside in the core layer of Docker.
 
-<img alt="Development view" src="images/development-view.png" width="600" />
+<img  src="images/development-view.png" width="600" />
 
 *Figure 6: Modular structure of Docker*
 
@@ -198,7 +198,7 @@ The `security` layer contains trust-related code, a concept that is used for man
 Finally, Docker uses both integration tests and unit tests, as indicated by the `Tests` layer.
 This layer is represented by a vertical box, because testing occurs in all layers of the system.
 
-<img alt="Module dependencies" src="images/docker_deps.png" height="500" />
+<img  src="images/docker_deps.png" height="500" />
 
 *Figure 7: Module dependencies*
 
@@ -233,15 +233,15 @@ Usually to mark bugs or to make clear that issues belong to a certain part of th
 Additionally, certain issues get a label to indicate the difficulty. 
 These difficulty indicators give an indication of the experience needed to contribute to the project. There are five levels, ranging from `exp/beginner` to `exp/master`. 
 Each level is a guideline that indicates in how far a contributor can help solve issues that might require more knowledge of Docker. 
-This is a great way for beginning contributors to familiarize themselves with the Docker contribution process, as much as it ensures that difficult issues are looked at by expert contributors. <br>
+This is a great way for beginning contributors to familiarize themselves with the Docker contribution process, as much as it ensures that difficult issues are looked at by expert contributors. <br/>
 Docker's [Contributor Guide](https://docs.docker.com/project/find-an-issue/) explains this and more in detail.
 
 ## Windows port
 
 On October 16, 2014 Microsoft announced a partnership with Docker, Inc. to bring Docker to the Windows platform [[ref]](http://news.microsoft.com/2014/10/15/dockerpr/). 
-This partnership includes Microsoft developers being dedicated to the Docker project. One such employee has even been top contributor for some time [[ref]](https://twitter.com/taylorb_msft/status/577862692955820032). <br>
+This partnership includes Microsoft developers being dedicated to the Docker project. One such employee has even been top contributor for some time [[ref]](https://twitter.com/taylorb_msft/status/577862692955820032). <br/>
 Before this project started, Docker was only useable on Linux. The goal is to make it possible to run containers on Windows Server.
-The Docker client, which can be used to manage Docker containers running on Windows, has already been ported to Windows [[ref]](https://github.com/docker/docker/pull/9113). Developers from Microsoft are currently porting the Docker daemon to Windows at the Microsoft fork of Docker [[ref]](https://github.com/microsoft/docker/tree/JJHWindowsDaemon).<br>
+The Docker client, which can be used to manage Docker containers running on Windows, has already been ported to Windows [[ref]](https://github.com/docker/docker/pull/9113). Developers from Microsoft are currently porting the Docker daemon to Windows at the Microsoft fork of Docker [[ref]](https://github.com/microsoft/docker/tree/JJHWindowsDaemon).<br/>
 In this section the challenges of porting Docker to Windows will be discussed. After this, metrics to be able to asses the portability of Docker will be introduced. 
 
 ### Challenges
@@ -252,7 +252,7 @@ This makes it very easy to implement OS specific container functionality and the
 
 In addition to the architectural challenges, a lot of `Linuxisms` are included into Docker. For example, in Windows it is common to use the registry to get configuration settings. In Docker, however, dotfiles and commandline parameters are used, the former of which is commonly used in Unix environments.
 
-In the short term the goal is to make the Docker daemon compile for Windows. This process is described in a proposal [[ref]](https://github.com/docker/docker/issues/10662) by [@jhowardmsft](https://github.com/jhowardmsft).
+In the short term the goal is to make the Docker daemon compile for Windows. This process is described in a proposal [[ref]](https://github.com/docker/docker/issues/10662) by @[jhowardmsft](https://github.com/jhowardmsft).
 Dummy Windows drivers without functionality will be added to reach this goal, which means that the daemon will momentarily not have any functionality on Windows.
 The long term goal is to write the actual implementation, so that the daemon can run on Windows.
 This work is done in the Microsoft fork of Docker [[ref]](https://github.com/microsoft/docker/tree/JJHWindowsDaemon).
@@ -260,11 +260,11 @@ This approach has its disadvantages, as it will probably result in one large pul
 
 ### Metrics
 
-The required changes to accommodate the port to Windows affect multiple aspects of the Docker project. This might have consequences for the quality of the software. In order to be able to keep an eye on this, some metrics are suggested. <br>
+The required changes to accommodate the port to Windows affect multiple aspects of the Docker project. This might have consequences for the quality of the software. In order to be able to keep an eye on this, some metrics are suggested. <br/>
 First, a goal is stated that specifies what should be achieved. 
-Next, some questions are given, the answers to which will help give insight into the progress of achieving the goal. The answers of these questions consists of a combination of metrics given per question. After the questions and metrics are listed, the motivation behind them is given. <br>
+Next, some questions are given, the answers to which will help give insight into the progress of achieving the goal. The answers of these questions consists of a combination of metrics given per question. After the questions and metrics are listed, the motivation behind them is given. <br/>
 
-The goal of these measurements is to **improve** the **portability** of **Docker** for its **developers**. <br>
+The goal of these measurements is to **improve** the **portability** of **Docker** for its **developers**. <br/>
 
 Portability is, according to [ISO 25010:2011](http://www.iso.org/iso/catalogue_detail.htm?csnumber=35733), defined as the degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another. 
 The main aspect of portability that applies to the Docker project is *adaptability*: the measure of the ability of the system to be able to change, specifically when a high portability is desired. 
@@ -294,7 +294,7 @@ All these metrics can be mapped to numbers, which makes them easy to evaluate an
 
 **Question 2** is designed to track the progress of the adaptability. Ideally, the amount of system specific calls should decrease over time. This can be measured by keeping records of the results of the metrics of question 1.
 
-**Question 3** covers the knowledge distribution within the work force. It is important to have enough developers proficient in a supported operating system and ensure that the distribution between these is similar. A shift in this distribution could, for example, result in a lack of insight into the effect of changes on one OS or another.<br>
+**Question 3** covers the knowledge distribution within the work force. It is important to have enough developers proficient in a supported operating system and ensure that the distribution between these is similar. A shift in this distribution could, for example, result in a lack of insight into the effect of changes on one OS or another.<br/>
 These metrics could be measured using questionnaires to identify experts and interviews to assess their actual knowledge.
 
 These three questions should help to gain insight into the improvement of the portability of Docker.
@@ -306,13 +306,13 @@ It allows the creation of stand-alone containers without the overhead of a simil
 It is designed as an open project, which introduces challenges as well as advantages.
 
 Overall, the architecture of the Docker project is well-maintained. 
-There is one very important reason for this: <br>
+There is one very important reason for this: <br/>
 Despite the popularity of the project, the design reviews, code reviews and documentation reviews are executed very thoroughly.
 This ensures that contributions from not just Docker, Inc. employees, but also those from external parties like IBM, Microsoft and others fit in the overall design of the project.
 
 An important aspect of the Docker architecture is its modularity. 
 All models have one responsibility, which fits the Unix philosophy. 
-This design choice allows for good testability and provides a clear structure of the code. <br>
+This design choice allows for good testability and provides a clear structure of the code. <br/>
 Another such enforced design choice is the driver model. 
 Several components are designed as a driver (e.g. storage driver, engine driver), which allows for an easier porting of that specific part of the code to another platform, or to providing a new driver with another implementation.
 
