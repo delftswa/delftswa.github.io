@@ -5,21 +5,21 @@ title: Vagrant
 chapter: true
 ---
 
-<p align="center">
-	<img src="images/logo_vagrant.png" alt="Vagrant" />
-	<h3 align="center" style="margin-bottom:30px;">Development environments made easy</h3>
-</p>
+# Vagrant: Development environments made easy
 
-<img src="images/Team.png" alt="Authors" />
+![](images/logo_vagrant.png "Vagrant Logo")
 
+![](images/Team.png "Authors")
 
-## Abstract
-Chances are, that as a developer you have come across the “it does not work on my machine” excuse from other developers with whom you have been working on a project. 
+**Abstract**
+
+*Chances are, that as a developer you have come across the “it does not work on my machine” excuse from other developers with whom you have been working on a project. 
 A possible solution to this problem is Vagrant. Vagrant is a tool for building complete development environments which are portable, and focus mostly on ease of use. 
 Vagrant helps you decrease the time and effort necessary to setup the development environment and makes it easy to distribute these environments with other developers.
-This allows developers focus more on actual development of the project instead of wasting hours on setting the environment. 
+This allows developers focus more on actual development of the project instead of wasting hours on setting the environment.*
 
-## Table of Contents
+**Table of Contents**
+
 * [Introduction](#introduction)
 * [Vagrant's Playground](#playground)
 * [The Underlying Architecture](#developmentview)
@@ -28,10 +28,10 @@ This allows developers focus more on actual development of the project instead o
 * [Functional View](#functionalview)
 * [Development Process](#devprocess)
 * [Future and Conclusion](#future-and-conclusion)
-* [References](#references)
-* [Appendix](#appendix)
+* [References](#vagrant-references)
+* [Appendix](#append-vagrantcommands)
 
-<a name="introduction"></a>
+<a id="introduction"/>
 
 ## Introduction
 Every developer has faced problems when it comes to setting up a development environment.
@@ -55,7 +55,7 @@ Then, the variable features are discussed by looking into the various features o
 Afterwards, the usability perspective and the functional view if the system will be discussed.
 Lastly, the development process of Vagrant is presented.
 
-<a name="playground"></a>
+<a id="playground"/>
 
 ## Vagrant's Playground
 Users are not the only people affected by the system/software they use. According to [Rozanski and Woods](#rw2000), the systems are not just used, they need to be designed, built, maintained and paid for. 
@@ -64,13 +64,13 @@ These people are also called *stakeholders*.
 The system is also affected by external entities interacting with the system.
 These entities will be presented and discussed in the *context view*.
 
-<a name="stakeholders"></a>
+<a id="stakeholders"/>
 
 ### Stakeholders
 The number of different stakeholders in general is large and in reality it will be challenging to meet all the requirements and needs of the different stakeholders. 
 The following diagram shows a visual overview of the stakeholder analysis of Vagrant. 
 
-![Types of stakeholders for Vagrant](images/Stakeholder.png)
+![](images/VagrantStakeholder.png "Types of stakeholders for Vagrant")
 
 As already mentioned in the [Introduction](#introduction), the main backer of Vagrant is Mitchell Hashimoto and his company HashiCorp. At the moment, HashiCorp handles the development, required investments, marketing, quality control, legal regulations and they provide professional support and training for Vagrant.
 The documentation is mainly maintained by HashiCorp staff.
@@ -102,7 +102,7 @@ Instead they expect to be rewarded in the form of a better system which they can
 ### Context View
 To get an overview of the all the external entities interacting with the system, the following diagram is presented.
 
-![Context View](images/ContextView.png)
+![](images/ContextView.png "Context View")
 
 Since Vagrant makes use of external virtual machines, it is highly dependent on VM providers like [VMware](http://www.vmware.com/), [Docker](https://www.docker.com/) or Oracle's [VirtualBox](https://www.virtualbox.org/). 
 
@@ -116,14 +116,14 @@ Vagrant is mainly developed in Ruby.
 Other languages used in the project are mostly web-development languages, with among others, JavaScript and CSS. 
 These are needed for the website of Vagrant [vagrantup.com](http://vagrantup.com), which is also located in the same repository as system itself. 
 
-<a name="developmentview"></a>
+<a id="developmentview"/>
 
 ## The Underlying Architecture
 In order to understand how Vagrant works, it is necessary to dive into the underlying architecture of Vagrant. 
 The organisation of the modules and their coupling are shown in the picture below, which will be discussed further.
 
 
-![Development View](images/LayeredView.png)
+![](images/LayeredView.png "Development View")
 
 ### Core layer
 As can be seen from the diagram, the core-layer consist of the most inner kernel of Vagrant.
@@ -189,14 +189,14 @@ Important config-implementations are the modules Config, Vagrantfile and Registr
 
 Vagrant also makes use of common third-party libraries, which serve functionality for logging, testing, networking and OS Management purposes. 
 
-<a name="productlines"></a>
+<a id="productlines"/>
 
 ## Variability
 This section discusses the analysis of the variability of Vagrant. 
 This is done by first looking into the features and the variability of the features. 
 Afterwards, the variability feature model will be presented in a graph and the main variation point is identified.
 
-<a name="mainfeatures"></a>
+<a id="mainfeatures"/>
 
 ### Main Features Offered by Vagrant 
 Vagrant provides the user the possibility to package a currently running environment by executing `vagrant package` which packages such an environment into a re-usable box. 
@@ -250,10 +250,10 @@ Users can choose from `ssh` and `winrm` **communication protocols**, which are d
 Based on the features in the [previous](#mainfeatures) section, the feature model of Vagrant is created and presented below.
 In the model, the most basic features are mandatory because these features are needed in order to use the tool. However the user has the possibility to choose between the different options with exception to the language as English is the only supported language currently. 
 
-![Feature model](images/FeatureModel.png)
+![](images/FeatureModel.png "Feature model")
 
 
-<a name="usabilitypersective"></a>
+<a id="usabilitypersective"/>
 
 ## Usability Perspective
 
@@ -265,11 +265,11 @@ The places where people can interact with the system should be identified, so ca
 Moreover, the user interface should be nicely separated from functional processing.
 This way, the user interface could be changed or replaced easily without having to untangle the implementation.
 
-#### Users
+### Users
 As described in [Stakeholders](#stakeholders), the users are mainly developers ranging from professional developers at large companies to independent programmers and hobbyists.
 These developers have most likely experience with Command-Line based interfaces and are familiar with virtual machines and -environments.
 
-#### User Interface
+### User Interface
 Vagrant offers one User Interface: namely the Command-Line Interface (CLI).
 This interface is the most important 'touch point' currently.
 The CLI offers a large variability of commands, the most common are provided by `vagrant help` (see [Appendix A](#append-vagrantcommands)).
@@ -282,7 +282,7 @@ However, one decent downside of the CLI is the fact that the auto-completion is 
 For example, `vagrant u` will be completed to `vagrant up` whereas subcommands like `vagrant up someV` will not be auto-completed to `vagrant up someVM`.
 Since users cannot fully rely one this handy feature, the overall experience may deteriorate.
 
-#### Separation User Interface and Functional Processing
+### Separation User Interface and Functional Processing
 
 Vagrant is able to run without any User Interface: every possible command can be executed by simply creating the corresponding Command object.
 In theory, you could put such Object in some main method and run this method by using an executable.
@@ -301,7 +301,7 @@ VagrantPlugins::CommandDestroy::Command.new(['--force'], @env).execute
 
 This immediately shows that the functional part of Vagrant is partly called with CLI information: the list of subcommands (`[--force]`).
 
-<a name="functionalview"></a>
+<a id="functionalview"/>
 
 ## Functional View
 
@@ -354,7 +354,7 @@ In the usability view the Command-Line Interface was discussed in terms of usabi
 In this section the Command-Line Interface will be discussed in terms of functionality.
 The functionality will be shown in the form of the following diagram.
 
-![Functional view of the Command-line interface](images/FunctionalView.png)
+![](images/FunctionalView.png "Functional view of the Command-line interface")
 
 In the diagram above it is clear to see how the various commands of the system relate.
 The blocks each represent a command available in Vagrant.
@@ -389,7 +389,7 @@ It shows all the different types of plugins, such the provisioner and provider p
 Additionally, using the colour-coding it also shows what tools have plugins available for vagrant.
 In general these plugins are not much more than middleware enabling Vagrant to access functionality of the external tools, such as VirtualBox.
 
-<a name="devprocess"></a>
+<a id="devprocess"/>
 
 ## Development Process
 Next to the module structure, it is important for  developers to know the process regarding new contributions.
@@ -408,14 +408,12 @@ Whenever a pull request is opened on GitHub, [Travis CI](https://travis-ci.org) 
 Travis CI then builds the system as specified in the build approach and runs all the tests.
 Then, the pull request is reviewed by one of the maintainers and merged into the system if everything looks alright.
 
-#### Release Process
+### Release Process
 New Vagrant versions are not being released with any regular schedule. 
 Project maintainer Mitchell Hashimoto explained the rationale for this in a personal email.
 The reason for relatively slow updating is that Vagrant already is reasonably mature (five years old) and considered stable for its primary use.
 Vagrant is finished in the sense that there are no any plans to add new or change existing functionality, except for minor requests.
 The infrequent releases of Vagrant mostly contain fixes of small bugs which reside on specific host-guest combinations, new feature requests and minor updates to the documentation. 
-
-<a name="future-and-conclusion"></a>
 
 ## Future and Conclusion
 
@@ -436,25 +434,22 @@ The usability perspective of Vagrant clearly shows, that Vagrant separates the u
 
 To conclude, Vagrant solves the common problem of having differences in the working environments of developers. Using Vagrant, developers can create and share reproducible working environments using a single file. It has a highly flexible architecture which is very easy to maintain due to the plugin-based approach.
 
-<a name="references"></a>
+<a id="vagrant-references"/>
 
 ## References
 
-* <a name="rw2000"></a>ROZANSKI, Nick; WOODS, Eóin. Software systems architecture: working with stakeholders using viewpoints and perspectives. Addison-Wesley, 2011.
-* <a name="dogfood"></a>Dogfood: [http://en.wikipedia.org/wiki/Eating_your_own_dog_food](http://en.wikipedia.org/wiki/Eating_your_own_dog_food) (Visited: March 2015)
-* <a name="plugindoc"></a>Plugins Documentation: [https://docs.vagrantup.com/v2/plugins/index.html](https://docs.vagrantup.com/v2/plugins/index.html) (Visited: March 2015)
-* <a name="devguide"></a>Development Guide: [https://github.com/mitchellh/vagrant/blob/master/README.md](https://github.com/mitchellh/vagrant/blob/master/README.md) (Visited: March 2015)
-* <a name="contr-guide"></a>Contribution Guide: [https://github.com/mitchellh/vagrant/blob/master/CONTRIBUTING.md](https://github.com/mitchellh/vagrant/blob/master/CONTRIBUTING.md) (Visited: March 2015)
-* <a name="cli-doc"></a>CLI Documentation: [http://docs.vagrantup.com/v2/cli/package.html](http://docs.vagrantup.com/v2/cli/package.html) (Visited: March 2015)
-* <a name="shell-doc"></a>Shell Documentation: [https://docs.vagrantup.com/v2/provisioning/shell.html](https://docs.vagrantup.com/v2/provisioning/shell.html) (Visited: March 2015)
+* <a id="rw2000"/>ROZANSKI, Nick; WOODS, Eóin. Software systems architecture: working with stakeholders using viewpoints and perspectives. Addison-Wesley, 2011.
+* <a id="dogfood"/>Dogfood: [http://en.wikipedia.org/wiki/Eating_your_own_dog_food](http://en.wikipedia.org/wiki/Eating_your_own_dog_food) (Visited: March 2015)
+* <a id="plugindoc"/>Plugins Documentation: [https://docs.vagrantup.com/v2/plugins/index.html](https://docs.vagrantup.com/v2/plugins/index.html) (Visited: March 2015)
+* <a id="devguide"/>Development Guide: [https://github.com/mitchellh/vagrant/blob/master/README.md](https://github.com/mitchellh/vagrant/blob/master/README.md) (Visited: March 2015)
+* <a id="contr-guide"/>Contribution Guide: [https://github.com/mitchellh/vagrant/blob/master/CONTRIBUTING.md](https://github.com/mitchellh/vagrant/blob/master/CONTRIBUTING.md) (Visited: March 2015)
+* <a id="cli-doc"/>CLI Documentation: [http://docs.vagrantup.com/v2/cli/package.html](http://docs.vagrantup.com/v2/cli/package.html) (Visited: March 2015)
+* <a id="shell-doc"/>Shell Documentation: [https://docs.vagrantup.com/v2/provisioning/shell.html](https://docs.vagrantup.com/v2/provisioning/shell.html) (Visited: March 2015)
 
-<a name="appendix"></a>
 
-## Appendix
+<a id="append-vagrantcommands"/>
 
-<a name="append-vagrantcommands"></a>
-
-### A: Vagrant Commands
+## Appendix: Vagrant Commands
 <pre><code>box             manages boxes: installation, removal, etc.
 connect         connect to a remotely shared Vagrant environment
 destroy         stops and deletes all traces of the vagrant machine
