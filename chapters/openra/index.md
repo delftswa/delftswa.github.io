@@ -5,21 +5,25 @@ title: OpenRA
 chapter: true
 ---
 
-![OpenRA logo](http://www.openra.net/images/soviet-logo.svg)
-
 # OpenRA
 
-## Abstract
+**By Jasper Abbink, Peter Evers, Nick ten Veen, Joost Verdoorn**
+*Delft University of Technology*
 
-OpenRA is an open source, cross-platform real-time strategy game engine.
+![](images/soviet-logo.png)
+
+
+**Abstract**
+
+*OpenRA is an open source, cross-platform real-time strategy game engine.
 This game engine is targeted at legacy Westwood games like Red Alert, Dune 2000, Tiberian Sun, and Tiberian Dawn.
 <!-- michielha: more entry points for readers who know any of these games-->
 The goal of this project is to have an extensible engine that makes modifying (modding) these games easy.
 The project has been scrutinized from multiple viewpoints: context view, development view, and evolution view.
-The outcome of this research and the conclusions that can be drawn from it are compiled in this chapter.
+The outcome of this research and the conclusions that can be drawn from it are compiled in this chapter.*
 <!-- michielha: it is generally accepted to put the actual conclusion in the abstract -->
 
-## Table of Contents
+**Contents**
 
 |# | Title
 ---|:------------------------
@@ -31,7 +35,8 @@ The outcome of this research and the conclusions that can be drawn from it are c
 |[6](#contributions) | Contributions
 |[7](#conclusion) | Conclusion
 
-# Introduction
+
+## Introduction
 
 Around the turn of the millennium [Westwood Studios](https://nl.wikipedia.org/wiki/Westwood_Studios) released a number of Real-Time Strategy (RTS) games jointly known as the Command & Conquer series.
 The series has been well received amongst gamers and has made a significant contribution to the pop-culture of the day.
@@ -44,7 +49,7 @@ Many games have later incorporated many of the same gameplay elements introduced
 
 <!-- michielha: maybe chuck in a screenshot in here to visualize what you just said -->
 
-## The conception of OpenRA
+### The conception of OpenRA
 
 OpenRA, where RA is an abbreviation of *Command & Conquer: Red Alert* --the best-received game of the Command & Conquer series-- is an open source project that aims for the reimplementation of the game engine featured in a number of Command & Conquer games.
 Besides the bare engine, the project features a number of so-called *mods* that can be run on the engine, with the mods mimicking the gameplay of individual games.
@@ -56,45 +61,44 @@ The project lay relatively dormant for about two years.
 Then suddenly, in October 2009, the project quickly gained a number of much-needed contributors, providing the spark that started a development effort that today is stronger than ever.
 At the time of writing, the project has amassed 15220 commits by 159 individuals, including some contributions by the authors of this chapter.
 
-# Stakeholder Analysis
+## Stakeholder Analysis
 
 Stakeholders within OpenRA work a little bit different than in a commercial(ly backed) product.
 As virtually no money is involved, most contributions come from a very small set of people that take many tasks upon themselves.
 
 Within the OpenRA project, the contributors aren't really concerned with a (materialistic) return on investment.
 There is however a thriving community of people concerning themselves with the planning of the project: creating road maps for the project, categorizing issues and reporting bugs.
-As we can see from the [issue](https://github.com/openra/openra/issues) and [pull request](https://github.com/openra/openra/pulls) page, most issue and milestone management is done by [@Mailaender](https://github.com/Mailaender), [@pchote](https://github.com/pchote) and [@obrakmann](https://github.com/obrakmann), who also have been the top contributors over the last twelve months.
+As we can see from the [issue](https://github.com/openra/openra/issues) and [pull request](https://github.com/openra/openra/pulls) page, most issue and milestone management is done by @[Mailaender](https://github.com/Mailaender), @[pchote](https://github.com/pchote) and @[obrakmann](https://github.com/obrakmann), who also have been the top contributors over the last twelve months.
 
 A summary of the project's stakeholders can be found in [Table 1](#t1).
 
-<a name="t1"></a>
+<a id="t1"/>
 
  Type | Entities |
 |---|---|
-| Developers | [@pchote](https://github.com/pchote) , [@Mailaender](https://github.com/Mailaender), [@obrakmann](https://github.com/obrakmann), [@chrisforbes](https://github.com/chrisforbes) |
+| Developers | @[pchote](https://github.com/pchote) , @[Mailaender](https://github.com/Mailaender), @[obrakmann](https://github.com/obrakmann), @[chrisforbes](https://github.com/chrisforbes) |
 | Users | hundreds of players around the world, [ModDB](http://www.moddb.com/games/openra) |
 | Suppliers | .NET/Mono, [Westwood](http://nl.wikipedia.org/wiki/Westwood_Studios), [Electronic Arts](http://www.ea.com/) |
-| Assessors | Preventing copyright infringement done by [@pchote]https://github.com/pchote) and [@Mailaender](https://github.com/Mailaender) in https://github.com/openra/openra/issues?q=legal |
+| Assessors | Preventing copyright infringement done by @[pchote](https://github.com/pchote) and @[Mailaender](https://github.com/Mailaender) in https://github.com/openra/openra/issues?q=legal |
 | Additional stakeholders | [Bountysource](https://www.bountysource.com/teams/openra/issues?tracker_ids=36085) |
 
 **Table 1** The stakeholders within OpenRA
 
 <!-- michielha: consider removing the table and putting it into text. Devs/users is pretty clear. At this point, it is not clear what 'mono' is. Assessors and additional stakeholders is really not clear to me. What is bountysource even? -->
 
-# Context View
+## Context View
 
 The Context view of the system defines the relationships, dependencies, and interactions between the system and its environment.
 It defines what the system can do and what it does not do, how it interacts with other systems and the people involved across these boundaries.
 
 A visual representation can be seen in [Figure 1](#f1).
 
-<a name="f1"></a>
+<a id="f1"></a>
 
-![Context View](images/context_view.png)
-
+![Context View](images/context_view.png)<br/>
 **Figure 1** The different stakeholders within OpenRA and their relations
 
-## Overview
+### Overview
 
 OpenRA is a cross-platform game engine written in C#, making use of Microsoft's .NET framework.
 Where C# used to only be used for development of Windows applications, the Mono framework extends the use of this language to other platforms, such as Mac OS X, Linux and the BSDs.
@@ -125,7 +129,7 @@ Modders can also upload their own missions and maps to have them available to ot
 This allows people to contribute to the game without having to have any experience with Git or GitHub, making the barrier for entry significantly lower.
 OpenRA also has a map maker tool that helps modders to build maps.
 
-## Distribution
+### Distribution
 
 Whenever software is involved, distribution plays a major role.
 Getting a piece of software to run on all major platforms usually comes with a high cost in terms of development effort.
@@ -137,7 +141,7 @@ Some Linux platforms also include OpenRA in their platform-specific repositories
 The scope of OpenRA is to provide a cross-platform engine similar in functionality to the original engine used in the Red Alert games.
 Users can provide the game data (such as textures and sound) from their original CD to run OpenRA, or download a 3rd party recreation of the game data (from a separate OpenRA project) .
 
-## Community
+### Community
 
 OpenRA features an extensive wiki (using the GitHub wiki) documenting every part necessary for contributing, from building the software to scripting mods and creating maps.
 They also provide a thorough FAQ on the wiki.
@@ -146,7 +150,7 @@ OpenRA also boasts quite an active forum, with new messages posted daily.
 They also have a [Reddit community](http://www.reddit.com/r/openra), a [Google+ community](https://plus.google.com/+OpenRAnet), [Twitter](https://twitter.com/openra), and [Facebook](https://www.facebook.com/openra) pages.
 Channel #openra on the Freenode IRC server is used for discussing different issues and ideas.
 
-# Development View
+## Development View
 
 The Development view attempts to capture all aspects of the system relevant to the development of the project.
 OpenRA is split up in several modules to separate independent parts of the project.
@@ -182,7 +186,7 @@ By doing this, it is easy to separately test the newly implemented functionality
 
 <!-- Michielha: those last two sentences are two specific, and I don't know what it's about. Suggested revision: say what you want but more abstract. -->
 
-## Source Code Structure
+### Source Code Structure
 
 Each module as specified in [Module Structures](#module-structures) resides in its own namespace.
 The core of the system has the namespace `OpenRA`.
@@ -208,16 +212,12 @@ The following model defines the organisation of the system’s source code in te
 [Figure 3](#f3) is zoomed into the `OpenRA.Mods.Common` and the `OpenRA.Mods.RA` module.
 This module is combined and represented as a whole because `OpenRA.Mods.RA` is an extension of `OpenRA.Mods.Common` as seen in [Figure 2](#f2).
 
-<a name="f2"></a>
-
-![Overview of the complete OpenRA Game Framework](images/openra-game.png)
-
+<a id="f2"></a>
+![Overview of the complete OpenRA Game Framework](images/openra-game.png)<br/>
 **Figure 2** Overview of the complete OpenRA Game Framework
 
-<a name="f3"></a>
-
-![Overview of the OpenRA.Mods.Common/OpenRA.Mods.RA](images/openra-mods-common-ra.png)
-
+<a id="f3"></a>
+![Overview of the OpenRA.Mods.Common/OpenRA.Mods.RA](images/openra-mods-common-ra.png)<br/>
 **Figure 3** Overview of the `OpenRA.Mods.Common`/`OpenRA.Mods.RA` source code modules
 
 In [Figure 3](#f3) the most important modules are listed for the OpenRA Red Alert Mod and are divided in separate layers.
@@ -225,7 +225,7 @@ The top layer represents the game itself and global modules to handle the UI and
 The next layer handles the game setup such as creating a world, a renderer and primitives.
 The next two layers contains the game core such as actors, activities, maps and players.
 
-## Test tools and infrastructure
+### Test tools and infrastructure
 
 OpenRA contains very few unit tests (13, of which three are currently disabled to not break the continuous integration systems).
 Furthermore there are automated tests to parse the default levels of all game mods.
@@ -237,7 +237,7 @@ Also to make sure these tests don't fail on the `master`-branch, OpenRA makes us
 Currently only the result of TravisCI is used to determine if a build passes or fails, as AppVeyor is mainly used to generate Windows builds.
 <!-- michielha: and not for testing? if not, you might want to add -->
 
-## Codeline Organization
+### Codeline Organization
 
 The OpenRA project has a strict coding standard that should be followed by contributors.
 This standard is being maintained by StyleCop, a system that checks if source code files follow code conventions.
@@ -262,7 +262,7 @@ Below is a small summary of the most important code style constraints:
 
 <!-- michielha: consider removing this section, its really specific and adds very little value -->
 
-## Build Process
+### Build Process
 
 Developers can build the system locally to test their changes.
 The project maintains a set of building instructions for both Windows and OSX/Linux systems.
@@ -278,7 +278,7 @@ Builds are packaged for different supported operating systems.
 Scripts are used to automatically package the binaries, upload them and update the wiki pages that contain generated content ([Traits](https://github.com/OpenRA/OpenRA/wiki/Traits), [Lua API](https://github.com/OpenRA/OpenRA/wiki/Lua-API)).
 These scripts are located in the repository in the `packaging` folder.
 
-## Release Process
+### Release Process
 
 OpenRA has three different types of releases: bleed, playtest and public release.
 These releases are located on seperate branches according to the [wiki](https://github.com/OpenRA/OpenRA/wiki/Branches-and-Releases):
@@ -296,12 +296,12 @@ These releases are aimed at testers to show the current state of development and
 Public releases are usually released one or two weeks after a playtest.
 This gives the developers time to polish up a playtest before releasing it as a public release.
 
-# Variability Perspective
+## Variability Perspective
 
 OpenRA has several important features that make up the engine.
 [Table 2](#t2) shows these features.
 
-<a name="t2"></a>
+<a id="t2"></a>
 
 Feature     | Description
 ----------- | -----------
@@ -319,10 +319,8 @@ Legacy Files	| Legacy file formats of existing games that are used to store maps
 
 [FeatureIDE](http://wwwiti.cs.uni-magdeburg.de/iti_db/research/featureide/) is used to visualize all these features/variabilities into a model, which can be seen in [Figure 4](#f4).
 
-<a name="f4"></a>
-
-![Feature Model](images/feature_model.png)
-
+<a id="f4"></a>
+![Feature Model](images/feature_model.png)<br/>
 **Figure 4** Feature model of OpenRA
 
 ### Incompatibilities between features
@@ -349,7 +347,7 @@ Therefore adding a mod to the already installed product only requires a valid mo
 One notable build-time variation point is creating the build for either Mono or .NET.
 Even though executables created with either VM should work on the other (build with Mono, run on .NET or vice versa), there were some issues with this in the past which resulted in building the Windows version separately on an actual .NET VM (via AppVeyor).
 
-## Architecture and Design
+### Architecture and Design
 There are multiple variation points in the system. The first one is the AI debug variation that is implemented at run-time, the second variation is the map editor that is implemented at build-time.
 
 The AI debug feature is a feature that can be enabled at run-time by checking the box in the settings dialog.
@@ -381,15 +379,13 @@ As you can see, there are multiple booleans present for different features in Op
 The user can also enable a performance graph to keep track of the time spent on different elements such as path-finding, rendering and activity traits.
 This is displayed in [Figure 5](#f5).
 
-<a name="f5"></a>
-
-![Image of debug feature](images/screenshot1.png)
-
+<a id="f5"></a>
+![Image of debug feature](images/screenshot1.png)<br/>
 **Figure 5** Screenshot of OpenRA with performance graph visible in lower left corner.
 
 At compile-time, the Makefile will make sure that for example the map editor will be shipped with the game.
 ```
-# program targets
+## program targets
 CORE = rsdl2 rnull game utility
 TOOLS = editor tsbuild crashdialog
 VERSION     = $(shell git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null || echo git-`git rev-parse --short HEAD`)
@@ -397,7 +393,7 @@ VERSION     = $(shell git name-rev --name-only --tags --no-undefined HEAD 2>/dev
 
 The map editor is useful for modders and the build details are also in the Makefile where the developer could specify the environment details such as the mod locations, libraries and icons.
 ```
-# Map Editor
+## Map Editor
 editor_SRCS := $(shell find OpenRA.Editor/ -iname '*.cs')
 editor_TARGET = OpenRA.Editor.exe
 editor_KIND = winexe
@@ -407,7 +403,7 @@ editor_EXTRA = -resource:OpenRA.Editor.Form1.resources -resource:OpenRA.Editor.M
 editor_FLAGS = -win32icon:OpenRA.Editor/OpenRA.Editor.Icon.ico
 ```
 
-# Deployment
+## Deployment
 As OpenRA is a software product, suitable hardware is necessary to deploy and use the system.
 OpenRA tries to be an open-source, cross-platform port of the original Westwood games and engine, keeping the range of hardware it runs on as large as possible.
 Therefore the requirements to the hardware are kept to a minimum and in practice any consumer can run OpenRA on his or her computer.
@@ -416,12 +412,12 @@ The only dependency the user should worry about on non-Windows systems, is that 
 Developers need to install more software, such as Visual Studio (on Windows) or MonoDevelop (on other systems).
 All these development requirements are properly listed in the OpenRA documentation so that any developer can quickly get started.
 
-# Evolution Perspective
+## Evolution Perspective
 The evolution perspective introduces a viewpoint into a project focused on continual change of a system.
 It's very similar to the notion of maintainability, taking into account metrics such as code quality and modularity.
 It goes beyond these, however, in that it tries to define whether or not maintenance and evolution is necessary or desired, and if so, where in the system this would be painful and where it would all go smoothly.
 
-## Evolution in OpenRA
+### Evolution in OpenRA
 Applying this perspective to OpenRA, we see see that it scores well on quite a few points raised by the perspective.
 On the other hand, it also scores poorly in some other cases, arguably making the evolution of the project significantly harder.
 
@@ -432,7 +428,7 @@ The mods, implementing individual games with the OpenRA Core being the game engi
 
 Two types of evolution are likely within OpenRA: functional evolution, when the OpenRA Core or mods have to deal with changes from within (ranging in size from a small bug fix to reimplementation or extension of components); and environment evolution, when the OpenRA Core changes, which essentially causes the loosely-coupled mods' environment to change.
 
-## Evolution candidates
+### Evolution candidates
 Some components of OpenRA are in a high need of evolution, for instance the AI submodule.
 GitHub yields some insight here, as there are many reports of faulty AI behaviour on its issue list.
 The AI submodule is an excellent example of a pattern seen in many open source projects.
@@ -441,7 +437,7 @@ When a project is mainly developed in the free time of its developers, and as su
 As is the aptly named HackyAI module, for which incidentally a complete reimplementation is planned.
 Other ongoing evolution efforts can be found in the rendering engine, where terrain height is being implemented, which will trigger environment evolution in the mods as they'll change to adapt the new features.
 
-## Ease of evolution
+### Ease of evolution
 As mentioned before, OpenRA's modularity will benefit evolution of the project.
 Despite its modularity, however, evolution may not go so smoothly.
 Tests are virtually non-existent in the project - checking mainly for coding style.
@@ -457,17 +453,17 @@ Every module can be built separately, and executables generated by automatic bui
 This makes it easier for other programmers to start hacking on the project, thereby increasing the number of potential contributors.
 This, in turn, should ensure continued evolution of the project.
 
-# Contributions
+## Contributions
 
 During the course of this project, several contribution have been made to OpenRA.
-A list of these contributions can be found in the [contribution list](contributions.html).
+A list of these contributions can be found in the [contribution list in the appendix](#openra-contributions).
 Most merged pull request are bug fixes, or small additions to the game.
 One of these additions is a kill/death ratio that is shown after a match.
-One of our team members, [@pevers](https://github.com/pevers), is even invited to the OpenRA organisation for all the fixes he implemented.
+One of our team members, @[pevers](https://github.com/pevers), is even invited to the OpenRA organisation for all the fixes he implemented.
 
 <!-- michielha: That's really nice! -->
 
-# Conclusion
+## Conclusion
 
 OpenRA was started to recreate the nostalgic experience many people have with the original Westwood games from the '90s.
 While the main effort was and still is to get the games working on as many modern platforms as possible, there is no concrete roadmap for features.
@@ -482,3 +478,36 @@ We do however think, that in the very near future a proper test suite should be 
 
 [SDL]: http://www.libsdl.org/
 [OpenRA Resource Center]: http://resource.openra.net
+
+<a id="openra-contributions"/>
+
+## Appendix: Contributions to OpenRA
+
+* Issue [[7472](http://github.com/OpenRA/OpenRA/issues/7472)] - Occupancy of enemy APCs is visible
+    Occupancy of enemy APCs where visible, this shouldn't be the case so we did a [PR](https://github.com/OpenRA/OpenRA/pull/7486) fixing this issue. One of the main contributers noticed that this could be solved much easier. After applying these changes the PR was merged after getting two upvotes.
+
+* Issue [[7505](http://github.com/OpenRA/OpenRA/issues/7505)] - /all cheat code on activated cheats
+    The /all cheat code will deactivate already activated cheats. This could be solved easily so we created a [PR](https://github.com/OpenRA/OpenRA/pull/7507#issuecomment-75372948)
+
+* Issue [[7447](https://github.com/OpenRA/OpenRA/issues/7447)] - Underscore is not shown in lobby chat [PR](https://github.com/OpenRA/OpenRA/pull/7527)
+
+* Issue [[7008](https://github.com/OpenRA/OpenRA/issues/7008)] - Resources spawn out of ore deposits. Whenever a unit or a vehicle is standing near an ore deposit, resources were unable to grow at the location of that unit. This issue is fixed in this [PR](https://github.com/OpenRA/OpenRA/pull/7555).
+
+* Issue [[7505](https://github.com/OpenRA/OpenRA/pull/7521)] - More fixes on the /all cheat code as a tiny error slipped through. [PR](https://github.com/OpenRA/OpenRA/pull/7521).
+
+* Multiple Issues [[7403](https://github.com/OpenRA/OpenRA/issues/7442)] and [[7403](https://github.com/OpenRA/OpenRA/issues/7403)] - In [PR](https://github.com/OpenRA/OpenRA/pull/7544) we proposed a fix for multiple issues. The first one is that a SAM site or turret that is being captured while shooting, will continue shooting at his target resulting in friendly fire.
+We fixed this by clearing the targets of an actor on capture.
+The second issue [[7442](https://github.com/OpenRA/OpenRA/issues/7442)] was much more complicated as it looks.
+A SAM site would stay if it was sold during a low-power attacking state.
+This problem wasn't always reproducible (see the comments) so it was much harder to convince the OpenRA team.
+We found out that a SAM site was still in an attacking state while it was powered down.
+This wasn't efficient at all but we didn't dug deeper into the problem because we proposed a simple fix that will terminate the attack activity when being disabled.
+This seemed to be working at first hand but soon the developers of OpenRA found huge regression on turrets and SAM sites.
+So we dug deeper into the activity mess and untangled it. We found that on sell, the current activities will be cancelled and the sell animation acitivity is started. After the animation, the real sell activity is started but in the meantime, another attack activity was queued resulting in the artifact of the issue. We fixed this by preventing activities to be scheduled after the sell-animation.
+
+* Issue [[7508](https://github.com/OpenRA/OpenRA/issues/7508)] - Sell icon not disabled while building is being captured. This was a pretty straightforward fix as it was only the icon that was wrong. We did more as the same issue was present for powering down a building. We fixed this and proposed a [PR](https://github.com/OpenRA/OpenRA/issues/7508). 
+
+* Issue [[7518](https://github.com/OpenRA/OpenRA/issues/7518)] - Changed chat messages from allied players to be marked as such. [[#7528](https://github.com/openra/openra/pull/7528)]
+
+* Issue [[6858](https://github.com/OpenRA/OpenRA/issues/6858)] - This added the feature to see the Kills/Death ratio in the score tab. [PR](https://github.com/OpenRA/OpenRA/pull/7529).
+
