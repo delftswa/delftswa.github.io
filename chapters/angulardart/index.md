@@ -8,16 +8,17 @@ chapter: true
 **Stephan Kool, Kors van Loon, Jeroen Vos and Jochem de Goede**<br/>
 *Delft University of Technology*
 
-## Abstract
 
-In this chapter, a client-side web framework called AngularDart is studied, which is a Dart version of its JavaScript counterpart: AngularJs. 
+![](images/angulardart_logo.png "AngularDart")
+
+**Abstract**
+
+*In this chapter, a client-side web framework called AngularDart is studied, which is a Dart version of its JavaScript counterpart: AngularJs. 
 AngularJs came from the need of developers to have easy data binding between forms and JavaScript and grew out to a big framework for developing client-side web applications. 
 Combined with the language and the developer environment of Dart, which tries to ease the development of client-side web apps, the original JavaScript framework was completely rewritten for this programming language and thus AngularDart was born. 
 In this chapter, research is performed to how the team behind AngularDart works and how the architecture is organized and evolves over time. 
-We discovered that for an open source project contributions are tremendously important. Also we discovered that the Angular team likes to think big and is rewriting Angular right now once more in yet another language. This version, Angular 2.0, is set to be released at the end of 2015.
+We discovered that for an open source project contributions are tremendously important. Also we discovered that the Angular team likes to think big and is rewriting Angular right now once more in yet another language. This version, Angular 2.0, is set to be released at the end of 2015.*
 
-
-![AngularDart](images/angulardart_logo.png "AngularDart")
 
 ## Introduction
 
@@ -194,19 +195,20 @@ The functional view of the system describes the runtime functional elements and 
 The functional capabilities define what AngularDart does. AngularDart is a port of AngularJs to the Dart programming language, so its main goal is to provide all the features that AngularJs offers. 
 We derived the following functions in AngularDart:
 
-| Function |  In component |
+| Function | In component |
 |----------|--------|
-| Animating HTML elements | Animate
-| Teach the browser new HTML syntax | HTML Compiler
-| Binding data in the view and in the model | Two-way data binding
-| Being able to create Services, which are substitutable objects wired together with DI | Services
-| Automatically resolve component dependencies | DI
-| Being able to write templates | Core DOM
-| Creating expressions | Formatter
-| Formatting values of an expression | Formatter
-| Easily create and validate forms | Forms
-| Attaching specific behavior to a DOM element | Directives
- 
+| Animating HTML elements | Animate |
+| Teach the browser new HTML syntax | HTML Compiler |
+| Binding data in the view and in the model | Two-way data binding |
+| Being able to create Services, which are substitutable objects wired together with DI | Services |
+| Automatically resolve component dependencies | DI |
+| Being able to write templates | Core DOM |
+| Creating expressions | Formatter |
+| Formatting values of an expression | Formatter |
+| Easily create and validate forms | Forms |
+| Attaching specific behavior to a DOM element | Directives |
+
+
 Also the differences between AngularJs and AngularDart are taken into account, resulting in the following [[1](http://stackoverflow.com/questions/19993377/differences-between-angular-js-and-angular-dart)]:
 
 * Difference in DI system: In Dart this is class-based, while it is symbol based in the Js version.
@@ -282,7 +284,7 @@ Angular 2.0 will be built using TypeScript from Microsoft. However, because no b
 ![Alt text](images/angular2_transpile_architecture.png "Angular 2 Transpile Architecture")
 In the image above you can see the way the Angular 2 is built. Since the development started on version 2 of Angular, both teams of the JavaScript and Dart version are combined into one team. Version 2 uses the facada pattern, which uses abstracted functions to improve readability of the library and the make a coherent API that is easy to use. Also, the most important reason that these facades are necessary is for the differences between JavaScript and Dart APIs. The transpiler uses these facades to compile the correct API for both languages. Traceur is the component responsible for tranpsiling the code to EcmaScript 5 and Dart. 
 
-![Alt text](images/angular2_team.png "The team of Angular 2")
+![](images/angular2_team.png "The team of Angular 2")
 
 This compiler actually adds an extra option to develop Angular apps. Besides EcmaScript 5, EcmaScript 6, TypeScript and Dart, it is also possible to write Angular apps using the Traceur compiler in EcmaScript 6 and having it transpile to any number of the just mentioned languages. 
 
@@ -305,7 +307,7 @@ Some developers are not planning to wait for transition solutions. The blog [pai
 2. Clean up `$scopes`. Scopes bind the view, a DOM element, to the controller but will be implicit in version two. They are no longer needed as a result to the component-based architecture.
 3. Finally, the author encourages everyone to 'start hacking with TypeScript'. 
 
-As said at the beginning of this perspective, after releasing version 2, the Angular developers will start working on back-porting some of the new features to version 1.x of AngularJs. One of these features will most likely be the router [[5](#5)].
+As said at the beginning of this perspective, after releasing version 2, the Angular developers will start working on back-porting some of the new features to version 1.x of AngularJs. One of these features will most likely be the router [[5](http://blog.thoughtram.io/angular/2015/06/16/routing-in-angular-2.html)].
 
 ## The Major Challenge: Contributing
 
