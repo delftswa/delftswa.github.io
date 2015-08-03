@@ -22,7 +22,7 @@ epub:
 	 --toc \
 	 --number-sections \
 	 --toc-depth=2 \
-	 --epub-cover-image=css/cover.jpg \
+	 --epub-cover-image=epub-cover.png \
 	 --output=$(EPUB_OUT) \
 	 index.md \
 	 $(CHAPTERS_MD)
