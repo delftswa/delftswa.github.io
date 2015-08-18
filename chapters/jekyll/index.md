@@ -5,19 +5,21 @@ title: Jekyll
 chapter: true
 ---
 
-{: .center}
-![Jekyll Software Architecture](./images/jekyll-sa-header.png)
+# Jekyll - A Simple Static Site Generator
+
+![](./images/jekyll-sa-header.png)
 
 **[Joop Aué](https://github.com/JoopAue), [Anton Bouter](https://github.com/abouter), and [Martin Rogalla](https://github.com/MartinRogalla)**<br/>
 *Delft University of Technology*
 
-# Jekyll - A Simple Static Site Generator
-The Delft Students on Software Architecture Jekyll chapter gives a concise well-structured overview of Jekyll's Software Architecture by providing perspectives of the various aspects that are important to its development.
+**Abstract**
+
+*The Delft Students on Software Architecture Jekyll chapter gives a concise well-structured overview of Jekyll's Software Architecture by providing perspectives of the various aspects that are important to its development.
 The involved stakeholders and context view are used to fully explain the extent of Jekyll's outside influence.
 This is followed by an in-depth developer's perspective after which Jekyll's variability and performance are analyzed.
-These insights will not only make it easier for people to join the community and contribute to the project, but will also give the Jekyll core team an outsider's observation of Jekyll's Software Architecture. 
+These insights will not only make it easier for people to join the community and contribute to the project, but will also give the Jekyll core team an outsider's observation of Jekyll's Software Architecture.*
 
-## Table of Contents
+**Table of Contents**
 
 * [Jekyll - A Simple Static Site Generator](#jekyll---a-simple-static-site-generator)
   * [Introduction](#introduction)
@@ -152,10 +154,9 @@ High interest and low power stakeholders need to be kept up-to-date with develop
 Low interest and low power stakeholders should be monitored and not flooded with excessive communication.
 The Power/Interest Grid for the Jekyll project is displayed in [Figure 1](#figure1).
 
-{: .center}
-| <a name="figure1">![Power/Interest Grid](./images/power-interest-grid.png)</a>|
-|:-------------:|
-|  **Figure 1** - *Power/Interest Grid* |
+<a id="figure1">![](./images/power-interest-grid.png)</a>
+
+**Figure 1** - *Power/Interest Grid*
 
 It is immediately clear that Parker Moore has great power and interest as he is the owner of the project.
 Furthermore it is interesting to note that GitHub has such high power.
@@ -167,11 +168,11 @@ Besides GitHub's power, it is also interesting to see that the [Jekyll-help](htt
 In order to show the context in which Jekyll resides, a clear concise description is given of the relationships, dependencies and interactions between Jekyll and its environment.
 The environment of a system include the people interacting with the system, dependencies and other interacting entities.
 
-In order to construct a context view for Jekyll its core requirements, as given in [Jekyll's Features](#jekylls-features), are to be combined with external entities.
+In order to construct a context view for Jekyll its core requirements, as given in [Jekyll's Features](#main-features), are to be combined with external entities.
 According to Rozanski and Woods<sup>[[1]](#bibliography)</sup> an external entity of a system is any system, organization, or person with which the system interacts.
 The relevant entities are grouped in three relevant categories: [Internal Systems](#internal-systems), [External Systems](#external-systems) and [Classes of People](#classes-of-people).
 
-#### Internal Systems
+### Internal Systems
 Internal systems that run within the Jekyll organization include:
 
  * **Jekyll-help**: allows Jekyll users to ask questions and indirectly gives feedback to Jekyll itself.
@@ -181,7 +182,7 @@ Internal systems that run within the Jekyll organization include:
  * **Jekyll-sass-convert**: allows Jekyll to build [Sass and SCSS](http://sass-lang.com/).
  * **Jekyll-watch**: features automatic rebuilding of a Jekyll site when file changes occur.
 
-#### External Systems
+### External Systems
 External systems that run outside of the Jekyll organization include:
 
  * **Dependencies**: of which the most important dependencies include Ruby, RubyGems, Markup converters, testing frameworks, Rake and syntax highlighters.
@@ -192,7 +193,7 @@ External systems that run outside of the Jekyll organization include:
  * **Version Control**: which is facilitated by GitHub.
  * **Continuous Integration**: is handled by [TravisCI](https://travis-ci.org/) and creates a feedback-loop between the developers and the test-suite.
 
-#### Classes of People
+### Classes of People
 There are several classes of people involved with Jekyll of which the relevant ones for the context view are listed below.
 
  * **Users**: are the people that either use Jekyll indirectly as authors or are generators, which means they use Jekyll to generate static web pages.
@@ -207,10 +208,9 @@ Furthermore, ideas for features and the future of Jekyll originate from the comm
 In the context diagram in [Figure 2](#figure2), a clear illustration is given of Jekyll's capabilities and its interaction with external entities.
 It does not go into the system's details in terms of how it should be built, but rather gives an abstract and high level view of the system.
 
-{: .center}
-| <a name="figure2">![Context Diagram](./images/context-diagram.png)</a>|
-|:-------------:|
-|  **Figure 2** - *Context Diagram* |
+<a id="figure2">![](./images/context-diagram.png)</a>
+
+**Figure 2** - *Context Diagram*
 
 ## Developer's Perspective
 A system from a user's point of view often differs greatly from that of a developer.
@@ -232,10 +232,10 @@ The structure consists out of the following five layers ordered by abstractness 
 
 The rough dependencies between the different layers in the figure are denoted by arrows.
 
-{: .center}
-| <a name="figure3">![Structure Model](./images/structure-model.png)</a>|
-|:-------------:|
-|  **Figure 3** - *Structure Model* |
+
+<a id="figure3">![](./images/structure-model.png)</a>
+
+**Figure 3** - *Structure Model*
 
 ### Common Processing
 According to Rozanski and Woods<sup>[[1]](#bibliography)</sup> any large system will benefit from identifying and isolating common processes into separate code modules that are used throughout the system.
@@ -310,10 +310,10 @@ However, the *lib/jekyll* folder also contains 35 Ruby files in the folder itsel
 This is a very large number of files for a single folder and these should preferably be placed in separate folders to maintain a clear and organized structure.
 One could for example place the files *site.rb*, *post.rb*, *page.rb* and *document.rb* in a new subdirectory *site* to organize the *lib/jekyll* folder.
 
-{: .center}
-| <a name="figure4">![Directory Structure](./images/fileStructure.png)</a>|
-|:-------------:|
-|  **Figure 4** - *Directory Structure* |
+
+<a id="figure4">![](./images/fileStructure.png)</a>
+
+**Figure 4** - *Directory Structure*
 
 Some other notable subdirectories are *features*, *script*, *site* and *test*.
 The *features* directory contains *.feature* files that are used by the [Cucumber](https://cukes.info/) plugin, which lets developers describe the behavior of software in plain text.
@@ -415,10 +415,10 @@ Permalinks should not exists without having a post or a page.
 The second constraint is that data should also have either a page, post or collection, since otherwise the data will never be used.
 Furthermore, formats like _LaTeX_ and _Math symbols_ require specific parsers to be used.
 
-{: .center}
-| <a name="figure5">![Feature Diagram](./images/featureDiagram.png)</a>|
-|:-------------:|
-|  **Figure 5** - *Feature Diagram* |
+
+<a id="figure5">![](./images/featureDiagram.png)</a>
+
+**Figure 5** - *Feature Diagram*
 
 ### Variation Points
 The user can specify the configuration of the site build in a configuration file or with flags when executing Jekyll in the terminal.
@@ -465,49 +465,45 @@ By [applying metrics](#metrics) to a Jekyll site the most influential sub proces
 Building a site starts with the `command` class that calls the `site.process` method.
 This method calls the methods displayed in [Figure 6](#figure6) subsequently:
 
-{: .center}
-| <a name="figure6">![Processes](images/processes.png)</a>|
-|:-------------:|
-|  **Figure 6** - *Processes in Jekyll* |
+
+<a id="figure6">![](images/processes.png)</a>
+
+**Figure 6** - *Processes in Jekyll*
 
 ### Metrics
 By running a benchmark on the processes described by the [task structure](#task-structure) a general idea of which processes are performance intensive is obtained.
 Analyzing the time spent on these different methods indicates that 97.5% of the build time is caused by the `render` method, as is displayed in [Figure 7](#figure7).
 The measurements have been performed on the [Jekyll site](http://jekyllrb.com/).
 
-{: .center}
-| <a name="figure7">![Diagram processes](./images/measurements/1-site-process.png)</a>|
-|:-------------:|
-|  **Figure 7** - *Time delay caused by the site processes* |
+
+<a id="figure7">![Diagram processes](./images/measurements/1-site-process.png)</a>
+
+**Figure 7** - *Time delay caused by the site processes*
 
 In [Figure 8](#figure8) the contribution in percentages of the total time spent by the renderer is displayed.
 The renderer uses around 20% of the time to render pages and posts.
 The other 80% is spent on rendering collections.
 Time spent on rendering permalinks is negligible compared to the rendering of pages, posts and collections.
 
-{: .center}
-| <a name="figure8">![Diagram render](./images/measurements/2-render-process.png)</a>|
-|:-------------:|
-|  **Figure 8** - *Time delay caused by render processes* |
+
+<a id="figure8">![Diagram render](./images/measurements/2-render-process.png)</a>
+
+**Figure 8** - *Time delay caused by render processes*
 
 When investigated further, it is found that in the collection rendering process 67% of the time is used by the `place in layout` process as shown in [Figure 9a](#figure9a).
 Looking into that it is concluded that by far the most time can be gained by improving the rendering process that uses [Liquid](http://liquidmarkup.org/). 
 Especially the `place in layout` process.
 This fact is illustrated by [Figure 9b](#figure9b).
 
-<table>
-  <tr>
-    <td><a name="figure9a"><img alt="Collection renderer process" src="./images/measurements/3-collection-render.png"></img></a></td>
-    <td><a name="figure9b"><img alt="Place in layout rendering" src="./images/measurements/4-render-place.png"></img></a></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>(a)</strong> <em>Collection renderer processes</em></td>
-    <td align="center"><strong>(b)</strong> <em>Place in layout processes</em></td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2"><strong>Figure 9</strong> - <em>Time delay caused by collection rendering</em></td>
-  </tr>
-</table>
+<a id="figure9a"><img  src="./images/measurements/3-collection-render.png"/></a>
+
+<strong>Figure 9(a)</strong> - <em>Time delay caused by collection renderer processes</em>
+
+
+<a id="figure9b"><img src="./images/measurements/4-render-place.png"/></a>
+
+<strong>Figure 9(b)</strong> - <em>Place in layout rendering processes</em>
+
 
 ### Parallelizability
 Improving the rendering performed by Liquid may not be straightforward, but executing parts of the render process in parallel is definitely a possibility.
@@ -526,14 +522,12 @@ Loops in which iterations do not depend on other iterations are perfect candidat
 There are multiple performance influential loops in Jekyll, which can be parallelized.
 For example the rendering of posts and pages:
 
-{% highlight ruby %}
-payload = site_payload
-[posts, pages].flatten.each do |page_or_post|
-    if regenerator.regenerate?(page_or_post)
-        page_or_post.render(layouts, payload)
+    payload = site_payload
+    [posts, pages].flatten.each do |page_or_post|
+        if regenerator.regenerate?(page_or_post)
+            page_or_post.render(layouts, payload)
+        end
     end
-end
-{% endhighlight %}
 
 It is worthwhile to take a look at these types of loops as the performance can be improved drastically by parallelization. 
 

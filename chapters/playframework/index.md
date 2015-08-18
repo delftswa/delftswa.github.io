@@ -5,21 +5,23 @@ title: Play Framework
 chapter: true
 ---
 
-![play_full_color](images/play.png)
 
 # Play Framework
 
-By: [Herman](https://github.com/hermanbanken), 
-[Michiel](https://github.com/michielha), 
-[Ruben](https://github.com/rubenverboon), and 
-[Vincent](https://github.com/vivami)
+By: [Herman Banken](https://github.com/hermanbanken), 
+[Michiel Haisma](https://github.com/michielha), 
+[Ruben Verboon](https://github.com/rubenverboon), and 
+[Vincent van Mieghem](https://github.com/vivami)
 
-###Abstract
-This chapter describes and explains various views and perspectives of the Play Framework that together aim at providing a broad architectural overview of the system and its context. 
+![](images/play.png)
+
+**Abstract**
+
+*This chapter describes and explains various views and perspectives of the Play Framework that together aim at providing a broad architectural overview of the system and its context. 
 The stakeholder and context view show that there are a number of very prominent stakeholders involved in the project and that the framework itself does not have many dependencies. 
 Play is in a transition to a more modular design that improves scalability and speed, while trying to maintain backwards compatibility. 
 In a view on reactivity and concurrency it is explained that Play aims at evolving to a reactive and entirely stateless web applications framework and this is partly achieved by moving the execution of HTTP requests to an event driven system. 
-Finally an overview of Play's past and future is provided from which can be concluded that these transitions are in line with proposed development roadmaps.
+Finally an overview of Play's past and future is provided from which can be concluded that these transitions are in line with proposed development roadmaps.*
 
 **Table of Contents**
 
@@ -88,7 +90,7 @@ These include routing, MVC logic, form validation, localisation, and several uti
 ![](images/module-diagram/modules-main.png)
 
 The diagram above shows most of the modules and their dependencies. 
-The test modules and Java-specific modules are excluded to provide a clearer view, but can be found in the [full diagram](images/module-diagram/modules-full.png). 
+The test modules and Java-specific modules are excluded to provide a clearer view, but can be found in the [full diagram](http://delftswa.github.io/chapters/playframework/images/module-diagram/modules-full.png). 
 Much of the functionality is contained in the main Play module, central in the diagram. 
 This main module depends only on these high level modules, required for basic operation:
 
@@ -134,9 +136,9 @@ Spring is a huge ecosystem, already at major version 4, so it is interesting to 
 The comparison is shown in the diagram below. 
 The fact that Play has less questions could mean that Play is easier to use than Spring MVC, or that more people are using Spring. 
 Both seem reasonable: Play is very well documented, and Spring MVC is widely adopted due to Spring, convincing people to use that whole platform.
-Compared to their estimated sizes (see [jobs](#what-s-next-for-me) below) however, Play has relatively many questions.
+Compared to their estimated sizes (see [jobs](#what-is-next-for-me) below) however, Play has relatively many questions.
 
-![diagram](images/frequenogramStackoverflow.png)
+![](images/frequenogramStackoverflow.png "Questions on StackOverflow")
 
 Getting exact usage numbers is hard however, as Play does not advertise itself in response headers.
 This causes sites like [BuiltWith.com](http://trends.builtwith.com/framework/Play-Framework) not to measure its world wide usage correctly. 
@@ -151,7 +153,7 @@ Our metric here, the amount of job openings, relates to the question of how adop
 The more jobs we found, the more adopted Play is.
 We looked at the amount of jobs on [Indeed](http://indeed.com), for which each of the frameworks is listed.
 
-![Job openings](images/job.png)
+![](images/job.png "Job Openings")
 
 From this we can see that there exist frameworks that are far more adopted by employers, concluded from the amount of job openings.
 We think that this is due to the fact that traditionally PHP and JavaScript are the most common web languages,
@@ -173,7 +175,7 @@ By doing this the code style remains uniform throughout the project.
 ### Workflow
 The general workflow of committing code is as follows:
 
-0.  Make sure you have signed the [Typesafe CLA](www.typesafe.com/contribute/cla), if not, sign it online.
+1.  Make sure you have signed the [Typesafe CLA](http://www.typesafe.com/contribute/cla), if not, sign it online.
 1.  An issue should be made on GitHub, explaining what you want to fix or implement, this helps to tell others in the project what you are working on.
 2.  You write code locally, while observing the [standardisation guidelines](https://www.playframework.com/documentation/2.3.x/Guidelines#Pull-Request-Requirements). You commit to a local branch with a meaningful name.
 3.  As a general rule, every piece of code that is added must be accompanied by test code.
@@ -192,7 +194,7 @@ This service is configured to automatically build certain branches (such as 'mas
 Also all pull requests will be automatically build, or can be rebuild by using a certain keyword in a github pull request comment ([`@play-pull-request-validator try again`](https://github.com/playframework/playframework/pull/4007#issuecomment-76663971)).
 After the build all unit and integration tests are run and the result is reflected on GitHub, marking the pull request as ready to merge, or indicates whether the build or tests are failing.
 
-![Jenkins integrates with GitHub](images/jenkins.png)
+![](images/jenkins.png "Jenkins integration with GitHub")
 
 ### Releases
 To obtain the Play framework binaries, you can use the  [Typesafe Activator](https://typesafe.com/community/core-tools/activator-and-sbt).
@@ -238,19 +240,19 @@ Other stakeholders can be identified. Together with their roles they are listed 
 
 | Type | Entities |
 |---|---|
-| **Developers** | Construct and deploy the system. Most active developers are employees of Typesafe. <br>[@jroper](https://github.com/jroper), [@guillaumebort](https://github.com/guillaumebort), [@pk11](https://github.com/pk11), [@richdougherty](https://github.com/richdougherty) |
-| **Users** | Users of the Play Framework are the type of stakeholder that make use of the system. These are companies that use Play to build their (often client-facing) web services: <br> [LinkedIn](https://www.linkedin.com), [Coursera](https://www.coursera.org), [Klout](https://klout.com/home), [The Guardian](http://www.theguardian.com/uk), [BBC](http://www.bbc.com), many others |
-| **Supporters** | Cloud Platforms as a service (PaaS) that support the Play Framework for their users: <br> [Amazon Web Services (AWS)](http://aws.amazon.com/opsworks/), [Jelastic](http://jelastic.com), [Heroku](https://www.heroku.com), [Google App Engine (GAE)](https://cloud.google.com/appengine/docs) |
-| **Funders** | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
+| **Developers** | Construct and deploy the system. Most active developers are employees of Typesafe. <br/>@[jroper](https://github.com/jroper), @[guillaumebort](https://github.com/guillaumebort), @[pk11](https://github.com/pk11), @[richdougherty](https://github.com/richdougherty) |
+| **Users** | Users of the Play Framework are the type of stakeholder that make use of the system. These are companies that use Play to build their (often client-facing) web services: <br/> [LinkedIn](https://www.linkedin.com), [Coursera](https://www.coursera.org), [Klout](https://klout.com/home), [The Guardian](http://www.theguardian.com/uk), [BBC](http://www.bbc.com), many others |
+| **Supporters** | Cloud Platforms as a service (PaaS) that support the Play Framework for their users: <br/> [Amazon Web Services (AWS)](http://aws.amazon.com/opsworks/), [Jelastic](http://jelastic.com), [Heroku](https://www.heroku.com), [Google App Engine (GAE)](https://cloud.google.com/appengine/docs) |
+| **Funders** | The stakeholders that fund the development of a system. These are venture capitals that have funded Typesafe Inc.: <br/> [Greylock Partners](http://www.greylock.com), [Shasta Ventures](http://www.shastaventures.com), [Juniper Networks](http://www.juniper.net/us/en/homepage-campaign.page) |
 
 The figure below shows an overview of the stakeholders discussed in the table above, and also shows the relation of Typesafe's other projects with respect to Play. 
 
-<a alt="Stakeholder Diagram" href="images/stakeholder_diagram.png"><img src="images/stakeholder_diagram.png" height="450"></a>
+<img src="images/stakeholder_diagram.png" height="450"/>
 
 In the diagram below, the stakeholders' power with respect to their interest are shown in a [Power/Interest Grid](http://www.mindtools.com/pages/article/newPPM_07.htm). 
 Stakeholders in the top right are the most important stakeholders of the system.
 
-![Power/Interest Grid](images/interest-power.png)
+![](images/interest-power.png "Power/Interest Grid")
 
 ### Context View
 The context that Play resides in is mainly dependent on the projects that are developed and maintained by Typesafe itself (sbt, Akka). 
@@ -269,7 +271,7 @@ There exist a number of web frameworks which can be considered as competitors. T
  * [Lift](http://liftweb.net/) (Scala)
 
 The diagram below explains context and the dependencies and relations between the discussed components. 
-![Context View](images/context-view.png)
+![](images/play-context-view.png "Context View")
 
 ## Future[Play]
 The Future[A] looks bright, is a bad inside joke.
@@ -286,7 +288,7 @@ The Manifesto is really about providing a coherent approach and vocabulary to th
 Touching the core of modern Software Architecture, it defines 4 main aspects: 
 _"we need to build: Responsive, Resilient, Elastic, and Message Driven systems"_.
 
-![Reactive Manifesto](http://www.reactivemanifesto.org/images/reactive-traits.svg)
+![](images/reactive-traits.png "Reactive Manifesto")
 
 With Play, Typesafe addresses these aspects and makes it 
 [simple](http://www.toptal.com/scala/scaling-play-to-thousands-of-concurrent-requests) 
@@ -303,7 +305,7 @@ Thist allows the main HTTP *execution context* to handle new requests, even when
 The image below [by Julien Richard-Foy](https://www.packtpub.com/books/content/handling-long-running-requests-play) (major contributor of Play) illustrates this: 
 the execution of code is interleaved, while the threaded model would block the entire thread.
 
-![Threaded vs evented execution models](images/reactive/execution-models.png)
+![](images/reactive/execution-models.png "Threaded vs evented execution models")
 
 Until this point, this section could have been about NodeJS or any other modern platform as well.
 While basic I/O requires only some minor usage of Scala's Futures (or Promises) which can be then handed off to asynchronous actions, 
@@ -314,34 +316,26 @@ or we would still run out of threads on the default execution context. We can do
 
 In `application.conf`:
 
-{% highlight text %}
-
-my-context {
-  fork-join-executor {
-    parallelism-factor = 20.0
-    parallelism-max = 200
-  }
-}
-
-{% endhighlight %}
+    my-context {
+      fork-join-executor {
+        parallelism-factor = 20.0
+        parallelism-max = 200
+      }
+    }
 
 In `MyController.scala`:
 
-{% highlight scala %}
-
-implicit val myExecutionContext = Akka.system.dispatchers.lookup("my-context")
-def index = Action.async {
-  val futureInt = scala.concurrent.Future { intensiveComputation() }
-  futureInt.map(i => Ok("Got result: " + i))
-}
-
-{% endhighlight %}
+    implicit val myExecutionContext = Akka.system.dispatchers.lookup("my-context")
+    def index = Action.async {
+      val futureInt = scala.concurrent.Future { intensiveComputation() }
+      futureInt.map(i => Ok("Got result: " + i))
+    }
 
 Julien Richard-Foy visualised this in the image below. 
 The two white horizontal boxes represent the execution contexts with both two threads.
 Using execution contexts, related work can be grouped, keeping the default context fast and responsive while still waiting for legacy blocking operations on other threads, in a transparent way.
 
-![Execution Contexts](images/reactive/2400OS_05_08.png)
+![](images/reactive/2400OS_05_08.png "Execution Contexts")
 
 However, in general, blocking operations should be prevented. 
 It is better to divide the work into small tasks that can be executed individually.
@@ -370,7 +364,7 @@ These streams can be long running, but the tasks themselves are small, this is i
 Using this pattern Play can also handle thousands of concurrent long-running requests. This is for example shown in this small [chatting application](https://github.com/matthiasn/sse-chat/issues/10#issuecomment-42857305) of Matthias Nehlsen (@matthiasn).
 Having a single server handling these amounts of requests is certainly not trivial using a solely thread-based model.
 
-![Chat application](https://raw.githubusercontent.com/matthiasn/sse-chat/master/tutorial/sse-chat2.png)
+![](images/sse-chat2.png "Chat application")
 
 #### Akka
 Besides the Iteratees library, Play also integrates nicely with another product of Typesafe: Akka,
