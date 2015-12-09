@@ -5,12 +5,10 @@ overview: true
 creator: 
 - role: Editor
 - text: Arie van Deursen and Rogier Slag (editors)
-date: August 2015, Version 1.1-RC1
+date: August 2015, Version 1.1-RC2
 ---
 
-# Delft Students on Software Architecture
-
-## DESOSA 2015
+# Delft Students on Software Architecture: DESOSA 2015
 
 
 **[Arie van Deursen] and [Rogier Slag].**<br/>
