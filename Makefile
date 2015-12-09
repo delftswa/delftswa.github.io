@@ -11,6 +11,7 @@ EXTRACTDIR=zzz-epub-extract
 TARGET_DIR=target
 
 EPUB_OUT=$(TARGET_DIR)/$(DOC).epub
+PDF_OUT=$(TARGET_DIR)/$(DOC).pdf
 
 all:
 	$(MAKE) clean img epub 
@@ -44,3 +45,17 @@ unzip:
 
 clean:
 	rm -rf images $(EXTRACTDIR) $(TARGET_DIR)
+
+pdf:
+	mkdir -p $(TARGET_DIR)
+	pandoc \
+	 --include-in-header=preamble.tex \
+	 --smart \
+	 --toc \
+	 --chapters \
+	 --number-sections \
+	 --toc-depth=2 \
+	 --output=$(PDF_OUT) \
+	 index.md \
+	 $(CHAPTERS_MD)
+
