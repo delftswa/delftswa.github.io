@@ -1,4 +1,6 @@
 _site
 .vagrant
 target
-images
+/images
+zzz-epub-extract
+.DS_Store

@@ -38,10 +38,10 @@ check:
 # An epub file is just a zip file with html content.
 # Provide target for unzipping to help fixing incorrect epubs.
 unzip:
-	rm -rf $(TMPDIR)
-	mkdir -p $(TMPDIR)
-	cp $(DOC).epub $(TMPDIR)/$(DOC).zip
-	cd $(TMPDIR); unzip $(DOC).zip
+	rm -rf $(EXTRACTDIR)
+	mkdir -p $(EXTRACTDIR)
+	cp $(EPUB_OUT) $(EXTRACTDIR)/$(DOC).zip
+	cd $(EXTRACTDIR); unzip $(DOC).zip
 
 clean:
 	rm -rf images $(EXTRACTDIR) $(TARGET_DIR)
