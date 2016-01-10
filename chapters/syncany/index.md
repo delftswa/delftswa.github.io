@@ -68,7 +68,6 @@ aid the user in deploying the Syncany application. Figure 1 depicts the context
 of Syncany, including systems, services, people, and more.
 
 ![](images/context-view.png)
-
 __Figure 1__: Context diagram of the Syncany project.
 
 #### The ecosystem
@@ -220,7 +219,6 @@ It shows the repositories, remote file synchronization, repository sharing and
 storing secure content on unsecured remote locations.
 
 ![](images/functionality.png)
-
 __Figure 2__: Syncany core functionality summarized.
 
 ### The Syncany blueprints
@@ -242,7 +240,6 @@ implementation in a single place, while being extensible enough to add new
 storage solutions, interfaces, etc.
 
 ![](images/module-structure-model.png)
-
 __Figure 3__: Module Structure Model of Syncany, based on Rozanski and Woods [[1]](#references).
 
 #### The bricks and mortar
@@ -370,7 +367,6 @@ clients after a cleanup operation. Figure 4 below summarizes the evolution that 
 feature has undergone.
 
 ![](images/cleanup.png)
-
 __Figure 4__: Feature evolution for the Cleanup feature.
 
 #### Transactions to compensate for your unstable Internet
@@ -406,7 +402,6 @@ further indexing of changes. Figure 5 below shows the evolution of the
 transactions feature.
 
 ![](images/transactions.png)
-
 __Figure 5__: Feature evolution for the Transactions feature.
 
 ### Time for your check-up, Syncany
@@ -453,7 +448,6 @@ methods or classes. Figure 6 shows an overview of the complexity of the methods
 for the three main Syncany projects.
 
 ![](images/barplotMethods.png)
-
 __Figure 6__: Method complexities for Syncany's main projects.
 
 #### Keep testing it 
@@ -481,7 +475,6 @@ Syncany does not yet have both tests for a majority of its classes, as shown in
 Figure 7.
 
 ![](images/coverage.png)
-
 __Figure 7__: Coverage data on a class level for the three main Syncany projects.
 
 In addition to not being extensive enough, the quality of the test suite is also
@@ -493,7 +486,6 @@ covered by some test in a method. "Barely covered" represents 1-49% coverage,
 "Covered" represents 50-79% and "Covered well" represents 80+%.
 
 ![](images/coverageClasses.png)
-
 __Figure 8__: Coverage data on a method level for the three main Syncany projects.
 
 #### Do not get stuck in the past
