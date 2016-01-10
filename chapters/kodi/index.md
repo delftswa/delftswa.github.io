@@ -9,7 +9,8 @@ chapter: true
 
 *A Report On the Journey of Team Kodi*
 
-<img src="images/Kodi.png" width="700px"/>
+![](images/Kodi.png)
+<!-- -->
 
 *Authors: [Kaj Dreef](https://www.github.com/kajdreef), [Menno van der Reek](https://www.github.com/mvanderreek), [Koen Schaper](https://www.github.com/kpschaper), [Maarten Steinfort](https://www.github.com/maartensteinfort)*
 
@@ -56,23 +57,20 @@ Furthermore, the Kodi player supports numerous [add-ons](http://kodi.wiki/view/O
 
 Originally, the Kodi software was developed for the XBOX game, a game console, the then purporting [XBOX Media Center](http://en.wikipedia.org/wiki/Kodi_(software)) (XBMC), that increased popularity whereby the XBMC foundation decided to expand their software to other platforms. Currently, the software is available for Windows, OSX, iOS, Android, and Linux. Since the name was still based on XBOX, XBOX Media Center, the foundation decided in 2014 to change the name to "Kodi" Entertainment Center. From this point we will continue naming the project Kodi. Besides that, the software has always been open-source and published for free.
 
-   <img src="images/Kodi-home.png" width="700px"/>
-   
-   _Figure 1: The attractive design of the Kodi Media Player from the outside_
+![](images/Kodi-home.png)
+_Figure 1: The attractive design of the Kodi Media Player from the outside_
 
 ### From the inside... 
 At the other side, in the backoffice, the developers are collaborating with each other to continuously improving the source code of the Kodi Media Player. Starting with exposing the prominent stakeholders by diving into Kodi's repository on Github. The stakeholders with the most influence on the course of the media player software are the developers controlled by the [board members](http://kodi.wiki/view/Team_Kodi/Members), consisting of experienced developers and maintainers. Secondly, the [context view](http://www.viewpoints-and-perspectives.info/home/viewpoints/context/) highlights the dependencies, relationships and interactions with its environment. The [development view](http://www.viewpoints-and-perspectives.info/home/viewpoints/development/) describes Kodi's independent 'modular' architecture that supports the development and maintenance process. These modules can be described as well-ordered ['building blocks'](#development-view---the-building-blocks-of-kodi) in a large construction. Subsequently the [functional](http://www.viewpoints-and-perspectives.info/home/viewpoints/functional-viewpoint/) view focuses more on these 'building blocks' and how they operate and interact. Although Kodi might seem similar on many of the different operating systems from the outside, the differing features are investigated from the inside in the variability view. Ultimately with the help of the evolution perspective the roadmap to the next version, called ['Isenguard'](http://kodi.tv/kodi-15-0-alpha-1-road-to-isengard/), is discussed and evaluated.
 
-   <img src="images/backofficeKodi.png" width="700px"/>
-   
-   _Figure 2: The backoffice of the Kodi community; working on the continuous enhancement of the media player_
+![](images/backofficeKodi.png)
+_Figure 2: The backoffice of the Kodi community; working on the continuous enhancement of the media player_
 
 ## Stakeholders - ***The brainiacs behind your TV screen***
 The Kodi Foundation comprises a [large community](https://github.com/xbmc/xbmc/network/members) of hundreds software engineers, architects, developers and testers. They work on a voluntary base, as most of them have another job and no income is generated since Kodi is freeware. The search for detecting and identifying the most prominent stakeholders and capture their workflow led to the conclusion that [a limited group of developers](https://github.com/orgs/xbmc/people) have the right to approve or deny the potential contributions and pull requests, see Figure 3. However, by looking deeper into their profile history on Github, it appeared that these developers have 'earned their rights' by enormous amounts of commits after a certain period actively participating to the continuous improvement process of the software. 
 
-   <img src="images/fourLargestCommitters.png" width="700px"/>
-   
-   _Figure 3: Four most present integrators within the community_
+![](images/fourLargestCommitters.png)
+_Figure 3: Four most present integrators within the community_
 
 Although most of Kodi's stakeholders fit within the structure of [Rozanski and Woods](http://www.viewpoints-and-perspectives.info/home/stakeholders/), for classifying stakeholders, some of them act as more than one stakeholder type. A classification of the most prominent stakeholders is discussed below.
 
@@ -90,9 +88,8 @@ Since Kodi is dependent on their users, they embrace them to contribute to the c
 
 By zooming in on the Kodi source code, the dependencies, interactions and relationships with the environment do appear. As can be seen in Figure 4, the Kodi software is supported on six different (operating) systems, which variates from high-specification desktop computers to low-specification computers with the purpose of only running the media player. In the context view, the behaviour of the media player and its environment are captured and displayed, as described in [Rozanski Woods](http://www.viewpoints-and-perspectives.info/home/viewpoints/context/). 
 
-   <img src="images/kodiContextView2.png" width="700px"/>
-   
-   _Figure 4: Context view of Kodi_
+![](images/kodiContextView2.png)
+_Figure 4: Context view of Kodi_
 
 It can be noted that Kodi supports multiple operating systems. It relies on these operating systems to abstract the communication with the hardware away. For other features external libraries are used, sometimes multiple libraries to be able to support all these operating systems. Using an automated build-system, the right libraries are picked for the targeted operating system.
 
@@ -115,11 +112,10 @@ This is one of Kodi's general guidelines that actually fits in the [Rozansky and
 
 Starting with discussing the [modular design](#modular-design) that form the 'building blocks' of Kodi and illustrate these with an overview to gain a deeper understanding of the architecture of Kodi. Furthermore, the dependencies of and interactions of the modules and layers are discussed. 
 
-### Modular Design
+![](images/KodiDevelopmentView.png)
+<br/>_Figure 5: Kodi's 'building blocks'_
 
-   <img src="images/KodiDevelopmentView.png" width="700px"/>
-   
-   _Figure 5: Kodi's 'building blocks'_
+### Modular Design
 
 Firstly in Figure 5, the **yellow** building block encloses all files and packages about the [skins](http://kodi.wiki/view/Category:Skins), translations, fonts, and GUI of the Kodi Media Player. This is one of the most popular modules for the external developers, while it also provides a perfect example for the visualisation of the working of modules within a greater software architecture.  
 
@@ -139,18 +135,21 @@ As can be seen in the overview, the modular building blocks divide the total arc
 Furthermore, the relatively 'independent' modular design of Kodi prevents developing functions multiple times, by orchestrating it into the packages among the different layers. Another interesting advantage of the modular architecture, is that the [scalability](http://en.wikipedia.org/wiki/Scalability) is improved drastically. Because of the sharp boundaries between the modules, it is not only easier to maintain the source code but also easier to develop new features for the system. 
 
 ### Development guidelines and principles
-A large community of developers, testers, maintainers and users are [invited to contribute](http://kodi.tv/get-involved/) to the Kodi software with the goal of fulfilling as much wishes of the users as possible. For this reason most of the developers, testers and maintainers are also actively using the media player system. Besides that, a large part of the reputation that Kodi has gained since their launch in 2002 is due to their framework for add-ons. Its accessibility is associated with the [guidelines and principles](http://kodi.wiki/view/XBMC_development) that Kodi has published. All members of the community,  developers and software engineers involved should abide these rules and principles. To illustrate a understanding of these guidelines, a selection* is provided.
+A large community of developers, testers, maintainers and users are [invited to contribute](http://kodi.tv/get-involved/) to the Kodi software with the goal of fulfilling as much wishes of the users as possible. For this reason most of the developers, testers and maintainers are also actively using the media player system. Besides that, a large part of the reputation that Kodi has gained since their launch in 2002 is due to their framework for add-ons. Its accessibility is associated with the [guidelines and principles](http://kodi.wiki/view/XBMC_development) that Kodi has published. All members of the community,  developers and software engineers involved should abide these rules and principles. To illustrate a understanding of these guidelines, a selection is provided:
 
 1. **Code documentation** 
-> *This should be done by using Docbook or Doxygen (preferred)*
+
+    > *This should be done by using Docbook or Doxygen (preferred)*
 
 2.  **Installation** 
-> *Be easy to install, set up and maintain, so that our valuable end-users do not get fed up with it and quit*
+
+    > *Be easy to install, set up and maintain, so that our valuable end-users do not get fed up with it and quit*
 
 3. **Modular design** 
-> * *Kodi should still compile and run if a non-essential module or library is disabled or removed* 
 
-**Due to the limited words that the book chapter may contain, the guidelines are cut out, however we would like to refer to the [Kodi website](http://kodi.wiki/view/XBMC_development) where this is discussed in more detail.* 
+    > *Kodi should still compile and run if a non-essential module or library is disabled or removed* 
+
+*Due to the limited words that the book chapter may contain, the guidelines are cut out, however we would like to refer to the [Kodi website](http://kodi.wiki/view/XBMC_development) where this is discussed in more detail.* 
 
 ## Functional View - ***More about the features***
 While continuing the journey, Kodi's Media Player is viewed from another viewpoint. 
@@ -159,9 +158,8 @@ However, this time it is more focussed on the underlying layer that drives most 
 In Figure 6 a simplified model is given of the functional view of Kodi.
 Only the key-features are shown here to keep the figure as simple as possible, but still show how the feature interact with each other to deliver the user the best media entertainment system possible.
 
-   <img src="images/FunctionalView2.png" width="700px"/>
-   
-   _Figure 6: Functional view of Kodi_
+![](images/FunctionalView2.png)
+_Figure 6: Functional view of Kodi_
 
 **Players**: The 'players', this is the part of Kodi where the user can actually play/open its content. This is of course the feature the user will use most often, because of this it is important that it uses an accessible GUI, resulting in a user friendly player. The players uses other features to get the content to the screen like the codecs, or their own dedicated library.
 
@@ -175,9 +173,8 @@ In the functional view a discovery has taken place regarding the depth of the fe
 ## Variability View - ***The effort to broaden audience***
 Nowadays it is not rare that people have multiple devices used for different purposes, varying from desktop computers and notebooks to tablets and smartphones. For example, lets look at the [Raspberry Pi](http://raspberrypi.org), which is a low-spec computer operating on a simplified version of Linux. Users can profit from prices that are as low as the specs, resulting in the necessity for software that fits its capacity. The developers of Kodi decided to also focus on the Raspberry Pi, while they already support multiple Linux version. Although, to make Kodi available for a device with lower specifications, it will result in that some features will be left out because of hardware limitations. These ''variability points'' can be found in Figure 7. This also applies for Apple OS X, iOS, Linux, Android, and Microsoft Windows operating systems. This leads to the emerging question; what is the price to reach a broad audience? 
 
-   <img src="images/variabilityView.png" width="700px"/>
-   
-   _Figure 7: Feature variability model of the Kodi Media Player_
+![](images/variabilityView.png)
+_Figure 7: Feature variability model of the Kodi Media Player_
 
 The main features of the system are investigated along with the perspective of the stakeholders (see section 7: [functional view](#functional-view---more-about-the-features)). Every software system has main features, since these also comprises the core activities. Also Kodi has published their main features on their [Wiki](http://kodi.wiki/view/Features_and_supported_formats). Based on the tens of different features that Kodi counts a variability model is created, see Figure 7. This model displays the cohesion of the features within  Kodi. There are 5 different 'abstract' features created; Music, Pictures, Videos, Settings, and Operating System. Subsequently, these are stripped down until the core features have emerged. 
 
@@ -229,9 +226,8 @@ During the course of the Software Architecture trip, on February 28, 2015 board 
 
 Currently Kodi supports a lot of different platforms, which is accompanied with the continuous increasing of device types. As it would become impossible to keep [supporting all hardware devices](http://kodi.wiki/view/Supported_hardware) a selection is made whereby the scope is moved and redefined during updates; the [Evolution Perspective](http://www.viewpoints-and-perspectives.info/home/perspectives/evolution/). The effort of maintaining these legacy devices, magnitude of the change divided by the time required, would not weight up to the value gained. For this reason the need to drop support in order to keep evolving Kodi and accept newer hardware, which also can be seen in the changes involved in update Isenguard (see Figure 8). The other way the developers try to make Kodi better maintainable is by refactoring major parts of the code and moving it to become add-ons. This allows the developers to add future features to the core, while trying at the same time to keep the core as simple as possible and better meeting the immediate needs.
 
-   <img src="images/updateChanges.png" width="700px"/>
-   
-   _Figure 8: Most important changes of Kodi's Isenguard update_
+![](images/updateChanges.png)
+_Figure 8: Most important changes of Kodi's Isenguard update_
 
 #### Ease of Evolution
 
@@ -301,13 +297,13 @@ We are armed with the different architectural tools, an experience richer. Kodi'
 14. Add an explanation to your solution and argument your choices. 
 15. Wait for the reaction of at least 2 of the main integrators (for example [*mkortstiege*](https://github.com/mkortstiege) or [*MartijnKaijser*](https://github.com/MartijnKaijser)). 
 16. When they call the keyword "*Jenkins build this please*", their build bot named Jenkins is checking if the code runs with your patch (see Figure 8)
-    ![](images/kodi-jenkins.png)
-    	
+
+    ![](images/kodi-jenkins.png)  	
     _Figure 8: Jenkins the build bot_
 
 17. When you receive a message that your Pull Request is accepted; congratulations.  
 18. Good luck with contributing!
 
-   
+
 
 
