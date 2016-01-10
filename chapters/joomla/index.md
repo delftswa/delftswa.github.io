@@ -7,7 +7,8 @@ chapter: true
 
 # Joomla
 
-<img  src="images/Joomla-website.png" width="70%"/>
+![](images/Joomla-website.png)
+<!-- -->
 
 **Remy Kabel, Panagiotis Mitsis, Michail Papadimitriou, Nikolaos Stekas**
 
@@ -164,7 +165,7 @@ With a slightly dim face he continues, "Joomla is not the only city delivering p
 * Contao - Free Content CMS, specializes in back-office and front-office accessibility.
 * Modx - Open-Source CMS, awarded Packt Publishing's Most Promising Open Source Content Management System in 2007.
 
-![The Path to CMS](http://michaellobry.com/wordpress/wp-content/uploads/2012/07/Flow-chart-Wordpress-vs-Joomla-vs-Drupal-Matrix-compare.png)
+![The Path to CMS](images/path-to-cms.png)
 _**Figure:** A typical path to decide between the main competitors in the world of CMS_
 
 
