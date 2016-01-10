@@ -7,7 +7,8 @@ chapter: true
 
 # Jekyll - A Simple Static Site Generator
 
-![](./images/jekyll-sa-header.png)
+![](images/jekyll-sa-header.png)
+<!-- -->
 
 **[Joop Aué](https://github.com/JoopAue), [Anton Bouter](https://github.com/abouter), and [Martin Rogalla](https://github.com/MartinRogalla)**<br/>
 *Delft University of Technology*
@@ -52,7 +53,7 @@ These insights will not only make it easier for people to join the community and
       * [Stamp Coupling](#stamp-coupling)
       * [Parallelizable Iterations](#parallelizable-iterations)
   * [Conclusions and Recommendations](#conclusions-and-recommendations)
-  * [Bibliography](#bibliography)
+  * [Bibliography](#jekyll-bibliography)
         
 ## Introduction
 Jekyll is an open-source static site generator written in Ruby.
@@ -82,7 +83,7 @@ Additionally the stakeholders differ largely in their interest in Jekyll and the
 These different levels of [interest and power](#powerinterest-grid) require a different approach of dealing with the stakeholders.
 
 ### Types of Stakeholders
-In their book, Rozanski and Woods<sup>[[1]](#bibliography)</sup> describe 11 types of stakeholders.
+In their book, Rozanski and Woods<sup>[[1]](#jekyll-bibliography)</sup> describe 11 types of stakeholders.
 However, this section only discusses 4 of them, which are believed to be relevant for Jekyll.
 One additional stakeholder, the community, is highly relevant for Jekyll and will therefore be included in the stakeholder analysis.
 For each stakeholder type a short description is given followed by a specification of the Jekyll stakeholders that fit that description.
@@ -147,7 +148,7 @@ For each stakeholder type a short description is given followed by a specificati
   The Jekyll community benefits greatly from [GitHub Pages](https://pages.github.com/) as GitHub Pages provides Jekyll [support](https://help.github.com/articles/using-jekyll-with-pages/) as a blog-aware static site generator.
 
 ### Power/Interest Grid
-The stakeholders can be prioritized using the Power/Interest Grid<sup>[[2]](#bibliography)</sup>.
+The stakeholders can be prioritized using the Power/Interest Grid<sup>[[2]](#jekyll-bibliography)</sup>.
 Stakeholders with high power and high interest must be involved in every decision and are to be satisfied.
 A low interest and high power stakeholder should be kept satisfied, but should not be bothered with detailed information.
 High interest and low power stakeholders need to be kept up-to-date with developments as they can be very helpful.
@@ -169,7 +170,7 @@ In order to show the context in which Jekyll resides, a clear concise descriptio
 The environment of a system include the people interacting with the system, dependencies and other interacting entities.
 
 In order to construct a context view for Jekyll its core requirements, as given in [Jekyll's Features](#main-features), are to be combined with external entities.
-According to Rozanski and Woods<sup>[[1]](#bibliography)</sup> an external entity of a system is any system, organization, or person with which the system interacts.
+According to Rozanski and Woods<sup>[[1]](#jekyll-bibliography)</sup> an external entity of a system is any system, organization, or person with which the system interacts.
 The relevant entities are grouped in three relevant categories: [Internal Systems](#internal-systems), [External Systems](#external-systems) and [Classes of People](#classes-of-people).
 
 ### Internal Systems
@@ -238,7 +239,7 @@ The rough dependencies between the different layers in the figure are denoted by
 **Figure 3** - *Structure Model*
 
 ### Common Processing
-According to Rozanski and Woods<sup>[[1]](#bibliography)</sup> any large system will benefit from identifying and isolating common processes into separate code modules that are used throughout the system.
+According to Rozanski and Woods<sup>[[1]](#jekyll-bibliography)</sup> any large system will benefit from identifying and isolating common processes into separate code modules that are used throughout the system.
 Jekyll has isolated common processing into separate code modules of which some are described below.
 
 * **Stevenson**:
@@ -292,7 +293,7 @@ Travis CI will also check on code style with [Rubocop](https://github.com/bbatso
 If a test fails or the code doesn't satisfy the [GitHub style guide](https://github.com/styleguide/ruby) for Ruby, the pull request will not be merged.
 
 ### Codeline Organization
-A codeline is defined by Rozanski and Woods<sup>[[1]](#bibliography)</sup> as a particular version of a set of source code files with a well-defined organizational structure.
+A codeline is defined by Rozanski and Woods<sup>[[1]](#jekyll-bibliography)</sup> as a particular version of a set of source code files with a well-defined organizational structure.
 This structure includes elements such as the directory structure, but also the utilities needed to test and release a build.
 Because the organization of the tests was already discussed in the section [*Standardization of Testing*](#standardization-of-testing), this section will mainly describe the organization of the source files and how the project is built and released.
 
@@ -486,8 +487,8 @@ The other 80% is spent on rendering collections.
 Time spent on rendering permalinks is negligible compared to the rendering of pages, posts and collections.
 
 
-<a id="figure8">![Diagram render](./images/measurements/2-render-process.png)</a>
-
+<div id="figure8"/>
+![Diagram render](./images/measurements/2-render-process.png)
 **Figure 8** - *Time delay caused by render processes*
 
 When investigated further, it is found that in the collection rendering process 67% of the time is used by the `place in layout` process as shown in [Figure 9a](#figure9a).
@@ -495,14 +496,13 @@ Looking into that it is concluded that by far the most time can be gained by imp
 Especially the `place in layout` process.
 This fact is illustrated by [Figure 9b](#figure9b).
 
-<a id="figure9a"><img  src="./images/measurements/3-collection-render.png"/></a>
+<div id="figure9a"/>
+![](images/measurements/3-collection-render.png)
+**Figure 9(a)** _Time delay caused by collection renderer processes_
 
-<strong>Figure 9(a)</strong> - <em>Time delay caused by collection renderer processes</em>
-
-
-<a id="figure9b"><img src="./images/measurements/4-render-place.png"/></a>
-
-<strong>Figure 9(b)</strong> - <em>Place in layout rendering processes</em>
+<div id="figure9b"/>
+![](images/measurements/4-render-place.png)
+**Figure 9(b)** - _Place in layout rendering processes_
 
 
 ### Parallelizability
@@ -552,6 +552,7 @@ Jekyll's community has been warm and welcoming, providing beginning contributors
 *Are you new to the open source community or simply interested in contributing to Jekyll? 
 Have a look at [Jekyll](https://github.com/jekyll/jekyll) and don't be afraid to propose small changes as the Jekyll community will give you thorough feedback on your proposed contributions and will help you along your journey.*
 
+<div id="jekyll-bibliography"/>
 ## Bibliography
 **[1]** Nick Rozanski and Eoin Woods. 2011. Software Systems Architecture:
 Working with Stakeholders Using Viewpoints and Perspectives. Addison-Wesley
