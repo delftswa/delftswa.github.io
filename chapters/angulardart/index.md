@@ -10,6 +10,7 @@ chapter: true
 
 
 ![](images/angulardart_logo.png "AngularDart")
+<!-- -->
 
 **Abstract**
 
@@ -37,83 +38,78 @@ AngularDart combines the client-side framework Angular with the programming lang
 ### What it is all about - A Quick Example
 
 HTML:
-<pre>
-<code>
 
-&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;todo.css&quot;&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h2&gt;Todo&lt;/h2&gt;
-    &lt;div todo-list ng-cloak&gt;
-    &lt;span&gt;
-      {{TodoCtrl.remaining()}} of {{TodoCtrl.todos.length}} remaining
-    &lt;/span&gt;
-        [ &lt;a href=&quot;&quot; ng-click=&quot;TodoCtrl.archive()&quot;&gt;archive&lt;/a&gt; ]
-        &lt;ul class=&quot;unstyled&quot;&gt;
-            &lt;li ng-repeat=&quot;todo in TodoCtrl.todos&quot;&gt;
-                &lt;input type=&quot;checkbox&quot; ng-model=&quot;todo.done&quot;&gt;
-                &lt;span class=&quot;done-{{todo.done}}&quot;&gt;{{todo.text}}&lt;/span&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;form ng-submit=&quot;TodoCtrl.addTodo()&quot;&gt;
-            &lt;input type=&quot;text&quot; ng-model=&quot;TodoCtrl.todoText&quot;  size=&quot;30&quot;
-                   placeholder=&quot;add new todo here&quot;&gt;
-            &lt;input class=&quot;btn-primary&quot; type=&quot;submit&quot; value=&quot;add&quot;&gt;
-        &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;script type=&quot;application/dart&quot; src=&quot;todo.dart&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;packages/browser/dart.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+    <!doctype html>
+    <html>
+      <head>
+        <link rel="stylesheet" href="todo.css">
+      </head>
+      <body>
+        <h2>Todo</h2>
+        <div todo-list ng-cloak>
+        <span>
+          {{TodoCtrl.remaining()}} of {{TodoCtrl.todos.length}} remaining
+        </span>
+            [ <a href="" ng-click="TodoCtrl.archive()">archive</a> ]
+            <ul class="unstyled">
+                <li ng-repeat="todo in TodoCtrl.todos">
+                    <input type="checkbox" ng-model="todo.done">
+                    <span class="done-{{todo.done}}">{{todo.text}}</span>
+                </li>
+            </ul>
+            <form ng-submit="TodoCtrl.addTodo()">
+                <input type="text" ng-model="TodoCtrl.todoText"  size="30"
+                       placeholder="add new todo here">
+                <input class="btn-primary" type="submit" value="add">
+            </form>
+        </div>
+        <script type="application/dart" src="todo.dart"></script>
+        <script src="packages/browser/dart.js"></script>
+      </body>
+    </html>
 
-</code>
-</pre>
+
 
 In this HTML example you can see some unusual properties inside the tags often prefixed with `ng-`. 
 These are standard Angular _directives_ that add behaviour or functionality to those tags.
 This is done by the Angular library by scanning the HTML client-side. The `todo-list` attribute in the top `<div>` refers to the controller written in Dart below, which manages the logic of adding todos:
 
 Dart:
-<pre><code>
-import ‘package:angular/angular.dart’;
-import ‘package:angular/application_factory.dart’;
 
-@Controller(
-    selector: &#39;[todo-list]&#39;,
-    publishAs: &#39;TodoCtrl&#39;)
-class TodoController {
-  List&lt;Todo&gt; todos;
-  String todoText;
- 
-  TodoController() {
-    todos = [...];
-  }
- 
-  void addTodo() {
-    todos.add(new Todo(todoText, false));
-    todoText = &#39;&#39;;
-  }
- 
-  int remaining() {...}
- 
-  void archive() {...}
-  }
-}
- 
-class Todo {...}
- 
-class TodoModule extends Module {...}
- 
-main() {
-  applicationFactory()
-      .addModule(new TodoModule())
-      .run();
-}
-</code>
-</pre>
+    import ‘package:angular/angular.dart’;
+    import ‘package:angular/application_factory.dart’;
+
+    @Controller(
+        selector: &#39;[todo-list]&#39;,
+        publishAs: &#39;TodoCtrl&#39;)
+    class TodoController {
+      List&lt;Todo&gt; todos;
+      String todoText;
+     
+      TodoController() {
+        todos = [...];
+      }
+     
+      void addTodo() {
+        todos.add(new Todo(todoText, false));
+        todoText = &#39;&#39;;
+      }
+     
+      int remaining() {...}
+     
+      void archive() {...}
+      }
+    }
+     
+    class Todo {...}
+     
+    class TodoModule extends Module {...}
+     
+    main() {
+      applicationFactory()
+          .addModule(new TodoModule())
+          .run();
+    }
 
 In the next section the Angular framework is described: Its stakeholders are analyzed, as well as the project's organization. Then, the implementation and its functions are assessed, after which the evolution is described and the metrics for evaluation are introduced. Lastly, the contributions made are discussed.
 
@@ -153,23 +149,23 @@ Now that we looked into the people involved in Angular, its architecture is expl
 Modules are functional, largely independent, units in the project that contain multiple files of source code. It is an 'encapsulation' of a specific aspect of the project. The two main advantages of the modular programming method are (1) simplification of code through limitation of dependencies between modules and (2) easier organisation of distributed programming because teams (or individuals) can specialize on single modules instead of having to know all the source code [Sun Microsystems, 2007](https://netbeans.org/project_downloads/usersguide/rcp-book-ch2.pdf). 
 
 Although the AngularDart repository could be considered to be relatively small, it also benefits from modules to structure the source code. The code section below illustrates a folder structure in the AngularDart project. It depicts the /lib folder, which actually contains 15 folders and 10 files. 
-<pre><code>
-angular.dart/lib
-  /animate                  # contains files that provide animation functionality for angular.dart
-    animation_loop.dart
-    animation_optimizer.dart
-    animations.dart
-    css_animate.dart
-    module.dart
-    [...]
-  /core                     # folder with core elements of angular.dart
-    /parser                 # sub-folder of /core containing parsing functions
-    [...]
-  module.dart 
-  annotation.dart           # source code file that adds annotation
-  exception handler.dart    # source code file that handles exceptions in angular.dart
-  [...]
-</code></pre>
+
+    angular.dart/lib
+      /animate                  # contains files that provide animation functionality for angular.dart
+        animation_loop.dart
+        animation_optimizer.dart
+        animations.dart
+        css_animate.dart
+        module.dart
+        [...]
+      /core                     # folder with core elements of angular.dart
+        /parser                 # sub-folder of /core containing parsing functions
+        [...]
+      module.dart 
+      annotation.dart           # source code file that adds annotation
+      exception handler.dart    # source code file that handles exceptions in angular.dart
+      [...]
+
 The modules in AngularDart can be identified through the 'module.dart' file in a directory. In the example above, 'animate' is a module where 'core' contains the parser.
 
 [Christopher Hiller](https://github.com/boneskull), a Software Architect and contributor to AngularJs, explained how  developers can modularize their projects when using Angular. 
@@ -177,7 +173,9 @@ His blog is a good addition on the explanation above and focuses on creating mod
 
 The overall tendency is that the main modules in `/lib` are loosely decoupled, with only the Core module binding all the modules together.
 In the image below, the different modules and the dependencies between them are illustrated by a network analysis graph: Larger modules have more imcoming dependencies whilst small modules rely on such dependencies.
-![Module dependency graph analysis](images/module _graph_analysis.png "Module dependency graph analysis of /lib")
+
+![](images/module _graph_analysis.png)
+_Module dependency graph analysis of /lib_
 
 AngularDart is written with a Dependency Injection (DI) framework, used for the decoupling of classes, allowing for re-usability. 
 It allows the import of some software library in such a way that the DI module handles the discovery and import of this library. 
@@ -196,7 +194,7 @@ The functional capabilities define what AngularDart does. AngularDart is a port 
 We derived the following functions in AngularDart:
 
 | Function | In component |
-|----------|--------|
+|----------------------------------------------------|------------|
 | Animating HTML elements | Animate |
 | Teach the browser new HTML syntax | HTML Compiler |
 | Binding data in the view and in the model | Two-way data binding |
@@ -218,24 +216,23 @@ Also the differences between AngularJs and AngularDart are taken into account, r
 * AngularDart is built on top of Shadow DOM, so when implementing a Component the Shadow DOM is used. 
 
 An example of the DI system differing between both versions, can be made clear as follows by an example from the blog [[2](http://victorsavkin.com/post/86909839576/angulardart-1-0-for-angularjs-developers)] of Victor Savkn:
-<pre><code>
-//JS:
-// The name here matters, and since it will be minified in production, 
-// we have to use the array syntax.
-m.factory("usersRepository", ["$http", function($http){
-  return {
-    all: function(){/* ... */}
-  }
-}]);
 
-//DART:
-@Injectable()
-class UsersRepository {
-  // Only the type here matters, the variable name does not affect DI.
-  UsersRepository(Http h){/*...*/}
-  all(){/* ... */}
-}
-</code></pre>
+    //JS:
+    // The name here matters, and since it will be minified in production, 
+    // we have to use the array syntax.
+    m.factory("usersRepository", ["$http", function($http){
+      return {
+        all: function(){/* ... */}
+      }
+    }]);
+
+    //DART:
+    @Injectable()
+    class UsersRepository {
+      // Only the type here matters, the variable name does not affect DI.
+      UsersRepository(Http h){/*...*/}
+      all(){/* ... */}
+    }
 
 
 #### Interfaces
@@ -257,7 +254,8 @@ Connectors are the pieces of code of the architecture that link the elements, or
 #### External entities
 AngularDart has "other systems, software programs, hardware devices or other entities with which the system interacts" (Rozanski and Woods, p. 272), or external entities. These can be extracted from the Context view image below.
 
-![Context view with logos](images/Context_view_with_logos.png "Context view with logos")
+![](images/Context_view_with_logos.png)
+_Context view with logos_
 
 * HTML: AngularDart extends the HTML with several directives, as discussed earlier, such as "ng-class". By using this directive, AngularDart attaches to that DOM element a specified behavior, or it can transform that DOM element (and its children).
 * DOM: AngularDart relies on the DOM, which all browsers have implemented. Furthermore, it can make use of the Shadow DOM, which is a polyfiller if it is not already natively supported by the browser.
@@ -281,10 +279,13 @@ Version 2 will also add support for Web Components, which are a collection of fo
 
 Angular 2.0 will be built using TypeScript from Microsoft. However, because no browser supports TypeScript natively yet, it will be transpiled (a source-to-source compiler, that *trans*lates code to another programming language) to EcmaScript 5. TypeScript differs from EcmaScript 5 by the addition of types to the language (type annotations, compile-time type checking and type inference). This also counts for classes, interfaces, modules and more. TypeScript is a superset of EcmaScript 5, which means that any current JavaScript program is a valid TypeScript program. However, Angular 2.0 does not offer any backwards compatibility to version 1.
 
-![Alt text](images/angular2_transpile_architecture.png "Angular 2 Transpile Architecture")
+![](images/angular2_transpile_architecture.png)
+_Angular 2 Transpile Architecture_
+
 In the image above you can see the way the Angular 2 is built. Since the development started on version 2 of Angular, both teams of the JavaScript and Dart version are combined into one team. Version 2 uses the facada pattern, which uses abstracted functions to improve readability of the library and the make a coherent API that is easy to use. Also, the most important reason that these facades are necessary is for the differences between JavaScript and Dart APIs. The transpiler uses these facades to compile the correct API for both languages. Traceur is the component responsible for tranpsiling the code to EcmaScript 5 and Dart. 
 
-![](images/angular2_team.png "The team of Angular 2")
+![](images/angular2_team.png)
+_The team of Angular 2_
 
 This compiler actually adds an extra option to develop Angular apps. Besides EcmaScript 5, EcmaScript 6, TypeScript and Dart, it is also possible to write Angular apps using the Traceur compiler in EcmaScript 6 and having it transpile to any number of the just mentioned languages. 
 
@@ -347,18 +348,16 @@ The level of achievement of the goal can be measured by comparing the deltas of 
 For example: the number of issues being raised in AngularJs might be higher than in AngularDart or Angular 2.0, but that cannot directly concluded that AngularJs is more fragile, AngularJs has more users and contributors. 
 So the improvement of 2.0 over 1.0 in this measure `M` should measured as:
 
-<pre><code>
-Mjs = Issues(Ajs) / Contributors(Ajs)
-Mdart = Issues(Adart) / Contributors(Adart) 
-M2 = Issues(A2) / Contributors(A2) 
-</code></pre>
+    Mjs = Issues(Ajs) / Contributors(Ajs)
+    Mdart = Issues(Adart) / Contributors(Adart) 
+    M2 = Issues(A2) / Contributors(A2) 
 
 Resulting in: `M2 < Mdart < Mjs`
 
 #### Goal for Angular
 
 | Goal |  |
-|---------|-------|
+|---------|---------------------------------|
 | Purpose | Lower |
 | Issue  | The barrier  |
 | Object  | For contributing towards Angular (2.0)  |
@@ -443,7 +442,8 @@ An application called `cloc` is used to count the number of lines of code and th
 
 <br />
 
-![Ratio Comment/LOC](images/ratio_loc_comments.png "Ratio Comment / LOC")
+![](images/ratio_loc_comments.png)
+_Ratio Comment / LOC_
 
 **Total volume of documentation (word count)**
 
@@ -478,7 +478,9 @@ Finally, general checking metrics are needed to define whether the goal, namely 
 * **Mapping**: Monitoring the number of contributors, to see if this increases
 
 This metric is performed and obtained from GitHub, with the results depicted in the following graph:
-![Number of contributors](images/number_of_contributors.png "Number of contributors")
+
+![](images/number_of_contributors.png)
+_Number of contributors_
 
 The number of contributors reached a peak in November 2014, and has steadily declined. This might be just because of start of the AngularJs 2.0, the new framework.
 
