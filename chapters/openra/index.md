@@ -11,7 +11,7 @@ chapter: true
 *Delft University of Technology*
 
 ![](images/soviet-logo.png)
-
+<!-- -->
 
 **Abstract**
 
@@ -74,8 +74,8 @@ A summary of the project's stakeholders can be found in [Table 1](#t1).
 
 <a id="t1"/>
 
- Type | Entities |
-|---|---|
+ Type            | Entities |
+|----------------|------------------------------------------------------|
 | Developers | @[pchote](https://github.com/pchote) , @[Mailaender](https://github.com/Mailaender), @[obrakmann](https://github.com/obrakmann), @[chrisforbes](https://github.com/chrisforbes) |
 | Users | hundreds of players around the world, [ModDB](http://www.moddb.com/games/openra) |
 | Suppliers | .NET/Mono, [Westwood](http://nl.wikipedia.org/wiki/Westwood_Studios), [Electronic Arts](http://www.ea.com/) |
@@ -304,7 +304,7 @@ OpenRA has several important features that make up the engine.
 <a id="t2"></a>
 
 Feature     | Description
------------ | -----------
+----------- | ---------------------------------------------------
 OS		| Operating system where the program runs on
 VM		| Virtual Machine where compiled binaries are executed on
 Mod		| Mod currently being played. This can be changed at runtime by selecting a different mod
@@ -388,7 +388,8 @@ At compile-time, the Makefile will make sure that for example the map editor wil
 ## program targets
 CORE = rsdl2 rnull game utility
 TOOLS = editor tsbuild crashdialog
-VERSION     = $(shell git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null || echo git-`git rev-parse --short HEAD`)
+VERSION = $(shell git name-rev --name-only --tags --no-undefined HEAD \
+  2>/dev/null || echo git-`git rev-parse --short HEAD`)
 ```
 
 The map editor is useful for modders and the build details are also in the Makefile where the developer could specify the environment details such as the mod locations, libraries and icons.
@@ -398,8 +399,10 @@ editor_SRCS := $(shell find OpenRA.Editor/ -iname '*.cs')
 editor_TARGET = OpenRA.Editor.exe
 editor_KIND = winexe
 editor_DEPS = $(game_TARGET) $(mod_common_TARGET)
-editor_LIBS = System.Windows.Forms.dll System.Data.dll System.Drawing.dll $(editor_DEPS) thirdparty/Eluant.dll
-editor_EXTRA = -resource:OpenRA.Editor.Form1.resources -resource:OpenRA.Editor.MapSelect.resources
+editor_LIBS = System.Windows.Forms.dll System.Data.dll System.Drawing.dll \
+  $(editor_DEPS) thirdparty/Eluant.dll
+editor_EXTRA = -resource:OpenRA.Editor.Form1.resources \
+  -resource:OpenRA.Editor.MapSelect.resources
 editor_FLAGS = -win32icon:OpenRA.Editor/OpenRA.Editor.Icon.ico
 ```
 
