@@ -13,7 +13,7 @@ By: [Herman Banken](https://github.com/hermanbanken),
 [Ruben Verboon](https://github.com/rubenverboon), and 
 [Vincent van Mieghem](https://github.com/vivami)
 
-![](images/play.png)
+![Play Logo](images/play.png)
 <!-- -->
 
 **Abstract**
@@ -88,7 +88,7 @@ View templating is brought out of the project, in the form of [Twirl](https://gi
 Some features are not modularised and live in the play-core module.
 These include routing, MVC logic, form validation, localisation, and several utilities.
 
-![](images/module-diagram/modules-main.png)
+![_Module View of Play_](images/module-diagram/modules-main.png)
 _Module View of Play_
 
 The diagram above shows most of the modules and their dependencies. 
@@ -140,7 +140,7 @@ The fact that Play has less questions could mean that Play is easier to use than
 Both seem reasonable: Play is very well documented, and Spring MVC is widely adopted due to Spring, convincing people to use that whole platform.
 Compared to their estimated sizes (see [jobs](#what-is-next-for-me) below) however, Play has relatively many questions.
 
-![](images/frequenogramStackoverflow.png)
+![_Play Questions on StackOverflow_](images/frequenogramStackoverflow.png)
 _Play Questions on StackOverflow_
 
 Getting exact usage numbers is hard however, as Play does not advertise itself in response headers.
@@ -156,7 +156,7 @@ Our metric here, the amount of job openings, relates to the question of how adop
 The more jobs we found, the more adopted Play is.
 We looked at the amount of jobs on [Indeed](http://indeed.com), for which each of the frameworks is listed.
 
-![](images/job.png)
+![_Play Job Openings_](images/job.png)
 _Play Job Openings_
 
 From this we can see that there exist frameworks that are far more adopted by employers, concluded from the amount of job openings.
@@ -198,7 +198,7 @@ This service is configured to automatically build certain branches (such as 'mas
 Also all pull requests will be automatically build, or can be rebuild by using a certain keyword in a github pull request comment ([`@play-pull-request-validator try again`](https://github.com/playframework/playframework/pull/4007#issuecomment-76663971)).
 After the build all unit and integration tests are run and the result is reflected on GitHub, marking the pull request as ready to merge, or indicates whether the build or tests are failing.
 
-![](images/jenkins.png)
+![_Jenkins integration with GitHub_](images/jenkins.png)
 _Jenkins integration with GitHub_
 
 ### Releases
@@ -252,13 +252,13 @@ Other stakeholders can be identified. Together with their roles they are listed 
 
 The figure below shows an overview of the stakeholders discussed in the table above, and also shows the relation of Typesafe's other projects with respect to Play. 
 
-![](images/stakeholder_diagram.png)
+![_Play Stakeholders_](images/stakeholder_diagram.png)
 _Play Stakeholders_
 
 In the diagram below, the stakeholders' power with respect to their interest are shown in a [Power/Interest Grid](http://www.mindtools.com/pages/article/newPPM_07.htm). 
 Stakeholders in the top right are the most important stakeholders of the system.
 
-![](images/interest-power.png)
+![_Play Power/Interest Grid_](images/interest-power.png)
 _Play Power/Interest Grid_
 
 ### Context View
@@ -279,7 +279,7 @@ There exist a number of web frameworks which can be considered as competitors. T
 
 The diagram below explains context and the dependencies and relations between the discussed components. 
 
-![](images/play-context-view.png)
+![_Play Context View_](images/play-context-view.png)
 _Play Context View_
 
 ## Future[Play]
@@ -297,7 +297,7 @@ The Manifesto is really about providing a coherent approach and vocabulary to th
 Touching the core of modern Software Architecture, it defines 4 main aspects: 
 _"we need to build: Responsive, Resilient, Elastic, and Message Driven systems"_.
 
-![](images/reactive-traits.png)
+![_Reactive Manifesto_](images/reactive-traits.png)
 _Reactive Manifesto_
 
 With Play, Typesafe addresses these aspects and makes it 
@@ -315,7 +315,7 @@ Thist allows the main HTTP *execution context* to handle new requests, even when
 The image below [by Julien Richard-Foy](https://www.packtpub.com/books/content/handling-long-running-requests-play) (major contributor of Play) illustrates this: 
 the execution of code is interleaved, while the threaded model would block the entire thread.
 
-![](images/reactive/execution-models.png)
+![_Threaded vs evented execution models_](images/reactive/execution-models.png)
 _Threaded vs evented execution models_
 
 Until this point, this section could have been about NodeJS or any other modern platform as well.
@@ -346,7 +346,7 @@ Julien Richard-Foy visualised this in the image below.
 The two white horizontal boxes represent the execution contexts with both two threads.
 Using execution contexts, related work can be grouped, keeping the default context fast and responsive while still waiting for legacy blocking operations on other threads, in a transparent way.
 
-![](images/reactive/2400OS_05_08.png)
+![_Execution Contexts_](images/reactive/2400OS_05_08.png)
 _Execution Contexts_
 
 However, in general, blocking operations should be prevented. 
@@ -376,7 +376,7 @@ These streams can be long running, but the tasks themselves are small, this is i
 Using this pattern Play can also handle thousands of concurrent long-running requests. This is for example shown in this small [chatting application](https://github.com/matthiasn/sse-chat/issues/10#issuecomment-42857305) of Matthias Nehlsen (@matthiasn).
 Having a single server handling these amounts of requests is certainly not trivial using a solely thread-based model.
 
-![](images/sse-chat2.png)
+![_Chat application_](images/sse-chat2.png)
 _Chat application_
 
 #### Akka

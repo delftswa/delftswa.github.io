@@ -10,7 +10,7 @@ chapter: true
 **By Jasper Abbink, Peter Evers, Nick ten Veen, Joost Verdoorn**
 *Delft University of Technology*
 
-![](images/soviet-logo.png)
+![Open RA Logo](images/soviet-logo.png)
 <!-- -->
 
 **Abstract**

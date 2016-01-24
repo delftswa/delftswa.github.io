@@ -9,7 +9,7 @@ chapter: true
 *Delft University of Technology*
 
 
-![](images/angulardart_logo.png "AngularDart")
+![Angular Dart Logo](images/angulardart_logo.png "AngularDart")
 <!-- -->
 
 **Abstract**
@@ -174,7 +174,7 @@ His blog is a good addition on the explanation above and focuses on creating mod
 The overall tendency is that the main modules in `/lib` are loosely decoupled, with only the Core module binding all the modules together.
 In the image below, the different modules and the dependencies between them are illustrated by a network analysis graph: Larger modules have more imcoming dependencies whilst small modules rely on such dependencies.
 
-![](images/module _graph_analysis.png)
+![Module dependency graph analysis of /lib](images/module _graph_analysis.png)
 _Module dependency graph analysis of /lib_
 
 AngularDart is written with a Dependency Injection (DI) framework, used for the decoupling of classes, allowing for re-usability. 
@@ -254,7 +254,7 @@ Connectors are the pieces of code of the architecture that link the elements, or
 #### External entities
 AngularDart has "other systems, software programs, hardware devices or other entities with which the system interacts" (Rozanski and Woods, p. 272), or external entities. These can be extracted from the Context view image below.
 
-![](images/Context_view_with_logos.png)
+![PIETJE PUK](images/Context_view_with_logos.png)
 _Context view with logos_
 
 * HTML: AngularDart extends the HTML with several directives, as discussed earlier, such as "ng-class". By using this directive, AngularDart attaches to that DOM element a specified behavior, or it can transform that DOM element (and its children).
@@ -279,12 +279,12 @@ Version 2 will also add support for Web Components, which are a collection of fo
 
 Angular 2.0 will be built using TypeScript from Microsoft. However, because no browser supports TypeScript natively yet, it will be transpiled (a source-to-source compiler, that *trans*lates code to another programming language) to EcmaScript 5. TypeScript differs from EcmaScript 5 by the addition of types to the language (type annotations, compile-time type checking and type inference). This also counts for classes, interfaces, modules and more. TypeScript is a superset of EcmaScript 5, which means that any current JavaScript program is a valid TypeScript program. However, Angular 2.0 does not offer any backwards compatibility to version 1.
 
-![](images/angular2_transpile_architecture.png)
+![Angular 2 Transpile Architecture](images/angular2_transpile_architecture.png)
 _Angular 2 Transpile Architecture_
 
 In the image above you can see the way the Angular 2 is built. Since the development started on version 2 of Angular, both teams of the JavaScript and Dart version are combined into one team. Version 2 uses the facada pattern, which uses abstracted functions to improve readability of the library and the make a coherent API that is easy to use. Also, the most important reason that these facades are necessary is for the differences between JavaScript and Dart APIs. The transpiler uses these facades to compile the correct API for both languages. Traceur is the component responsible for tranpsiling the code to EcmaScript 5 and Dart. 
 
-![](images/angular2_team.png)
+![The team of Angular 2](images/angular2_team.png)
 _The team of Angular 2_
 
 This compiler actually adds an extra option to develop Angular apps. Besides EcmaScript 5, EcmaScript 6, TypeScript and Dart, it is also possible to write Angular apps using the Traceur compiler in EcmaScript 6 and having it transpile to any number of the just mentioned languages. 
@@ -442,7 +442,7 @@ An application called `cloc` is used to count the number of lines of code and th
 
 <br />
 
-![](images/ratio_loc_comments.png)
+![Ratio Comment / LOC](images/ratio_loc_comments.png)
 _Ratio Comment / LOC_
 
 **Total volume of documentation (word count)**
@@ -479,7 +479,7 @@ Finally, general checking metrics are needed to define whether the goal, namely 
 
 This metric is performed and obtained from GitHub, with the results depicted in the following graph:
 
-![](images/number_of_contributors.png)
+![Number of contributors](images/number_of_contributors.png)
 _Number of contributors_
 
 The number of contributors reached a peak in November 2014, and has steadily declined. This might be just because of start of the AngularJs 2.0, the new framework.

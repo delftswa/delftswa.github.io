@@ -7,7 +7,7 @@ chapter: true
 
 # Jekyll - A Simple Static Site Generator
 
-![](images/jekyll-sa-header.png)
+![Jekyll Logo](images/jekyll-sa-header.png)
 <!-- -->
 
 **[Joop Aué](https://github.com/JoopAue), [Anton Bouter](https://github.com/abouter), and [Martin Rogalla](https://github.com/MartinRogalla)**<br/>
@@ -155,8 +155,7 @@ High interest and low power stakeholders need to be kept up-to-date with develop
 Low interest and low power stakeholders should be monitored and not flooded with excessive communication.
 The Power/Interest Grid for the Jekyll project is displayed in [Figure 1](#figure1).
 
-<a id="figure1">![](./images/power-interest-grid.png)</a>
-
+<a id="figure1">![Figure 1: Power/Interest Grid](./images/power-interest-grid.png)</a>
 **Figure 1** - *Power/Interest Grid*
 
 It is immediately clear that Parker Moore has great power and interest as he is the owner of the project.
@@ -209,8 +208,7 @@ Furthermore, ideas for features and the future of Jekyll originate from the comm
 In the context diagram in [Figure 2](#figure2), a clear illustration is given of Jekyll's capabilities and its interaction with external entities.
 It does not go into the system's details in terms of how it should be built, but rather gives an abstract and high level view of the system.
 
-<a id="figure2">![](./images/context-diagram.png)</a>
-
+<a id="figure2">![Figure 2: Context Diagram](./images/context-diagram.png)</a>
 **Figure 2** - *Context Diagram*
 
 ## Developer's Perspective
@@ -234,8 +232,7 @@ The structure consists out of the following five layers ordered by abstractness 
 The rough dependencies between the different layers in the figure are denoted by arrows.
 
 
-<a id="figure3">![](./images/structure-model.png)</a>
-
+<a id="figure3">![Figure 3: Structure Model](./images/structure-model.png)</a>
 **Figure 3** - *Structure Model*
 
 ### Common Processing
@@ -312,8 +309,7 @@ This is a very large number of files for a single folder and these should prefer
 One could for example place the files *site.rb*, *post.rb*, *page.rb* and *document.rb* in a new subdirectory *site* to organize the *lib/jekyll* folder.
 
 
-<a id="figure4">![](./images/fileStructure.png)</a>
-
+<a id="figure4">![Figure 4: Directory Structure](./images/fileStructure.png)</a>
 **Figure 4** - *Directory Structure*
 
 Some other notable subdirectories are *features*, *script*, *site* and *test*.
@@ -417,8 +413,7 @@ The second constraint is that data should also have either a page, post or colle
 Furthermore, formats like _LaTeX_ and _Math symbols_ require specific parsers to be used.
 
 
-<a id="figure5">![](./images/featureDiagram.png)</a>
-
+<a id="figure5">![Figure 5: Feature Diagram](./images/featureDiagram.png)</a>
 **Figure 5** - *Feature Diagram*
 
 ### Variation Points
@@ -467,8 +462,7 @@ Building a site starts with the `command` class that calls the `site.process` me
 This method calls the methods displayed in [Figure 6](#figure6) subsequently:
 
 
-<a id="figure6">![](images/processes.png)</a>
-
+<a id="figure6">![Figure 6: Processes in Jekyll](images/processes.png)</a>
 **Figure 6** - *Processes in Jekyll*
 
 ### Metrics
@@ -497,11 +491,11 @@ Especially the `place in layout` process.
 This fact is illustrated by [Figure 9b](#figure9b).
 
 <div id="figure9a"/>
-![](images/measurements/3-collection-render.png)
+![**Figure 9(a)** _Time delay caused by collection renderer processes_](images/measurements/3-collection-render.png)
 **Figure 9(a)** _Time delay caused by collection renderer processes_
 
 <div id="figure9b"/>
-![](images/measurements/4-render-place.png)
+![**Figure 9(b)** - _Place in layout rendering processes_](images/measurements/4-render-place.png)
 **Figure 9(b)** - _Place in layout rendering processes_
 
 

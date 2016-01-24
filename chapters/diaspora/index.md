@@ -7,7 +7,7 @@ chapter: true
 
 # Diaspora
 
-![](images/Diaspora.png)
+![Diaspora Logo](images/Diaspora.png)
 <!-- -->
 
 **Simon Bijl, Tejaswini Dandi, Selman Ercan, Revathi MC**<br/>
@@ -49,7 +49,7 @@ In this chapter, we discuss the context, architecture and development of the Dia
 
 In 2010 the project was funded as a Kickstarter project, collecting over $200,000. Since 2012 the project is fully based on volunteer work. The image below gives a rough timeline of the project.
 
-![](images/History.PNG)
+![_Figure 1: Project History of Diaspora_](images/History.PNG)
 _Figure 1: Project History of Diaspora_
 
 
@@ -61,7 +61,7 @@ In this section, the organisation and analysis of major stakeholders involved in
 
 Some of the stakeholder categories identified in Rozanski and Woods are included in this section. As the project currently involves less contributors, few of the stakeholders have multiple roles in the project. 
 
-![](images/Stakeholder.png)
+![_Figure 2: Stakeholder Analysis of Diaspora_](images/Stakeholder.png)
 _Figure 2: Stakeholder Analysis of Diaspora_
 
 The Diaspora Foundation, which is part of the Free Software Support Network (FSSN), manages the Diaspora software development. Eben Moglen and the Software Freedom Law Center in turn run the FSSN. The FSSN provides resources to Diaspora development and manages Diaspora's branding, trademark, copyrights, finances and legal assets. Administrators who maintain the system once it has been deployed are called *podmins*, and the system administrators. Users of the network of nodes, mainly different individuals and organisations, can host a pod on their own server. 
@@ -73,7 +73,7 @@ The most active developer is [Mr. Jonne Haß](https://github.com/jhass) with 187
 
 The process of software architecture involves the concerns of both the internal and the external environment. In addition to the internal stakeholders, it is essential to give a definition of the environment of the system in terms of its relationships and dependencies. This need can be met by creating a context view as part of the architectural description. The figure below gives an overview of Diaspora's interactions with external entities. 
 
-![](images/Context view.png)
+![_Figure 3: Context view diagram of Diaspora_](images/Context view.png)
 _Figure 3: Context view diagram of Diaspora_
 
 As seen from the figure, the most essential external dependencies of Diaspora can be categorised into three types: background processing, development environment and decision making tools. As Diaspora relies on a lot of network communication with other servers, background processing jobs are considered essential. This is mainly taken care of by [Redis](http://redis.io/) and [Sidekiq](http://sidekiq.org/). The development environment mainly consists of [GitHub](https://github.com/Diaspora/Diaspora) and [testing](https://wiki.diasporafoundation.org/Testing_workflow) frameworks. The process followed in the development environment is mainly discussed and decided in the central platform [Loomio](https://www.loomio.org/g/EseV9p4X/Diaspora-community), which acts a voting tool.
@@ -112,7 +112,7 @@ Mandatory features are present in all products.
 Optional ones may or may not be selected.
 Among alternative features only one can be selected, while in OR-features it is possible to select one or more. Below is the feature model diagram of Diaspora.
 
-![](images/feature-model.png)
+![_Figure 4: Diaspora Feature Model_](images/feature-model.png)
 _Figure 4: Diaspora Feature Model_
 
 Most of the included features are mandatory. The OS support for development is an OR-feature; different operating systems are supported and it is possible to develop using more than one at the same time. The data storage feature is an alternative feature; various DBMSs are supported, but only one can be used at the same time. The chatting feature is optional.
@@ -121,7 +121,7 @@ Most of the included features are mandatory. The OS support for development is a
 
 In order to represent a complex system in a way that is manageable and comprehensible by a range of business and technical stakeholders, the only successful way is to attack the problem from different directions simultaneously. In this approach, the architecture definition is partitioned into a number of separate but interrelated views and perspectives, each of which describes a separate aspect of the architecture. Collectively these views describe the whole system. 
 
-![](images/Viewpoint.png)
+![_Figure 5: Viewpoint Catalog_](images/Viewpoint.png)
 _Figure 5: Viewpoint Catalog_
 
 As shown in figure 3, we made use of some of the viewpoints and perspectives defined in Rozanski and Woods in analysing the architecture of Diaspora. In this section we will analyse the Diaspora project using two viewpoints (_Development_ and _Deployment_) and one perspective (_Internationalisation_).
@@ -138,12 +138,12 @@ In general, Model (M) is the central component of the MVC Architecture. Models a
 
 The operation of this architecture is illustrated in the following figure.
 
-![](images/MVC.png)
+![_Figure 6: MVC Architecture_](images/MVC.png)
 _Figure 6: MVC Architecture_
 
 As explained earlier, Diaspora's architecture consists of modules organised as models, controllers and views. The following figure shows which modules belongs to which part of the MVC architecture.
 
-![](images/Module.png)
+![_Figure 7: Modular organisation_](images/Module.png)
 _Figure 7: Modular organisation_
 
 Redis, resque, mysql2, activerecord are the databases where Diaspora stores data and acts as models for the system. Diaspora uses [Sinatra](http://www.sinatrarb.com/) libraries for creating web applications in Ruby.
@@ -155,7 +155,7 @@ Diaspora uses JSXC in the front end of Diaspora's built-in chat feature. Diaspor
 ##### Source Code Structure
 Diaspora is a Ruby on Rails application and the module organisation conforms to the Ruby on Rails project structure described in [application structure](http://en.wikibooks.org/wiki/Ruby_on_Rails/Getting_Started/Creating_the_application#The_Application_Structure). The project documentation is provided through [wiki](https://wiki.Diasporafoundation.org/Main_Page) where every single feature is precisely explained using workflows. The documentation on recent changes in the system is provided through the `Changelog.md` file. The Diaspora application structure is shown in the figure below. 
 
-![](images/diaspora-codeline.png)
+![_Figure 8: The application structure of Diaspora_](images/diaspora-codeline.png)
 _Figure 8: The application structure of Diaspora_
 
 
@@ -222,7 +222,7 @@ This is an important model for the deployment viewpoint. This model defines:
 
 The Runtime platform Model of Diaspora is shown below:
 
-![](images/Deployment Diagram.png)
+![_Figure 9: Runtime platform Model_](images/Deployment Diagram.png)
 _Figure 9: Runtime platform Model_
 
 For every pod system few hardware requirements need to be satisfied like size of the RAM, disk space needed type of CPU recommended etc. And the software elements necessary for the pod are database technology, protocols that are needed to use for file transfer, or for security between the layers etc. The Diaspora social network is constructed of a network of pods(nodes), which are hosted by many different individuals and institutions. Each pod is operated with a copy of the Diaspora software which acts as a personal web server.
@@ -257,12 +257,12 @@ By default rails-i18n loads all locale files, pluralisation and transliteration 
 
 #### Major touch points 
 
-![](images/Touch points.png)
+![_Figure 10: Major Touch points of Diaspora around the globe_](images/Touch points.png)
 _Figure 10: Major Touch points of Diaspora around the globe_
 
 This concern focuses on identifying all the major touch points (where a person interacts with the system), its scope of services and information that need to be internationalised in each of these touch points and system's region of concerns. The regions plotted in the diagram show the major touch points of the Diaspora system. The data is retrieved by taking the regions of active pod administrators, regions which have their languages translated at higher rate and regions which has its recent updates on languages. 
 
-![](images/I18n.png)
+![_Figure 11: Scope of internationalisation of Diaspora_](images/I18n.png)
 _Figure 11: Scope of internationalisation of Diaspora_
   
 The chart is plotted by taking the values on percentage of translated data and proofread data in the Diaspora system. The chart shows clearly the proportion of translated data and proofread data in different languages in the Diaspora system. It can be seen that, though some of the languages has been translated to its maximum extent, there still remains some maintainability concerns in proofreading the translated data and finalising the changes needed to the system.
@@ -286,7 +286,7 @@ In this section we evaluate the maintainability of the Diaspora project. We defi
 
 The quality profile below is plotted by evaluating the cyclomatic complexity in the Diaspora codebase, through analysing every single line of code by the risk category instead of summation or average median method. Code complexity is analysed using Saikuro, which is a Ruby cyclomatic complexity analyser. When given Ruby source code Saikuro will generate a report listing the cyclomatic complexity of each method found. Some of the Classes/Modules which is under High risk category include `AspectsController`, `ConversationsController`, `PhotosController`, `StatusMessagesController`, `UsersController` and `PeopleController`. Duplication of code attributing to high risk category can be seen in the modules `PeopleController`, `StatusMessagesController`.
 
-![](images/Complexity.png)
+![_Figure 12: Quality profile of cyclomatic complexity_](images/Complexity.png)
 _Figure 12: Quality profile of cyclomatic complexity_
 
 |**Cyclomatic Complexity**|**Risk Category**|**Percentage of code**|
@@ -302,7 +302,7 @@ _Figure 12: Quality profile of cyclomatic complexity_
 
 Below is a diagram generated by the CodeClimate plugin running on the Diaspora codebase. It shows the change in the number of classes per risk category over a period of four months, prior to the last release;`Diaspora 0.4.1.2`on October 30th, 2014.
 
-![](images/code-climate-trends.png)
+![_Figure 13: CodeClimate Maintainability trends_](images/code-climate-trends.png)
 _Figure 13: CodeClimate Maintainability trends_
 
 The first thing to note is that only the dark green area is increasing in height, meaning that most of the newly created classes and modules are in the _very low risk_ category.

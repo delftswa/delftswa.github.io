@@ -7,7 +7,7 @@ chapter: true
 
 # Joomla
 
-![](images/Joomla-website.png)
+![Joomla Logo](images/Joomla-website.png)
 <!-- -->
 
 **Remy Kabel, Panagiotis Mitsis, Michail Papadimitriou, Nikolaos Stekas**
