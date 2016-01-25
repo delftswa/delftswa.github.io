@@ -7,9 +7,11 @@ chapter: true
 
 # Vagrant: Development environments made easy
 
-![](images/logo_vagrant.png "Vagrant Logo")
+![Vagrant Logo](images/logo_vagrant.png)
+<!-- -->
 
-![](images/Team.png "Authors")
+![Authors](images/Team.png)
+<!-- -->
 
 **Abstract**
 
@@ -70,7 +72,8 @@ These entities will be presented and discussed in the *context view*.
 The number of different stakeholders in general is large and in reality it will be challenging to meet all the requirements and needs of the different stakeholders. 
 The following diagram shows a visual overview of the stakeholder analysis of Vagrant. 
 
-![](images/VagrantStakeholder.png "Types of stakeholders for Vagrant")
+![_Types of stakeholders for Vagrant_](images/VagrantStakeholder.png)
+_Types of stakeholders for Vagrant_
 
 As already mentioned in the [Introduction](#introduction), the main backer of Vagrant is Mitchell Hashimoto and his company HashiCorp. At the moment, HashiCorp handles the development, required investments, marketing, quality control, legal regulations and they provide professional support and training for Vagrant.
 The documentation is mainly maintained by HashiCorp staff.
@@ -102,7 +105,8 @@ Instead they expect to be rewarded in the form of a better system which they can
 ### Context View
 To get an overview of the all the external entities interacting with the system, the following diagram is presented.
 
-![](images/ContextView.png "Context View")
+![_Context View_](images/ContextView.png)
+_Context View_
 
 Since Vagrant makes use of external virtual machines, it is highly dependent on VM providers like [VMware](http://www.vmware.com/), [Docker](https://www.docker.com/) or Oracle's [VirtualBox](https://www.virtualbox.org/). 
 
@@ -123,7 +127,8 @@ In order to understand how Vagrant works, it is necessary to dive into the under
 The organisation of the modules and their coupling are shown in the picture below, which will be discussed further.
 
 
-![](images/LayeredView.png "Development View")
+![_Development View_](images/LayeredView.png)
+_Development View_
 
 ### Core layer
 As can be seen from the diagram, the core-layer consist of the most inner kernel of Vagrant.
@@ -250,7 +255,8 @@ Users can choose from `ssh` and `winrm` **communication protocols**, which are d
 Based on the features in the [previous](#mainfeatures) section, the feature model of Vagrant is created and presented below.
 In the model, the most basic features are mandatory because these features are needed in order to use the tool. However the user has the possibility to choose between the different options with exception to the language as English is the only supported language currently. 
 
-![](images/FeatureModel.png "Feature model")
+![_Feature model_](images/FeatureModel.png)
+_Feature model_
 
 
 <a id="usabilitypersective"/>
@@ -354,7 +360,8 @@ In the usability view the Command-Line Interface was discussed in terms of usabi
 In this section the Command-Line Interface will be discussed in terms of functionality.
 The functionality will be shown in the form of the following diagram.
 
-![](images/FunctionalView.png "Functional view of the Command-line interface")
+![_Functional view of the Command-line interface_](images/FunctionalView.png)
+_Functional view of the Command-line interface_
 
 In the diagram above it is clear to see how the various commands of the system relate.
 The blocks each represent a command available in Vagrant.
@@ -450,27 +457,30 @@ To conclude, Vagrant solves the common problem of having differences in the work
 <a id="append-vagrantcommands"/>
 
 ## Appendix: Vagrant Commands
-<pre><code>box             manages boxes: installation, removal, etc.
-connect         connect to a remotely shared Vagrant environment
-destroy         stops and deletes all traces of the vagrant machine
-global-status   outputs status Vagrant environments for this user
-halt            stops the vagrant machine
-help            shows the help for a subcommand
-init            initializes a new Vagrant environment by creating a Vagrantfile
-login           log in to HashiCorp's Atlas
-package         packages a running vagrant environment into a box
-plugin          manages plugins: install, uninstall, update, etc.
-provision       provisions the vagrant machine
-push            deploys code in this environment to a configured destination
-rdp             connects to machine via RDP
-reload          restarts vagrant machine, loads new Vagrantfile configuration
-resume          resume a suspended vagrant machine
-share           share your Vagrant environment with anyone in the world
-ssh             connects to machine via SSH
-ssh-config      outputs OpenSSH valid configuration to connect to the machine
-status          outputs status of the vagrant machine
-suspend         suspends the machine
-up              starts and provisions the vagrant environment
-version         prints current and latest Vagrant version
-</code></pre>
+
+Command |  |
+|---------------|------------------------------------------------------|
+box            | manages boxes: installation, removal, etc.
+connect        | connect to a remotely shared Vagrant environment
+destroy        | stops and deletes all traces of the vagrant machine
+global-status  | outputs status Vagrant environments for this user
+halt           | stops the vagrant machine
+help           | shows the help for a subcommand
+init           | initializes a new Vagrant environment by creating a Vagrantfile
+login          | log in to HashiCorp's Atlas
+package        | packages a running vagrant environment into a box
+plugin         | manages plugins: install, uninstall, update, etc.
+provision      | provisions the vagrant machine
+push           | deploys code in this environment to a configured destination
+rdp            | connects to machine via RDP
+reload         | restarts vagrant machine, loads new Vagrantfile configuration
+resume         | resume a suspended vagrant machine
+share          | share your Vagrant environment with anyone in the world
+ssh            | connects to machine via SSH
+ssh-config     | outputs OpenSSH valid configuration to connect to the machine
+status         | outputs status of the vagrant machine
+suspend        | suspends the machine
+up             | starts and provisions the vagrant environment
+version        | prints current and latest Vagrant version
+
 

@@ -59,11 +59,13 @@ Docker does so by running isolated, virtual environments in so called containers
 These containers are created by developers and can contain both the developed program and all other necessary software.
 Normally this is done by using virtual machines, but this results in a large overhead caused by the hypervisor that creates and runs a virtual machine.
 Docker makes it possible to create isolated environments without this overhead by running the processes in the kernel of the host OS, which eliminates the need for a guest OS.
-Figure 1 illustrates the difference between using a VM on the left-hand side and using Docker on the right-hand side.
+The figures below illustrate the difference between using a virtual machine on the one hand and using Docker on the other.
 
-![VMs](images/variability_vm.png) ![Docker](images/variability_docker.png)
+![_Traditional Approach to Virtual Environments_](images/variability_vm.png)
+<br/>_Traditional Approach to Virtual Environments_
 
-*Figure 1: VMs (left-hand side) versus Docker (right-hand side) [[ref]](https://www.docker.com/whatisdocker/)*
+![_Docker's Approach to Virtual Environments_](images/variability_docker.png)
+<br/>_Docker's Approach to Virtual Environments_
 
 To run such a container, an image is needed.
 An image is the read-only description of a container, from which multiple containers can be run.
@@ -75,32 +77,32 @@ Docker can then automatically build the image by executing this `Dockerfile`.
 Internally, Docker uses the same functionality as the commit command to execute a `Dockerfile`.
 
 To take a closer look at the structure of the Docker project, we first identify the functional elements of Docker.
-The relation between those elements is depicted in Figure 2. Table 1 provides a small description of each element's responsibility.
+The relation between those elements is depicted in Figure [_Component diagram of Docker_](#component-diagram). The subsequent table provides a small description of each element's responsibility.
 
-![](images/component_diagram.png "Component Diagram")
+<div id="component-diagram"/>
+![_Component diagram of Docker_](images/component_diagram.png)
+_Component diagram of Docker_
 
-*Figure 2: Component diagram of Docker*
-
-Element | Responsibility
---- | ---
-Builder | Parsing Dockerfiles and building images based on the contents of those Dockerfiles.
-Client | Providing a user interface (CLI) to interact with Docker
-Daemon | Running containers and storing images
-Engine | Storing containers and manipulating these containers by executing jobs
+Element   | Responsibility
+-------   | ------------------------------------------------------------------
+Builder   | Parsing Dockerfiles and building images based on the contents of those Dockerfiles.
+Client    | Providing a user interface (CLI) to interact with Docker
+Daemon    | Running containers and storing images
+Engine    | Storing containers and manipulating these containers by executing jobs
 Event Bus | Providing a publish-subscribe interface for events
-Registry | Storing images and providing an interface for pulling those images
+Registry  | Storing images and providing an interface for pulling those images
 
-*Table 1: Responsibility of each identified element*
+Table: Responsibility of each identified element
 
 At the heart of Docker is [libcontainer](https://github.com/docker/libcontainer). 
 Libcontainer provides an interface to making containers inside a host OS. 
-It uses namespaces, cgroups, capabilities, and filesystem access controls to isolate containers. Until version 0.9 Docker used [LXC](https://linuxcontainers.org/) for this purpose and it is still possible to swap libcontainer for LXC (see Figure 3). 
+It uses namespaces, cgroups, capabilities, and filesystem access controls to isolate containers. Until version 0.9 Docker used [LXC](https://linuxcontainers.org/) for this purpose and it is still possible to swap libcontainer for LXC (see Figure [Virtualization Abstraction](#virtualization-abstraction)). 
 However, by using their own interface they are able to drastically reduce the number of moving parts [[ref]](http://blog.docker.com/2014/03/docker-0-9-introducing-execution-drivers-and-libcontainer/) and no longer depend on userland packages. 
 The libcontainer project attracted a number of companies to support Docker, such as Microsoft, Google, IBM, Red Hat, and Canonical [[ref]](http://www.zdnet.com/article/docker-libcontainer-unifies-linux-container-powers/).
 
-<img  src="images/docker-linux-interfaces.png" width="300" />
-
-*Figure 3: Virtualization abstraction [[ref]](http://en.wikipedia.org/wiki/Docker_(software)#/media/File:Docker-linux-interfaces.svg)* 
+<div id="virtualization-abstraction"/>
+![_Virtualization abstraction_](images/docker-linux-interfaces.png)
+_Virtualization abstraction_
 
 ## Usage Principles
 When starting to use Docker you will notice that it poses some restrictions on the application containers. Specifically, Docker encourages containers to be:
@@ -110,14 +112,15 @@ When starting to use Docker you will notice that it poses some restrictions on t
 3. Stateless
 
 ### Layered
-As all changes are committed on top of the previous change, an image has a layered structure (see Figure 4).
+As all changes are committed on top of the previous change, an image has a layered structure (see the [Figure](#layered-structure) below).
 This also allows the use of previously built layers/images.
 For example, when you have only changed the source code of your application, only the layers starting at importing your source code have to be rebuilt, i.e. the dependencies do not need to be built/installed again.
 Intermediate layers are cached by Docker, so only the changed layer and all layers on top of that need to be rebuilt.
 
-<img  src="https://docs.docker.com/terms/images/docker-filesystems-multilayer.png" width="300" />
+<div id="layered-structure"/>
+![_Layered structure of an image_](images/docker-filesystems-multilayer.png)
+_Layered structure of an image_
 
-*Figure 4: Layered structure of an image [[ref]](https://docs.docker.com/terms/image/)*
 
 ### Application per Container
 It is considered a best practice to run a single process in a single container [[ref]](https://docs.docker.com/articles/dockerfile_best-practices/#run-only-one-process-per-container). This best practice becomes obvious in several places:
@@ -156,11 +159,11 @@ Maintainers are the only persons allowed to merge pull requests and can be found
 
 Another big group of stakeholders are the suppliers. Companies offering Docker based services have a big interest in its development. Examples of suppliers are companies that offer Infrastructure as a Service with built-in support for Docker, such as [DigitalOcean](https://www.digitalocean.com/features/one-click-apps/docker/) and [GiantSwarm](https://giantswarm.io), but also [Docker Hub](https://hub.docker.com/), offering tools for building and sharing containers.
 
-<img  src="images/P_I_curve.png" height="500" />
+<div id="docker-pi"/>
+![_The Power/Interest curve for Docker_](images/P_I_curve.png)
+_The Power/Interest curve for Docker_
 
-*Figure 5: The Power/Interest curve for Docker*
-
-Figure 5 provides an overview of the power versus interest curve, which represents how much power and interest a given stakeholder has in the system.
+The [Figure above](#docker-pi) provides an overview of the power versus interest curve, which represents how much power and interest a given stakeholder has in the system.
 On the top right, with the most power and interest, there are two stakeholders: Docker, Inc. and Solomon Hykes.
 The first being the company supporting Docker, the latter being the inventor of Docker (also referred to as the [benevolent dictator for life](http://en.wikipedia.org/wiki/Benevolent_dictator_for_life)).
 Google, Microsoft and IBM also have quite some power and interest in the Docker project, as they contribute to the source code and provide Docker on their systems.
@@ -175,13 +178,14 @@ Finally, there are also competitors, like Rocket, that have a little interest (a
 Docker has a clear modular structure.
 Each module is represented by a directory in the root of the project.
 These modules can be grouped together according to the layer they reside in.
-The Docker project can be divided into four layers: core, utility, security, and test.
-Figure 6 displays these layers and their modules.
-Most of the modules that had their functionality described in Figure 2 reside in the core layer of Docker.
+The Docker project can be divided into four layers: core, utility, security, and test,
+as shown in the figure displaying the [Modular Structure of Docker](#docker-modular-view).
+Most of the modules that had their functionality described in Figure [_Component diagram of Docker_](#component-diagram) reside in the core layer of Docker.
 
-<img  src="images/development-view.png" width="600" />
+<div id="docker-modular-view"/>
+![_Modular Structure of Docker_](images/development-view.png)
+_Modular Structure of Docker_
 
-*Figure 6: Modular structure of Docker*
 
 Most functionality is implemented in the core layer.
 The `Daemon` module is responsible for constructing containers.
@@ -198,12 +202,12 @@ The `security` layer contains trust-related code, a concept that is used for man
 Finally, Docker uses both integration tests and unit tests, as indicated by the `Tests` layer.
 This layer is represented by a vertical box, because testing occurs in all layers of the system.
 
-<img  src="images/docker_deps.png" height="500" />
+<div id="docker-dependencies"/>
+![_Module Dependencies_](images/docker_deps.png)
+_Module Dependencies_
 
-*Figure 7: Module dependencies*
-
-Finally, Figure 7 shows an overview of the dependencies between the most important modules. This graph was generated by statically analyzing the source code. The colors correspond to the colors in Figure 6: pink nodes are core modules, yellow nodes are domain models and purple nodes are utilities. 
-It should be noted that Figure 7 shows just high-level dependencies of a subset of the project. This set was chosen because of it being the core of the project and a good representation of the dependency distribution in general. 
+Finally, the [Figure above](#docker-dependencies) shows an overview of the dependencies between the most important modules. This graph was generated by statically analyzing the source code. The colors correspond to the colors in the Figure describing the [Modular Structure of Docker](#docker-modular-view): pink nodes are core modules, yellow nodes are domain models and purple nodes are utilities. 
+It should be noted that the figure shows just high-level dependencies of a subset of the project. This set was chosen because of it being the core of the project and a good representation of the dependency distribution in general. 
 
 The figure starts at the top with the `docker` module, which is the entry point of the application. The important thing to note about this picture is that all dependencies contain arrows downward; there are no circular dependencies. Architectures without circular dependencies are usually easier to understand and maintain [[ref]](http://www.objectmentor.com/resources/articles/granularity.pdf).
 
