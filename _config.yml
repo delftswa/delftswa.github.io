@@ -1,4 +1,4 @@
-highlighter: pygments
+highlighter: rouge
 relative_permalinks: false
 
 timezone: UTC
