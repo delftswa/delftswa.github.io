@@ -59,3 +59,9 @@ pdf:
 	 index.md \
 	 $(CHAPTERS_MD)
 
+docker:
+	docker run --rm --volume="$(CURDIR):/srv/jekyll" -it jekyll/builder:3.8.4 bash
+
+serve:
+	cd _site && python -m SimpleHTTPServer 4000
+
